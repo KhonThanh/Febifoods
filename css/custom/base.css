@@ -1,0 +1,63 @@
+:root {
+  --primary-color: #105B37;
+  --yellow-green:#FFFBB6;
+  --dark-green-color: #005324;
+  --white-color: #ffffff;
+  --orange-color: #FFB907;
+  --black-color: #000000;
+  --light-gray-color: #F3F4F3;
+  --font-size-base: 16px;
+  --font-name: 'Oswald', sans-serif;;
+}
+
+main{
+  position: relative;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  caret-color: transparent;
+}
+
+header{
+  position: relative;
+  z-index: 1;
+
+}
+
+body {
+  font-family: var(--font-name);
+  overflow-x: hidden;
+}
+
+header,
+footer,
+section {
+  justify-content: center;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0px;
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-black);
+  cursor: pointer;
+}
+
+*:not(input):not(textarea) {
+  caret-color: transparent;
+}
