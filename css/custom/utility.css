@@ -19,7 +19,7 @@
 .container-l,
 .container-s {
   margin: 0 auto;
-  width: calc(100% - 40px);
+  width: calc(100% - 20px);
 }
 
 .container-f{
