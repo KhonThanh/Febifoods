@@ -1,6 +1,7 @@
 .bg-green { background-color: var(--primary-color);}
 .bg-dark-green { background-color: var(--dark-green-color);}
 .bg-white { background-color: var(--white-color); }
+.bg-light-gray { background-color: var(--light-gray-color);}
 .bg-orange { background-color: var(--orange-color);}
 
 .flex { display: flex; }

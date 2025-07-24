@@ -55,4 +55,66 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+// js slide
+if (!$('.homepageslide').length) {
+  console.error('❌ .homepageslide not found');
+} else if (!$('.dot-slide').length) {
+  console.error('❌ .dot-slide not found');
+} else {
+  $('.homepageslide').slick({
+    Infinite: true,
+    dots: true,
+    appendDots: $('.dot-slide'),
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 3000,
+  });
+  console.log('✅ Slick initialized successfully!');
+}
 
+// js type rice
+
+$(document).ready(function () {
+  if ($('.rice-slider').length) {
+    $('.rice-slider').slick({
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      infinite: true,
+      arrows: true,
+      autoplay: false,
+      prevArrow: $('.rice-prev'),
+      nextArrow: $('.rice-next'),
+      responsive: [
+        {
+          breakpoint: 551,
+          settings: {
+            slidesToShow: 4
+          }
+        }
+      ]
+    });
+
+    // Bấm vào để đổi màu active
+    $('.rice-slider').on('click', 'a.rice-item', function (e) {
+      e.preventDefault();
+      $('.rice-item').removeClass('active');
+      $(this).addClass('active');
+    });
+
+  } else {
+    console.warn("Không tìm thấy .rice-slider");
+  }
+});
+
+// js connect
+$(document).ready(function () {
+  $('.connection-content__item').on('click', function (e) {
+    e.preventDefault(); // Ngăn chặn nhảy trang nếu có href="#"
+
+    // Gỡ active khỏi tất cả các item
+    $('.connection-content__item').removeClass('active');
+
+    // Thêm active vào item được click
+    $(this).addClass('active');
+  });
+});
