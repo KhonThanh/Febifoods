@@ -94,7 +94,6 @@ $(document).ready(function () {
       ]
     });
 
-    // Bấm vào để đổi màu active
     $('.rice-slider').on('click', 'a.rice-item', function (e) {
       e.preventDefault();
       $('.rice-item').removeClass('active');
@@ -109,12 +108,21 @@ $(document).ready(function () {
 // js connect
 $(document).ready(function () {
   $('.connection-content__item').on('click', function (e) {
-    e.preventDefault(); // Ngăn chặn nhảy trang nếu có href="#"
-
-    // Gỡ active khỏi tất cả các item
+    e.preventDefault(); 
     $('.connection-content__item').removeClass('active');
-
-    // Thêm active vào item được click
     $(this).addClass('active');
+  });
+});
+
+//js story
+document.addEventListener('DOMContentLoaded', function () {
+  const tabButtons = document.querySelectorAll('.story-tab');
+
+  tabButtons.forEach(btn => {
+    btn.addEventListener('click', function () {
+      if (this.classList.contains('active')) return;
+      tabButtons.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+    });
   });
 });

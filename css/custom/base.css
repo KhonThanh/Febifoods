@@ -27,6 +27,10 @@ header{
 
 }
 
+button{
+  font-family: var(--font-name);
+}
+
 body {
   font-family: var(--font-name);
   overflow-x: hidden;
