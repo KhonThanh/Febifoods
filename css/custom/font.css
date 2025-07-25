@@ -54,3 +54,27 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: 'Inter';
+  src: local('Inter'), local('Inter-SemiBold'),
+       url('../../font/Inter_18pt-SemiBold.ttf') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: local('Inter'), local('Inter-Italic'),
+       url('../../font/Inter_18pt-Italic.ttf') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Oooh Baby';
+  src: url('../../font/OoohBaby-Regular.ttf') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+

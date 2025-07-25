@@ -7,7 +7,9 @@
   --black-color: #000000;
   --light-gray-color: #F3F4F3;
   --font-size-base: 16px;
-  --font-name: 'Oswald', sans-serif;;
+  --font-name: 'Oswald', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+  --font-ooohbaby: 'Oooh Baby', sans-serif;
 }
 
 main{
