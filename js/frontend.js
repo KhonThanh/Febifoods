@@ -117,12 +117,43 @@ $(document).ready(function () {
 //js story
 document.addEventListener('DOMContentLoaded', function () {
   const tabButtons = document.querySelectorAll('.story-tab');
+  const tabContents = document.querySelectorAll('.tab-content');
 
-  tabButtons.forEach(btn => {
-    btn.addEventListener('click', function () {
-      if (this.classList.contains('active')) return;
-      tabButtons.forEach(b => b.classList.remove('active'));
-      this.classList.add('active');
+  // Kiểm tra nếu có ít nhất một tab và một content
+  if (tabButtons.length && tabContents.length) {
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', function () {
+        if (this.classList.contains('active')) return;
+
+        // Reset active và show
+        tabButtons.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+
+        tabContents.forEach(c => c.classList.remove('show'));
+
+        const targetId = this.dataset.target;
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          targetSection.classList.add('show');
+        }
+      });
     });
-  });
+  }
 });
+
+// js map
+
+function toggleBg() {
+  const section = document.getElementById('mapSection');
+  const title = document.getElementById('map-marketing__title');
+
+  if (section.classList.contains('bg-white')) {
+    section.classList.remove('bg-white');
+    section.classList.add('bg-green');
+    title.classList.add('title-color');
+  } else {
+    section.classList.remove('bg-green');
+    section.classList.add('bg-white');
+    title.classList.remove('title-color');
+  }
+}

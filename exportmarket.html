@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEBIFOODS</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <header class="bg-white">
+        <div class="container-f flex center-hor header-top" data-include="./component/header-top.html"></div>
+        <div class="container-f flex center-hor header-bottom">
+            <div class="container-l flex center-ver header-container">
+                <div class="header-content flex">
+                    <a class="flex center-hor nav-active" href="./index.html">
+                        <img src="./img/icon/home.png" alt="">
+                    </a>
+                    <a class="flex center-hor" href="./story.html">câu chuyện</a>
+                    <a class="flex center-hor" href="./story.html">lĩnh vực hoạt động</a>
+                    <a class="flex center-hor" href="#">phát triễn bền vững</a>
+                    <a class="flex center-hor" href="#">quan hệ cổ đông</a>
+                    <a class="flex center-hor" href="./contact.html">liên hệ</a>
+                    <a class="flex center-hor" href="#">tin tức</a>
+                    <div class="flex center-ver search-box">
+                        <input type="text" placeholder="Search..." />
+                        <button type="submit">
+                            <img src="./img/icon/search-line.png" alt="Search" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="menumobile" class="container-f flex bg-green" data-include="./component/menumobile.html"></div>
+    </header>
+    <main class="container-f flex flex-col center-hor">
+        <section class="container-f bg-white map-container__bg" id="mapSection">
+            <div class="container-f flex flex-col center-ver map-marketing">
+                <h1 id="map-marketing__title">Thị trường xuất khẩu</h1>
+                <div class="container-l map-image world-map" >
+                    <svg class="container-f" width="1297" height="604" viewBox="0 0 1297 604" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        data-include="./component/map.html">
+                    </svg>
+                    <button class="map-pin" id="toggleBtn" onclick="toggleBg()" >North America</button>
+                </div>
+                <div class="container-l map-container flex map-detail">
+                    <div class=" flex flex-col map-country">
+                        <div class="map-country__item">
+                            <h2>asia</h2>
+                            <p>UAE</p>
+                            <p>Qatar</p>
+                            <p>China</p>
+                            <p>Kuwait</p>
+                            <p>Malaysia</p>
+                            <p>Philipines</p>
+                            <p>Indonesia</p>
+                            <p>Singapore</p>
+                            <p>HongKong</p>
+                        </div>
+                        <div class="map-country__item">
+                            <h2>africa</h2>
+                            <p>Togo</p>
+                            <p>Benin</p>
+                            <p>Congo</p>
+                            <p>Ghana</p>
+                            <p>Ivory Coast</p>
+                            <p>Mozambique</p>
+                        </div>
+                        <div class="map-country__item">
+                            <h2>North America</h2>
+                            <p>Canada</p>
+                        </div>
+                        <div class="map-country__item">
+                            <h2>Oceania</h2>
+                            <p>Vanuatu</p>
+                            <p>Australia</p>
+                        </div>
+                    </div>
+                    <div class=" map-image">
+                        <img src="./img/map/map2.png" alt="">
+                    </div>
+                </div>
+                <div class="flex container-l center-hor count-country">
+                    <div class="flex center-hor center-ver count-country__item">
+                        <strong>+10</strong>
+                        <p>Quốc gia</p>
+                    </div>
+                    <div class="flex center-hor center-ver count-country__item">
+                        <strong>+10</strong>
+                        <p>Quốc gia</p>
+                    </div>
+                    <div class="flex center-hor center-ver count-country__item">
+                        <strong>+10</strong>
+                        <p>Quốc gia</p>
+                    </div>
+                    <div class="flex center-hor center-ver count-country__item">
+                        <strong>+10</strong>
+                        <p>Quốc gia</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container-f center-ver flex bg-white">
+            <hr class="line-end-content">
+        </section>
+    </main>
+    <footer class="container-f bg-green center-ver" data-include="./component/footer.html"></footer>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="./js/frontend.js"></script>
+</body>
+
+</html>

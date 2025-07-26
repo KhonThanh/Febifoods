@@ -22,10 +22,10 @@
                         <img src="./img/icon/home.png" alt="">
                     </a>
                     <a class="flex center-hor nav-active" href="./story.html">câu chuyện</a>
-                    <a class="flex center-hor" href="#">lĩnh vực hoạt động</a>
+                    <a class="flex center-hor" href="./story.html">lĩnh vực hoạt động</a>
                     <a class="flex center-hor" href="#">phát triễn bền vững</a>
                     <a class="flex center-hor" href="#">quan hệ cổ đông</a>
-                    <a class="flex center-hor" href="#">liên hệ</a>
+                    <a class="flex center-hor" href="./contact.html">liên hệ</a>
                     <a class="flex center-hor" href="#">tin tức</a>
                     <div class="flex center-ver search-box">
                         <input type="text" placeholder="Search..." />
@@ -46,12 +46,12 @@
                 <option>Triết lý kinh doanh</option>
             </select>
             <div class="story-tab_container flex center-ver">
-                <button class="flex center-hor center-ver active story-tab">tổng quan</button>
-                <button class="flex center-hor center-ver story-tab">Tầm nhìn - sứ mệnh</button>
-                <button class="flex center-hor center-ver story-tab">Triết lý kinh doanh</button>
+                <button data-target="tab1" class="flex center-hor center-ver active story-tab">tổng quan</button>
+                <button data-target="tab2" class="flex center-hor center-ver story-tab">Tầm nhìn - sứ mệnh</button>
+                <button data-target="tab3" class="flex center-hor center-ver story-tab">Triết lý kinh doanh</button>
             </div>
         </section>
-        <section class="container-f general-content ">
+        <section id="tab1" class="container-f general-content tab-content show">
             <div class="container-l">
                 <h1 class="story-title">câu chuyện thương hiệu</h1>
                 <p class="story-sub-title__style">Hiện thực hóa</p>
@@ -119,7 +119,7 @@
                 </div>
             </div>
         </section>
-        <section class="container-f field-of-operation">
+        <section id="tab2" class="container-f field-of-operation tab-content">
             <div class="container-l field-of-operation__content">
                 <h1 class="field-of-operation__toptitle">lĩnh vực hoạt động</h1>
                 <h2 class="field-of-operation__title">quy trình sản xuất</h2>
@@ -127,7 +127,7 @@
                     alt="">
             </div>
         </section>
-        <section class="container-f bg-white ">
+        <section id="tab3" class="container-f bg-white tab-content ">
             <div class="container-l">
                 <h1 class="core-values__title">quá trình phát triển</h1>
                 <img class="core-values__map" src="./img/map/image 69.svg" alt="">
