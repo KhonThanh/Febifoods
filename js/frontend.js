@@ -208,3 +208,32 @@ function initProductSlider() {
     item.style.zIndex = Math.floor(100 - distance);
   });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll("section, footer");
+  if (!sections.length) return;
+
+  sections.forEach(sec => sec.classList.add("hidden-section"));
+
+  let revealIndex = 0;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+
+        el.style.transitionDelay = `${revealIndex * 50}ms`;
+        revealIndex++;
+
+        el.classList.add("show-up");
+
+        observer.unobserve(el); 
+      }
+    });
+  }, {
+    threshold: 0, 
+    rootMargin: "0px 0px -20% 0px"
+  });
+
+  sections.forEach(sec => observer.observe(sec));
+});
