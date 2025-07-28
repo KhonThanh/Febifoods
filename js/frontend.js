@@ -108,7 +108,7 @@ $(document).ready(function () {
 // js connect
 $(document).ready(function () {
   $('.connection-content__item').on('click', function (e) {
-    e.preventDefault(); 
+    e.preventDefault();
     $('.connection-content__item').removeClass('active');
     $(this).addClass('active');
   });
@@ -156,4 +156,55 @@ function toggleBg() {
     section.classList.add('bg-white');
     title.classList.remove('title-color');
   }
+}
+
+// js slide product
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new MutationObserver(() => {
+    const items = document.querySelectorAll(".all-product__item");
+    if (items.length > 0) {
+      initProductSlider();   // chạy scale
+      observer.disconnect(); // ngừng quan sát để tránh chạy lại
+    }
+  });
+
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
+});
+
+// Hàm scale
+function initProductSlider() {
+  const items = document.querySelectorAll(".all-product__item");
+  if (items.length === 0) return;
+
+  const total = items.length;
+  const isEven = total % 2 === 0;
+  const centerIndex = isEven ? total / 2 - 0.5 : Math.floor(total / 2);
+
+  items.forEach((item, index) => {
+    let distance = Math.abs(index - centerIndex);
+    let scale;
+
+    if (isEven) {
+      if (index === centerIndex || index === centerIndex + 1) {
+        scale = 1;
+        item.classList.add("center");
+      } else {
+        scale = 1 - 0.1 * distance;
+      }
+    } else {
+      if (index === centerIndex) {
+        scale = 1;
+        item.classList.add("center");
+      } else {
+        scale = 1 - 0.1 * distance;
+      }
+    }
+
+    if (scale < 0.5) scale = 0.5;
+    item.style.transform = `scale(${scale})`;
+    item.style.zIndex = Math.floor(100 - distance);
+  });
 }
