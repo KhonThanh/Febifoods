@@ -70,6 +70,15 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'Inter';
+  src: local('Inter'), local('Inter-Regular'),
+       url('../../font/Inter_18pt-Regular.ttf') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 @font-face {
   font-family: 'Oooh Baby';
   src: url('../../font/OoohBaby-Regular.ttf') format('woff2');

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEBIFOODS</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <header class="bg-white">
+        <div class="container-f flex center-hor header-top" data-include="./component/header-top.html"></div>
+        <div class="container-f flex center-hor header-bottom">
+            <div class="container-l flex center-ver header-container">
+                <div class="header-content flex">
+                    <a class="flex center-hor  nav-active" href="./index.html">
+                        <img src="./img/icon/home.png" alt="">
+                    </a>
+                    <a class="flex center-hor" href="./story.html">câu chuyện</a>
+                    <a class="flex center-hor" href="./story.html">lĩnh vực hoạt động</a>
+                    <a class="flex center-hor " href="./product.html">sản phẩm</a>
+                    <a class="flex center-hor" href="./sustainabledevelopment.html">phát triễn bền vững</a>
+                    <a class="flex center-hor" href="#">quan hệ cổ đông</a>
+                    <a class="flex center-hor" href="./contact.html">liên hệ</a>
+                    <a class="flex center-hor" href="#">tin tức</a>
+                    <div class="flex center-ver search-box">
+                        <input type="text" placeholder="Search..." />
+                        <button type="submit">
+                            <img src="./img/icon/search-line.png" alt="Search" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="menumobile" class="container-f flex bg-green" data-include="./component/menumobile.html"></div>
+    </header>
+    <main class="container-f flex flex-col center-hor">
+        <section class="container-f main-banner ">
+            <div class="homepageslide">
+                <a title="banner trang chủ" href="#">
+                    <picture>
+                        <source srcset="./img/banner/background-desktop.webp" media="(min-width: 769px)"
+                            type="image/webp">
+                        <source srcset="./img/banner/background-table.webp" media="(min-width: 426px)"
+                            type="image/webp">
+                        <source srcset="./img/banner/bg-mobile.webp" media="(max-width: 425px)" type="image/webp">
+                        <img src="./img/banner/background-desktop.webp" alt="ảnh mô tả" loading="lazy">
+                    </picture>
+                </a>
+                <a title="banner trang chủ" href="#">
+                    <picture>
+                        <source srcset="./img/banner/background-desktop.webp" media="(min-width: 769px)"
+                            type="image/webp">
+                        <source srcset="./img/banner/background-table.webp" media="(min-width: 426px)"
+                            type="image/webp">
+                        <source srcset="./img/banner/bg-mobile.webp" media="(max-width: 425px)" type="image/webp">
+                        <img src="./img/banner/background-desktop.webp" alt="ảnh mô tả" loading="lazy">
+                    </picture>
+                </a>
+                <a title="banner trang chủ" href="#">
+                    <picture>
+                        <source srcset="./img/banner/background-desktop.webp" media="(min-width: 769px)"
+                            type="image/webp">
+                        <source srcset="./img/banner/background-table.webp" media="(min-width: 426px)"
+                            type="image/webp">
+                        <source srcset="./img/banner/bg-mobile.webp" media="(max-width: 425px)" type="image/webp">
+                        <img src="./img/banner/background-desktop.webp" alt="ảnh mô tả" loading="lazy">
+                    </picture>
+                </a>
+            </div>
+        </section>
+        <section class="container-f main-banner">
+            <div class="dot-slide"></div>
+        </section>
+        
+    </main>
+    <footer class="container-f bg-green center-ver" data-include="./component/footer.html"></footer>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="./js/frontend.js"></script>
+</body>
+
+</html>

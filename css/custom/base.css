@@ -23,6 +23,10 @@ main{
   caret-color: transparent;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 header{
   position: relative;
   z-index: 1;
