@@ -707,7 +707,9 @@
 }
 
 .Business-img{
-    padding-bottom: 30px;
+    padding-bottom: 30px; 
+    width: 100%;
+    height: auto;
 }
 
 .Business-container h2,
