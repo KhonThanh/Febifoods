@@ -6,6 +6,7 @@
 
 .flex { display: flex; }
 .flex-col {flex-direction: column;}
+.flex-wrap{flex-wrap: wrap;}
 .center-hor{justify-content: center;}
 .center-ver{align-items: center;}
 

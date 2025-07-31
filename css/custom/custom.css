@@ -117,7 +117,7 @@
     min-width: 80px;
     padding: 5px 10px;
     border: 50px;
-    font-size: calc(var(--font-size-base) - 2px);
+    font-size: var(--font-size-base);
     font-weight: 600;
     text-transform: uppercase;
     color: var(--primary-color);
@@ -316,6 +316,7 @@
     padding: 0px 10px;
     text-align: center;
     cursor: pointer;
+    text-transform: capitalize;
 }
 
 .responsibility-button .bg-green {
@@ -560,102 +561,111 @@
     background-color: var(--orange-color);
 }
 
-.story-title {
-    margin-top: 116px;
-    margin-bottom: 90px;
-    font-size: calc(var(--font-size-base) + 34px);
-    text-align: center;
+.intro-custom__container {}
+
+.intro-custom__container p,
+.intro-custom__container h2,
+.intro-custom__container h1 {
+    font-weight: 700px;
 }
 
-.story-sub-title__style {
-    font-family: var(--font-ooohbaby);
-    font-size: calc(var(--font-size-base) + 48px);
+.intro-custom__container h2 {
+    color: var(--orange-color);
 }
 
-.story-slogan__title {
-    font-size: calc(var(--font-size-base) + 32px);
-
-}
-
-.story-slogan__sub {
-    font-size: calc(var(--font-size-base) + 10px);
-    font-style: italic;
-}
-
-.story-title,
-.story-slogan__title {
-    font-weight: bold;
+.intro-custom__container h1 {
+    color: var(--primary-color);
+    margin-bottom: 67px;
     text-transform: uppercase;
 }
 
-.story-title,
-.story-slogan__title,
-.story-slogan__sub {
-    font-family: var(--font-inter);
+.intro-custom__container h2,
+.intro-custom__container h1 {
+    font-size: calc(var(--font-size-base) + 32px);
 }
 
-.story-title,
-.story-sub-title__style,
-.story-slogan__title,
-.story-slogan__sub {
+.intro-custom__container h1 span {
+    font-size: calc(var(--font-size-base) + 80px);
+    position: relative;
+    z-index: 2;
+    margin-left: 30px;
+}
+
+.intro-custom__container h1 span::after {
+    content: "";
+    z-index: -1;
+    width: 100%;
+    height: 323.46px;
+    background-image: url(../../img/intro/rice.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -52px;
+    left: -23px;
+}
+
+.intro-custom__container p {
+    font-size: calc(var(--font-size-base) * 2);
+    color: var(--black-color);
+    margin-bottom: 36px;
+}
+
+.all-btn {
+    text-transform: uppercase;
+    max-width: 224px;
+    width: 100%;
+    border-radius: 50px;
+    padding: 18px 30px;
+    background-color: var(--orange-color);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    justify-content: space-between;
+    font-size: calc(var(--font-size-base) + 8px);
     color: var(--primary-color);
 }
 
-.story-sub-title__style,
-.story-slogan__title,
-.story-slogan__sub {
+.intro-custom__content,
+.intro-custom__image {
+    width: 50%;
+    flex: 0 0 auto;
+}
+
+.intro-custom__image>img{
     width: 100%;
-    padding: 0px 90px;
+    height: auto;
 }
 
-.comment-container {
-    margin-top: 49px;
-    margin-bottom: 20px;
-    gap: 58px;
-}
-
-.comment-item {
-    padding: 49px 45px 23px 82px;
-    border: 1px solid var(--primary-color);
+.position-two,
+.position-one {
     position: relative;
-    display: flex;
-    align-items: end;
-    flex-direction: column;
 }
 
-.comment-item p {
-    margin-bottom: 26px;
-}
-
-.comment-item::after {
-    content: "";
-    display: inline-block;
-    width: 47.73px;
-    height: 32.92px;
-    background-image: url(../../img/icon/chaticon.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    left: 27px;
+.product-fall,
+.rice-fall {
     position: absolute;
-    top: 24px;
 }
 
-.story-general__content strong {
-    font-family: var(--font-name);
-    font-weight: normal;
-    margin-bottom: 25px;
+.product-fall{
+    top: -92%;
 }
 
-.story-general__content em {
-    font-style: italic;
-    font-family: var(--font-inter);
-    margin-bottom: 80px;
+.rice-fall {
+    width: 134% !important; 
+    height: auto;
+    top: -109%;
+    left: -62%;
 }
 
-.story-general__content strong,
-.story-general__content em {
-    font-size: calc(var(--font-size-base) + 8px);
+
+.padding-larger {
+    padding: 246px 0px 160px;
+}
+
+.padding-medium {
+    padding: 130px 0px;
+}
+
+.padding-small {
+    padding: 116px 0px 73px 0px;
 }
 
 .Business-container h2,
@@ -698,7 +708,7 @@
     font-size: calc(var(--font-size-base) * 2);
 }
 
-.Business-container p{
+.Business-container p {
     padding-bottom: 24px;
 }
 
@@ -706,8 +716,8 @@
     padding-bottom: 75px;
 }
 
-.Business-img{
-    padding-bottom: 30px; 
+.Business-img {
+    padding-bottom: 30px;
     width: 100%;
     height: auto;
 }
@@ -731,6 +741,7 @@
 
 .core-values__content {
     padding-bottom: 76px;
+    flex-wrap: wrap;
 }
 
 .core-values__item {
@@ -761,16 +772,6 @@
 
 .tab-content.show {
     display: block;
-}
-
-.general-content {
-    position: relative;
-}
-
-.rice-down {
-    position: absolute;
-    left: 32%;
-    top: 38%;
 }
 
 /* css contact */
@@ -1055,7 +1056,7 @@
     border-right: 1px solid var(--white-color);
 }
 
-/* css comnunicate */
+/* css communicate */
 
 .community-container h1 {
     margin: 18px 0px 125px;

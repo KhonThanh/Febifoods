@@ -1,8 +1,9 @@
 // js phần component
 document.addEventListener("DOMContentLoaded", () => {
   const includeElements = document.querySelectorAll("[data-include]");
+  let loadedCount = 0;
 
-  includeElements.forEach(async el => {
+  includeElements.forEach(async (el) => {
     const file = el.getAttribute("data-include");
     if (!file) return;
 
@@ -16,7 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (typeof initResponsive === "function") {
         initResponsive(el);
       }
-
     } catch (err) {
       el.innerHTML = `
         <div style="color: red; padding: 1rem; background: #fff0f0; border: 1px solid red;">
@@ -24,12 +24,17 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       `;
       console.error("Lỗi khi fetch:", file, err);
+    } finally {
+      loadedCount++;
+      if (loadedCount === includeElements.length) {
+        document.dispatchEvent(new Event("includesLoaded")); // 🔑 bắn sự kiện
+      }
     }
   });
 });
 
 // js thêm width và height vào bất kì thẻ img
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("includesLoaded", () => {
   const images = document.querySelectorAll("img");
 
   images.forEach((img) => {
@@ -39,9 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (img.complete) {
       setDimensions(img);
     } else {
-      img.addEventListener("load", function () {
-        setDimensions(img);
-      });
+      img.addEventListener("load", () => setDimensions(img));
     }
   });
 
@@ -163,8 +166,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const observer = new MutationObserver(() => {
     const items = document.querySelectorAll(".all-product__item");
     if (items.length > 0) {
-      initProductSlider();   // chạy scale
-      observer.disconnect(); // ngừng quan sát để tránh chạy lại
+      initProductSlider();
+      observer.disconnect();
     }
   });
 
@@ -227,11 +230,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         el.classList.add("show-up");
 
-        observer.unobserve(el); 
+        observer.unobserve(el);
       }
     });
   }, {
-    threshold: 0, 
+    threshold: 0,
     rootMargin: "0px 0px -20% 0px"
   });
 
