@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEBIFOODS</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <header class="bg-white">
+        <div class="container-f flex center-hor header-top" data-include="./component/header-top.html"></div>
+        <div class="container-f flex center-hor header-bottom">
+            <div class="container-l flex center-ver header-container">
+                <div class="header-content flex">
+                    <a class="flex center-hor  " href="./index.html">
+                        <img src="./img/icon/home.png" alt="">
+                    </a>
+                    <a class="flex center-hor" href="./story.html">câu chuyện</a>
+                    <a class="flex center-hor" href="./fieldofactivity.html">lĩnh vực hoạt động</a>
+                    <a class="flex center-hor " href="./product.html">sản phẩm</a>
+                    <a class="flex center-hor" href="./sustainabledevelopment.html">phát triễn bền vững</a>
+                    <a class="flex center-hor" href="./community.html">quan hệ cổ đông</a>
+                    <a class="flex center-hor" href="./contact.html">liên hệ</a>
+                    <a class="flex center-hor nav-active" href="./news.html">tin tức</a>
+                    <div class="flex center-ver search-box">
+                        <input type="text" placeholder="Search..." />
+                        <button type="submit">
+                            <img src="./img/icon/search-line.png" alt="Search" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="menumobile" class="container-f flex bg-green" data-include="./component/menumobile.html"></div>
+    </header>
+    <main class="container-f flex flex-col center-hor bg-white">
+        <section class="container-f bg-white">
+            <div class="container-l flex nav-bar">
+                <a href="#" class="nav-bar__item">trang chủ</a>
+                <a href="#" class="nav-bar__item">tin tức</a>
+            </div>
+        </section>
+        <section class="container-f top-news__container">
+            <div class="container-l flex news-grid top-news">
+                <article class="top-news__item rectangle">
+                    <img src="./img/new/new 1.png" alt="Trồng lúa giảm phát thải">
+                    <div class="top-news__content">
+                        <h2 class="news-title">Trồng lúa giảm phát thải gắn với tăng trưởng xanh</h2>
+                        <p>Sau hơn một năm từ khi Đề án “Phát triển bền vững một triệu ha chuyên canh lúa chất lượng cao
+                            và phát thải thấp gắn với tăng trưởng xanh vùng Đồng bằng sông Cửu Long đến năm 2030”</p>
+                    </div>
+                </article>
+                <article class="top-news__item square">
+                    <img src="./img/new/new 2.png" alt="Bữa cơm gạo sạch">
+                    <div class="top-news__content">
+                        <h3 class="news-title">Đưa hạt gạo Việt Nam từ
+                            bữa cơm quê đến bàn ăn thế giới</h3>
+                        <p>Ngày 4/4, tại thành phố Cần Thơ, hội thảo “Định vị hạt gạo Việt Nam trong kỷ nguyên mới” </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="container-f top-news__container">
+            <div class="container-l flex news-grid top-news">
+                <article class="top-news__item square">
+                    <img src="./img/new/new 3.png" alt="Bữa cơm gạo sạch">
+                    <div class="top-news__content">
+                        <h3 class="news-title">Độc đáo tranh gạo ở Sóc Sơn</h3>
+                        <p>Với nguyên liệu chính là gạo, chị Nguyễn Thị Vân, xã Đông Xuân, huyện Sóc Sơn</p>
+                    </div>
+                </article>
+                <article class="top-news__item .rectangle">
+                    <img src="./img/new/new 4.png" alt="Trồng lúa giảm phát thải">
+                    <div class="top-news__content">
+                        <h2 class="news-title">Tổ chức Festival lúa gạo mang tầm quốc tế</h2>
+                        <p>Sau hơn một năm từ khi Đề án “Phát triển bền vững một triệu ha chuyên canh lúa chất lượng cao
+                            và phát thải thấp gắn với tăng trưởng xanh vùng Đồng bằng sông Cửu Long đến năm 2030”</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="container-f">
+            <div class="container-l">
+                <article class="news-card highlight">
+                    <img src="img/nong-dan.jpg" alt="Nông dân trồng lúa">
+                    <h2 class="news-title">Trồng Lúa Giảm Phát Thải Gắn Với Tăng Trưởng Xanh</h2>
+                    <p class="news-desc">Nội dung tóm tắt bài viết...</p>
+                </article>
+                <div class="news-column side-articles">
+                    <article class="news-card small">
+                        <img src="img/gao1.jpg" alt="Gạo sạch">
+                        <h4 class="news-title">Trồng lúa giảm phát thải...</h4>
+                    </article>
+                    <article class="news-card small">
+                        <img src="img/gao2.jpg" alt="Gạo đóng gói">
+                        <h4 class="news-title">Trồng lúa giảm phát thải...</h4>
+                    </article>
+                    <article class="news-card small">
+                        <img src="img/gao3.jpg" alt="Hạt gạo">
+                        <h4 class="news-title">Trồng lúa giảm phát thải...</h4>
+                    </article>
+                </div>
+                <div class="ads-banner">
+                    <img src="" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="container-f">
+            <div class="container-l">
+                <article class="news-card highlight">
+                    <img src="img/nong-dan.jpg" alt="Nông dân trồng lúa">
+                    <h2 class="news-title">Trồng Lúa Giảm Phát Thải Gắn Với Tăng Trưởng Xanh</h2>
+                    <p class="news-desc">Nội dung tóm tắt bài viết...</p>
+                </article>
+                <di class="ads-banner">
+                    <img src="" alt="">
+                </di class="top-news__content" <div>
+                v>
+                <p></p>
+            </div>
+            </div>
+        </section>
+    </main>
+    <footer class="container-f bg-green center-ver" data-include="./component/footer.html"></footer>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="./js/frontend.js"></script>
+</body>
+
+</html>

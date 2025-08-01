@@ -194,6 +194,64 @@
         background-position: left;
     }
 
+    body .all-product__container .product__container .product-item {
+        width: calc(100% / 3 - 20px) !important;
+    }
+
+    .story-tab_container {
+        padding: 6px 12px;
+    }
+
+}
+
+@media screen and (max-width: 884px) {
+    .display-mobile {
+        flex-direction: column;
+    }
+
+    .community-dropdown {
+        display: block;
+    }
+
+    .community-select {
+        display: none;
+    }
+
+    .community-dropdown {
+        appearance: none;
+        background-color: var(--white-color);
+        color: var(--black-color);
+        font-size: var(--font-size-base);
+        padding: 10px 30px;
+        margin: 20px 0;
+        border: none;
+        border-radius: 50px;
+        width: 100%;
+        cursor: pointer;
+        text-transform: capitalize;
+        font-weight: 600;
+
+    }
+
+    .community-list {
+        position: relative;
+    }
+
+    /* Thêm icon mũi tên dropdown */
+    .community-list::after {
+        content: "";
+        position: absolute;
+        right: 20px;
+        aspect-ratio: 71 / 79;
+        width: 12px;
+        height: auto;
+        top: 57%;
+        transform: translateY(-50%);
+        background-image: url(../../img/icon/Vector-down.png);
+        pointer-events: none;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
 }
 
 @media screen and (max-width:768px) {
@@ -203,6 +261,11 @@
 
     .core-values__item:not(:last-child) {
         border-right: unset;
+    }
+
+    .field-tab,
+    .story-tab {
+        font-size: var(--font-size-base);
     }
 
     .rice-item {
@@ -236,6 +299,14 @@
         width: 50%;
         max-height: 100px;
         height: auto;
+    }
+
+    body .all-product__container .product__container .product-item {
+        width: calc(100% / 2 - 20px) !important;
+    }
+
+    .product-button img {
+        margin: 0px 5px;
     }
 }
 
@@ -318,6 +389,53 @@
         border-right: 0px solid var(--primary-color);
     }
 
+    .story-tab_container {
+        padding: 6px 6px;
+    }
+
+
+    .field-tab,
+    .story-tab {
+        padding: 7px 10px;
+    }
+
+    .field-tab,
+    .story-tab {
+        padding: 7px 10px;
+    }
+
+    .field-of-operation__content,
+    .field-of-operation__link {
+        padding: 30px 0px;
+    }
+
+    .story-tab_container {
+        margin-bottom: 30px !important;
+    }
+
+    .field-of-operation__toptitle,
+    .field-of-operation__title {
+        margin-bottom: 45px;
+    }
+
+    .sustainable-container {
+        margin-top: 30px !important;
+    }
+
+    .tab__content li {
+        flex-grow: 1;
+        padding-left: 20px;
+        justify-content: space-between;
+        gap: 58px;
+    }
+
+    .tab__content {
+        padding-right: 26px;
+    }
+
+    .list-time p {
+        font-size: var(--font-size-base);
+    }
 }
 
 @media screen and (max-width: 551px) {
