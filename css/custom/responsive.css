@@ -115,6 +115,8 @@
 
     .creation-process__item {
         flex-direction: row !important;
+        width: 80vw;
+        justify-content: space-between;
     }
 
     .line-center {
@@ -122,9 +124,17 @@
         height: 100%;
     }
 
-    .creation-process__item img:nth-child(2){
-        margin: 0px 58px;
+    .creation-process__item img:nth-child(2) {
+        margin: 0px ;
     }
+
+    .creation-process__img{
+        width: 50%;
+        max-height: 100px;
+        height: auto;
+    }
+
+    
 
 }
 
@@ -172,6 +182,10 @@
 
     :root {
         --font-size-base: 12px;
+    }
+
+    .creation-process__item {
+        width: 100vw;
     }
 
     .intro-custom__container h2,

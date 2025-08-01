@@ -22,12 +22,12 @@
                         <img src="./img/icon/home.png" alt="">
                     </a>
                     <a class="flex center-hor" href="./story.html">câu chuyện</a>
-                    <a class="flex center-hor" href="./story.html">lĩnh vực hoạt động</a>
+                    <a class="flex center-hor" href="./fieldofactivity.html">lĩnh vực hoạt động</a>
                     <a class="flex center-hor " href="./product.html">sản phẩm</a>
                     <a class="flex center-hor" href="./sustainabledevelopment.html">phát triễn bền vững</a>
-                    <a class="flex center-hor nav-active" href="#">quan hệ cổ đông</a>
+                    <a class="flex center-hor nav-active" href="./community.html">quan hệ cổ đông</a>
                     <a class="flex center-hor" href="./contact.html">liên hệ</a>
-                    <a class="flex center-hor" href="#">tin tức</a>
+                    <a class="flex center-hor" href="./news.html">tin tức</a>
                     <div class="flex center-ver search-box">
                         <input type="text" placeholder="Search..." />
                         <button type="submit">
@@ -40,192 +40,210 @@
         <div id="menumobile" class="container-f flex bg-green" data-include="./component/menumobile.html"></div>
     </header>
     <main class="container-f flex flex-col center-hor">
-        <section class="container-f flex flex-col center-ver community-container">
-            <h1>Quan hệ cổ đông</h1>
+        <section class="container-f bg-white">
+            <div class="container-l flex nav-bar">
+                <a href="#" class="nav-bar__item">trang chủ</a>
+                <a href="#" class="nav-bar__item">quan hệ cổ đông</a>
+            </div>
         </section>
-        <section class="container-f flex flex-col center-ver community-container">
-            <h2 class="container-l">Công bố thông tin</h2>
-            <div class="container-f bg-green ">
-                <div class="container-l flex">
-                    <div class="community-list flex center-hor center-ver">
-                        <ul class="flex flex-col center-ver">
-                            <li>thông tin tài chính</li>
-                            <li class="active">điều lệ & quy chế</li>
-                            <li>báo cáo tài chính</li>
-                            <li>công bố thông tin</li>
-                            <li>thông báo cổ đông</li>
-                        </ul>
-                    </div>
-                    <div class="community-tap flex flex-col bg-white tap__container">
-                        <div class="flex center-hor list-time">
-                            <a class="active">
-                                <p>2018</p>
-                            </a>
-                            <a>
-                                <p>2019</p>
-                            </a>
-                            <a>
-                                <p>2020</p>
-                            </a>
-                            <a>
-                                <p>2021</p>
-                            </a>
-                            <a>
-                                <p>2022</p>
-                            </a>
-                            <a>
-                                <p>2023</p>
-                            </a>
-                            <a>
-                                <p>2024</p>
-                            </a>
-                        </div>
-                        <div class="tab__content">
-                            <ul class="flex flex-col ">
-                                <li class="flex center-ver tab__item"><img src="./img/icon/PDF_icon.png" alt="">
-                                    <p>Báo cáo kết quả kinh doanh quý 4.2018</p><a href="#"><img
-                                            src="./img/icon/pdf-down.png" alt=""></a>
-                                </li>
-                                <li class="flex center-ver tab__item"><img src="./img/icon/PDF_icon.png" alt="">
-                                    <p>Báo cáo kết quả kinh doanh quý 4.2018</p><a href="#"><img
-                                            src="./img/icon/pdf-down.png" alt=""></a>
-                                </li>
-                                <li class="flex center-ver tab__item"><img src="./img/icon/PDF_icon.png" alt="">
-                                    <p>Báo cáo kết quả kinh doanh quý 4.2018</p><a href="#"><img
-                                            src="./img/icon/pdf-down.png" alt=""></a>
-                                </li>
-                                <li class="flex center-ver tab__item"><img src="./img/icon/PDF_icon.png" alt="">
-                                    <p>Báo cáo kết quả kinh doanh quý 4.2018</p><a href="#"><img
-                                            src="./img/icon/pdf-down.png" alt=""></a>
-                                </li>
-                                <li class="flex center-ver tab__item"><img src="./img/icon/PDF_icon.png" alt="">
-                                    <p>Báo cáo kết quả kinh doanh quý 4.2018</p><a href="#"><img
-                                            src="./img/icon/pdf-down.png" alt=""></a>
-                                </li>
-                                <li class="flex center-ver tab__item"><img src="./img/icon/PDF_icon.png" alt="">
-                                    <p>Báo cáo kết quả kinh doanh quý 4.2018</p><a href="#"><img
-                                            src="./img/icon/pdf-down.png" alt=""></a>
-                                </li>
-                                <li class="flex center-ver tab__item"><img src="./img/icon/PDF_icon.png" alt="">
-                                    <p>Báo cáo kết quả kinh doanh quý 4.2018</p><a href="#"><img
-                                            src="./img/icon/pdf-down.png" alt=""></a>
-                                </li>
-                                <li class="flex center-ver tab__item"><img src="./img/icon/PDF_icon.png" alt="">
-                                    <p>Báo cáo kết quả kinh doanh quý 4.2018</p><a href="#"><img
-                                            src="./img/icon/pdf-down.png" alt=""></a>
-                                </li>
-                                <li class="flex center-ver tab__item"><img src="./img/icon/PDF_icon.png" alt="">
-                                    <p>Báo cáo kết quả kinh doanh quý 4.2018</p><a href="#"><img
-                                            src="./img/icon/pdf-down.png" alt=""></a>
-                                </li>
+        <section class="container-f flex center-hor bg-white">
+            <select class="container-l story-tab_mobile">
+                <option>Công bố thông tin</option>
+                <option>Quản trị thông tin</option>
+            </select>
+            <div class="container-l story-tab_container flex center-ver">
+                <button data-target="tab1" class="flex center-hor center-ver active story-tab">Công bố thông
+                    tin</button>
+                <button data-target="tab2" class="flex center-hor center-ver story-tab">quản trị công ty</button>
+            </div>
+        </section>
+        <section id="tab1" class="container-f tab-content show">
+            <div class="container-f flex flex-col center-ver community-container  bg-white">
+                <h2 class="container-l">Công bố thông tin</h2>
+                <div class="container-f bg-green ">
+                    <div class="container-l flex">
+                        <div class="community-list flex center-hor center-ver">
+                            <ul class="flex flex-col center-ver">
+                                <li>thông tin tài chính</li>
+                                <li class="active">điều lệ & quy chế</li>
+                                <li>báo cáo tài chính</li>
+                                <li>công bố thông tin</li>
+                                <li>thông báo cổ đông</li>
                             </ul>
                         </div>
-                        <div class="flex center-ver center-hor pagination-container">
-                            <a href="#" title="arrow next and prew page" class="btn flex center-hor"><img src="./img/icon/pre-page.png" alt=""></a>
-                            <div class="flex center-hor pagination-content"> 
-                                <a class="flex center-hor center-ver" href="#">1 </a>
-                                <a class="flex center-hor center-ver" href="#">2 </a>
-                                <a class="flex center-hor center-ver" href="#">3 </a>
+                        <div class="community-tap flex flex-col bg-white tap__container">
+                            <div class="flex center-hor list-time">
+                                <a class="active">
+                                    <p>2018</p>
+                                </a>
+                                <a>
+                                    <p>2019</p>
+                                </a>
+                                <a>
+                                    <p>2020</p>
+                                </a>
+                                <a>
+                                    <p>2021</p>
+                                </a>
+                                <a>
+                                    <p>2022</p>
+                                </a>
+                                <a>
+                                    <p>2023</p>
+                                </a>
+                                <a>
+                                    <p>2024</p>
+                                </a>
                             </div>
-                            <a href="#" title="arrow next and prew page" class="btn flex center-hor"><img src="./img/icon/nex-page.png" alt=""></a>
+                            <div class="tab__content">
+                                <ul class="flex flex-col ">
+                                    <li class="flex center-ver tab__item"><img src="./img/icon/PDF_icon.png" alt="">
+                                        <p>Báo cáo kết quả kinh doanh quý 4.2018</p><a href="#"><img
+                                                src="./img/icon/pdf-down.png" alt=""></a>
+                                    </li>
+                                    <li class="flex center-ver tab__item"><img src="./img/icon/PDF_icon.png" alt="">
+                                        <p>Báo cáo kết quả kinh doanh quý 4.2018</p><a href="#"><img
+                                                src="./img/icon/pdf-down.png" alt=""></a>
+                                    </li>
+                                    <li class="flex center-ver tab__item"><img src="./img/icon/PDF_icon.png" alt="">
+                                        <p>Báo cáo kết quả kinh doanh quý 4.2018</p><a href="#"><img
+                                                src="./img/icon/pdf-down.png" alt=""></a>
+                                    </li>
+                                    <li class="flex center-ver tab__item"><img src="./img/icon/PDF_icon.png" alt="">
+                                        <p>Báo cáo kết quả kinh doanh quý 4.2018</p><a href="#"><img
+                                                src="./img/icon/pdf-down.png" alt=""></a>
+                                    </li>
+                                    <li class="flex center-ver tab__item"><img src="./img/icon/PDF_icon.png" alt="">
+                                        <p>Báo cáo kết quả kinh doanh quý 4.2018</p><a href="#"><img
+                                                src="./img/icon/pdf-down.png" alt=""></a>
+                                    </li>
+                                    <li class="flex center-ver tab__item"><img src="./img/icon/PDF_icon.png" alt="">
+                                        <p>Báo cáo kết quả kinh doanh quý 4.2018</p><a href="#"><img
+                                                src="./img/icon/pdf-down.png" alt=""></a>
+                                    </li>
+                                    <li class="flex center-ver tab__item"><img src="./img/icon/PDF_icon.png" alt="">
+                                        <p>Báo cáo kết quả kinh doanh quý 4.2018</p><a href="#"><img
+                                                src="./img/icon/pdf-down.png" alt=""></a>
+                                    </li>
+                                    <li class="flex center-ver tab__item"><img src="./img/icon/PDF_icon.png" alt="">
+                                        <p>Báo cáo kết quả kinh doanh quý 4.2018</p><a href="#"><img
+                                                src="./img/icon/pdf-down.png" alt=""></a>
+                                    </li>
+                                    <li class="flex center-ver tab__item"><img src="./img/icon/PDF_icon.png" alt="">
+                                        <p>Báo cáo kết quả kinh doanh quý 4.2018</p><a href="#"><img
+                                                src="./img/icon/pdf-down.png" alt=""></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="flex center-ver center-hor pagination-container">
+                                <a href="#" title="arrow next and prew page" class="btn flex center-hor"><img
+                                        src="./img/icon/pre-page.png" alt=""></a>
+                                <div class="flex center-hor pagination-content">
+                                    <a class="flex center-hor center-ver" href="#">1 </a>
+                                    <a class="flex center-hor center-ver" href="#">2 </a>
+                                    <a class="flex center-hor center-ver" href="#">3 </a>
+                                </div>
+                                <a href="#" title="arrow next and prew page" class="btn flex center-hor"><img
+                                        src="./img/icon/nex-page.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-f flex flex-col center-ver community-container">
+                <h2 class="container-l">Công bố thông tin</h2>
+                <div class="container-f bg-green ">
+                    <div class="container-l flex">
+                        <div class="community-list flex center-hor center-ver">
+                            <ul class="flex flex-col center-ver">
+                                <li>thông tin tài chính</li>
+                                <li class="active">điều lệ & quy chế</li>
+                                <li>báo cáo tài chính</li>
+                                <li>công bố thông tin</li>
+                                <li>thông báo cổ đông</li>
+                            </ul>
+                        </div>
+                        <div class="community-tap flex flex-col bg-white tap__container">
+                            <div class="flex center-hor list-time">
+                                <a class="active">
+                                    <p>2018</p>
+                                </a>
+                                <a>
+                                    <p>2019</p>
+                                </a>
+                                <a>
+                                    <p>2020</p>
+                                </a>
+                                <a>
+                                    <p>2021</p>
+                                </a>
+                                <a>
+                                    <p>2022</p>
+                                </a>
+                                <a>
+                                    <p>2023</p>
+                                </a>
+                                <a>
+                                    <p>2024</p>
+                                </a>
+                            </div>
+                            <div class="tab__content">
+                                <ul class="flex flex-col ">
+                                    <li class="flex center-ver tab__item"><img src="./img/icon/PDF_icon.png" alt="">
+                                        <p>Báo cáo kết quả kinh doanh quý 4.2018</p><a href="#"><img
+                                                src="./img/icon/pdf-down.png" alt=""></a>
+                                    </li>
+                                    <li class="flex center-ver tab__item"><img src="./img/icon/PDF_icon.png" alt="">
+                                        <p>Báo cáo kết quả kinh doanh quý 4.2018</p><a href="#"><img
+                                                src="./img/icon/pdf-down.png" alt=""></a>
+                                    </li>
+                                    <li class="flex center-ver tab__item"><img src="./img/icon/PDF_icon.png" alt="">
+                                        <p>Báo cáo kết quả kinh doanh quý 4.2018</p><a href="#"><img
+                                                src="./img/icon/pdf-down.png" alt=""></a>
+                                    </li>
+                                    <li class="flex center-ver tab__item"><img src="./img/icon/PDF_icon.png" alt="">
+                                        <p>Báo cáo kết quả kinh doanh quý 4.2018</p><a href="#"><img
+                                                src="./img/icon/pdf-down.png" alt=""></a>
+                                    </li>
+                                    <li class="flex center-ver tab__item"><img src="./img/icon/PDF_icon.png" alt="">
+                                        <p>Báo cáo kết quả kinh doanh quý 4.2018</p><a href="#"><img
+                                                src="./img/icon/pdf-down.png" alt=""></a>
+                                    </li>
+                                    <li class="flex center-ver tab__item"><img src="./img/icon/PDF_icon.png" alt="">
+                                        <p>Báo cáo kết quả kinh doanh quý 4.2018</p><a href="#"><img
+                                                src="./img/icon/pdf-down.png" alt=""></a>
+                                    </li>
+                                    <li class="flex center-ver tab__item"><img src="./img/icon/PDF_icon.png" alt="">
+                                        <p>Báo cáo kết quả kinh doanh quý 4.2018</p><a href="#"><img
+                                                src="./img/icon/pdf-down.png" alt=""></a>
+                                    </li>
+                                    <li class="flex center-ver tab__item"><img src="./img/icon/PDF_icon.png" alt="">
+                                        <p>Báo cáo kết quả kinh doanh quý 4.2018</p><a href="#"><img
+                                                src="./img/icon/pdf-down.png" alt=""></a>
+                                    </li>
+                                    <li class="flex center-ver tab__item"><img src="./img/icon/PDF_icon.png" alt="">
+                                        <p>Báo cáo kết quả kinh doanh quý 4.2018</p><a href="#"><img
+                                                src="./img/icon/pdf-down.png" alt=""></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="flex center-ver center-hor pagination-container">
+                                <a href="#" title="arrow next and prew page" class="btn flex center-hor"><img
+                                        src="./img/icon/pre-page.png" alt=""></a>
+                                <div class="flex center-hor pagination-content">
+                                    <a class="flex center-hor center-ver" href="#">1 </a>
+                                    <a class="flex center-hor center-ver" href="#">2 </a>
+                                    <a class="flex center-hor center-ver" href="#">3 </a>
+                                </div>
+                                <a href="#" title="arrow next and prew page" class="btn flex center-hor"><img
+                                        src="./img/icon/nex-page.png" alt=""></a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-         <section class="container-f flex flex-col center-ver community-container">
-            <h2 class="container-l">Công bố thông tin</h2>
-            <div class="container-f bg-green ">
-                <div class="container-l flex">
-                    <div class="community-list flex center-hor center-ver">
-                        <ul class="flex flex-col center-ver">
-                            <li>thông tin tài chính</li>
-                            <li class="active">điều lệ & quy chế</li>
-                            <li>báo cáo tài chính</li>
-                            <li>công bố thông tin</li>
-                            <li>thông báo cổ đông</li>
-                        </ul>
-                    </div>
-                    <div class="community-tap flex flex-col bg-white tap__container">
-                        <div class="flex center-hor list-time">
-                            <a class="active">
-                                <p>2018</p>
-                            </a>
-                            <a>
-                                <p>2019</p>
-                            </a>
-                            <a>
-                                <p>2020</p>
-                            </a>
-                            <a>
-                                <p>2021</p>
-                            </a>
-                            <a>
-                                <p>2022</p>
-                            </a>
-                            <a>
-                                <p>2023</p>
-                            </a>
-                            <a>
-                                <p>2024</p>
-                            </a>
-                        </div>
-                        <div class="tab__content">
-                            <ul class="flex flex-col ">
-                                <li class="flex center-ver tab__item"><img src="./img/icon/PDF_icon.png" alt="">
-                                    <p>Báo cáo kết quả kinh doanh quý 4.2018</p><a href="#"><img
-                                            src="./img/icon/pdf-down.png" alt=""></a>
-                                </li>
-                                <li class="flex center-ver tab__item"><img src="./img/icon/PDF_icon.png" alt="">
-                                    <p>Báo cáo kết quả kinh doanh quý 4.2018</p><a href="#"><img
-                                            src="./img/icon/pdf-down.png" alt=""></a>
-                                </li>
-                                <li class="flex center-ver tab__item"><img src="./img/icon/PDF_icon.png" alt="">
-                                    <p>Báo cáo kết quả kinh doanh quý 4.2018</p><a href="#"><img
-                                            src="./img/icon/pdf-down.png" alt=""></a>
-                                </li>
-                                <li class="flex center-ver tab__item"><img src="./img/icon/PDF_icon.png" alt="">
-                                    <p>Báo cáo kết quả kinh doanh quý 4.2018</p><a href="#"><img
-                                            src="./img/icon/pdf-down.png" alt=""></a>
-                                </li>
-                                <li class="flex center-ver tab__item"><img src="./img/icon/PDF_icon.png" alt="">
-                                    <p>Báo cáo kết quả kinh doanh quý 4.2018</p><a href="#"><img
-                                            src="./img/icon/pdf-down.png" alt=""></a>
-                                </li>
-                                <li class="flex center-ver tab__item"><img src="./img/icon/PDF_icon.png" alt="">
-                                    <p>Báo cáo kết quả kinh doanh quý 4.2018</p><a href="#"><img
-                                            src="./img/icon/pdf-down.png" alt=""></a>
-                                </li>
-                                <li class="flex center-ver tab__item"><img src="./img/icon/PDF_icon.png" alt="">
-                                    <p>Báo cáo kết quả kinh doanh quý 4.2018</p><a href="#"><img
-                                            src="./img/icon/pdf-down.png" alt=""></a>
-                                </li>
-                                <li class="flex center-ver tab__item"><img src="./img/icon/PDF_icon.png" alt="">
-                                    <p>Báo cáo kết quả kinh doanh quý 4.2018</p><a href="#"><img
-                                            src="./img/icon/pdf-down.png" alt=""></a>
-                                </li>
-                                <li class="flex center-ver tab__item"><img src="./img/icon/PDF_icon.png" alt="">
-                                    <p>Báo cáo kết quả kinh doanh quý 4.2018</p><a href="#"><img
-                                            src="./img/icon/pdf-down.png" alt=""></a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="flex center-ver center-hor pagination-container">
-                            <a href="#" title="arrow next and prew page" class="btn flex center-hor"><img src="./img/icon/pre-page.png" alt=""></a>
-                            <div class="flex center-hor pagination-content"> 
-                                <a class="flex center-hor center-ver" href="#">1 </a>
-                                <a class="flex center-hor center-ver" href="#">2 </a>
-                                <a class="flex center-hor center-ver" href="#">3 </a>
-                            </div>
-                            <a href="#" title="arrow next and prew page" class="btn flex center-hor"><img src="./img/icon/nex-page.png" alt=""></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="container-f center-ver flex">
-            <hr class="line-end-content">
-        </section>
+
     </main>
     <footer class="container-f bg-green center-ver" data-include="./component/footer.html"></footer>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>

@@ -33,6 +33,45 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
+// js enviroment
+
+$(document).ready(function () {
+  if ($('.environment').length) {
+    $('.environment').slick({
+      slidesToShow: 4,
+      slidesToScroll: 2,
+      dots: false,
+      arrows: false,
+      infinite: true,
+      autoplay: true,
+      centerMode: true,
+      centerPadding: '0',
+      autoplaySpeed: 3000,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
+  }
+});
+
 // js thêm width và height vào bất kì thẻ img
 document.addEventListener("includesLoaded", () => {
   const images = document.querySelectorAll("img");
@@ -107,6 +146,7 @@ $(document).ready(function () {
     console.warn("Không tìm thấy .rice-slider");
   }
 });
+
 
 // js connect
 $(document).ready(function () {
@@ -239,4 +279,77 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   sections.forEach(sec => observer.observe(sec));
+});
+
+// js trang liên hệ
+document.addEventListener('DOMContentLoaded', function () {
+  const items = document.querySelectorAll('.contact-item');
+
+  if (items[0]) items[0].classList.add('border-bottom');
+  if (items[1]) items[1].classList.add('border-bottom', 'bottom-icon-SP');
+
+  for (let i = 2; i < items.length; i += 3) {
+    if (i + 3 < items.length) {
+      for (let j = i; j < i + 3 && j < items.length; j++) {
+        items[j].classList.add('border-bottom');
+      }
+    }
+  }
+  for (let i = 3; i < items.length; i += 3) {
+    items[i].classList.add('border-icon', 'border-left-right');
+  }
+});
+
+// js product
+$(document).ready(function () {
+  if ($('.all-product__container').length) {
+    $('.all-product__container').slick({
+      slidesToShow: 1,  
+      slidesToScroll: 1,
+      infinite: false,
+      arrows: false,
+      dots: false,
+    });
+  }
+});
+
+
+document.addEventListener("click", function (e) {
+  // Xử lý cho .community-list ul li
+  if (e.target.closest(".community-list ul li")) {
+    const clickedItem = e.target.closest("li");
+    const parent = clickedItem.closest("ul");
+    parent.querySelectorAll("li").forEach(li => li.classList.remove("active"));
+    clickedItem.classList.add("active");
+  }
+
+  // Xử lý cho .list-time a
+  if (e.target.closest(".list-time a")) {
+    const clickedLink = e.target.closest("a");
+    const parent = clickedLink.closest(".list-time");
+    parent.querySelectorAll("a").forEach(a => a.classList.remove("active"));
+    clickedLink.classList.add("active");
+  }
+});
+
+$("[data-include]").load("file.html", function () {
+  const $slider = $(".all-product__image--mobile");
+
+  if ($slider.length && !$slider.hasClass("slick-initialized")) {
+    $slider.slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      infinite: true,
+      arrows: true,
+      dots: false,
+      responsive: [
+        {
+          breakpoint: 551,
+          settings: {
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
+  }
 });

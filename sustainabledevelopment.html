@@ -13,7 +13,7 @@
 </head>
 
 <body>
-     <header class="bg-white">
+    <header class="bg-white">
         <div class="container-f flex center-hor header-top" data-include="./component/header-top.html"></div>
         <div class="container-f flex center-hor header-bottom">
             <div class="container-l flex center-ver header-container">
@@ -21,13 +21,13 @@
                     <a class="flex center-hor " href="./index.html">
                         <img src="./img/icon/home.png" alt="">
                     </a>
-                    <a class="flex center-hor" href="./story.html">câu chuyện</a>
-                    <a class="flex center-hor" href="./story.html">lĩnh vực hoạt động</a>
+                    <a class="flex center-hor " href="./story.html">câu chuyện</a>
+                    <a class="flex center-hor " href="./fieldofactivity.html">lĩnh vực hoạt động</a>
                     <a class="flex center-hor " href="./product.html">sản phẩm</a>
                     <a class="flex center-hor nav-active" href="./sustainabledevelopment.html">phát triễn bền vững</a>
-                    <a class="flex center-hor" href="#">quan hệ cổ đông</a>
+                    <a class="flex center-hor" href="./community.html">quan hệ cổ đông</a>
                     <a class="flex center-hor" href="./contact.html">liên hệ</a>
-                    <a class="flex center-hor" href="#">tin tức</a>
+                    <a class="flex center-hor" href="./news.html">tin tức</a>
                     <div class="flex center-ver search-box">
                         <input type="text" placeholder="Search..." />
                         <button type="submit">
@@ -39,51 +39,73 @@
         </div>
         <div id="menumobile" class="container-f flex bg-green" data-include="./component/menumobile.html"></div>
     </header>
-    <main class="container-f flex flex-col center-hor">
-        <section class="container-l bg-green flex sustainable-container">
-            <p>phát <br> triển <br> bền <br> vững</p>
-            <div class="sustainable-content flex center-ver bg-orange">
-                <ul class="flex flex-col sustainable-list">
-                    <li class="flex center-hor"><a href="#part-one">chiến lược</a></li>
-                    <li class="flex center-hor"><a href="#part-two">cam kết</a></li>
-                    <li class="flex center-hor">bảo vệ môi trường</li>
-                    <li class="flex center-hor">hoạt động xã hội</li>
-                </ul>
+    <main class="container-f flex flex-col center-ver">
+        <section class="container-f bg-white">
+            <div class="container-l flex nav-bar">
+                <a href="#" class="nav-bar__item">trang chủ</a>
+                <a href="#" class="nav-bar__item">phát triển bền vững</a>
             </div>
         </section>
-        <section class="container-l sustainable__img-container">
-            <img src="./img/banner/sustainable-img.png" alt="">
-            <img src="./img/banner/sustainable-model.png" alt="">
+        <section class="container-f flex center-hor bg-white">
+            <select class="container-l story-tab_mobile">
+                <option>Hoạt động xã hội </option>
+                <option>bảo vệ môi trường</option>
+            </select>
+            <div class="container-l story-tab_container flex center-ver">
+                <button data-target="tab1" class="flex center-hor center-ver active story-tab">Hoạt động xã hội</button>
+                <button data-target="tab2" class="flex center-hor center-ver story-tab">Bảo vệ môi trường</button>
+            </div>
         </section>
-        <section class="container-f center-ver flex">
-            <hr class="line-end-content">
+        <section id="tab1" class="container-f tab-content show">
+            <div class="bg-white container-f responsibility-group" data-include="./component/responsibility.html">
+            </div>
         </section>
-        <section class="container-l strategy-section" id="part-one">
-            <div class="strategy-content">
-                <div class="strategy-content__title">
-                    <h2>Chiến Lược</h2>
+        <section id="tab2" class="container-f bg-white tab-content  ">
+            <div class="container-l environment">
+                <div class="environment-header">
+                    <p class="environment-title flex center-ver">tham gia dự án TRVC
+                        &tọa đàm ESG <img src="./img/intro/iconseemore.png" alt=""></p>
+                    <img src="./img/intro/adrian-gomez--ViJiQk0vBg-unsplash 1.webp" alt="">
                 </div>
-                <p>
-                    Với mục tiêu trở thành thương hiệu gạo sạch hàng đầu không chỉ ở Việt Nam mà còn vươn tầm quốc tế,
-                    công ty King Green cam kết trong tương lai tiếp tục nghiên cứu và đưa ra thị trường đa dạng các sản
-                    phẩmlàm từ gạo với chất lượng tuyệt vời hơn, đáp ứng nhu cầu ẩm thực ngày càng cao của người tiêu
-                    dùng.
-                </p>
-                 <img class="strategy-content__img" src="./img/map/cZX 1.png" alt="Leaf" class="leaf-image" />
+                <div class="environment-header">
+                    <p class="environment-title flex center-ver">tài trợ giải bA DING
+                        super league bDSL4 <img src="./img/intro/iconseemore.png" alt=""></p>
+                    <img src="./img/intro/snapedit_1715070852710 1.webp" alt="">
+                </div>
+                <div class="environment-header">
+                    <p class="environment-title flex center-ver">chung tay cùng các
+                        hoạt động thiện nguyện <img src="./img/intro/iconseemore.png" alt=""></p>
+                    <img src="./img/intro/winston-chen-kXoEdaZ3SFw-unsplash 1.webp" alt="">
+                </div>
+                <div class="environment-header">
+                    <p class="environment-title flex center-ver">chung tay cùng các
+                        hoạt động thiện nguyện <img src="./img/intro/iconseemore.png" alt=""></p>
+                    <img src="./img/intro/farmer-holds-rice-hand 1.webp" alt="">
+                </div>
+                <div class="environment-header">
+                    <p class="environment-title flex center-ver">tham gia dự án TRVC
+                        &tọa đàm ESG <img src="./img/intro/iconseemore.png" alt=""></p>
+                    <img src="./img/intro/adrian-gomez--ViJiQk0vBg-unsplash 1.webp" alt="">
+                </div>
+                <div class="environment-header">
+                    <p class="environment-title flex center-ver">tài trợ giải bA DING
+                        super league bDSL4 <img src="./img/intro/iconseemore.png" alt=""></p>
+                    <img src="./img/intro/snapedit_1715070852710 1.webp" alt="">
+                </div>
+                <div class="environment-header">
+                    <p class="environment-title flex center-ver">chung tay cùng các
+                        hoạt động thiện nguyện <img src="./img/intro/iconseemore.png" alt=""></p>
+                    <img src="./img/intro/winston-chen-kXoEdaZ3SFw-unsplash 1.webp" alt="">
+                </div>
+                <div class="environment-header">
+                    <p class="environment-title flex center-ver">chung tay cùng các
+                        hoạt động thiện nguyện <img src="./img/intro/iconseemore.png" alt=""></p>
+                    <img src="./img/intro/farmer-holds-rice-hand 1.webp" alt="">
+                </div>
             </div>
         </section>
-        <section class="container-l bg-orange flex flex-col commit-container" id="part-two" >
-            <h2>cam kết</h2>
-            <p>Với mục tiêu trở thành thương hiệu gạo sạch hàng đầu không chỉ ở Việt Nam mà còn vươn tầm quốc tế, công
-                ty King Green cam kết trong tương lai tiếp tục nghiên cứu và đưa ra thị trường đa dạng các sản phẩmlàm
-                từ gạo với chất lượng tuyệt vời hơn, đáp ứng nhu cầu ẩm thực ngày càng cao của người tiêu dùng.</p>
-            <div class="container-f flex center-hor">
-                <img class="commit-container__img" src="./img/map/Group 94.png" alt="">
-            </div>
-        </section>
-        <section class="container-f center-ver flex">
-            <hr class="line-end-content">
-        </section>
+        <section class="container-f flex-col flex center-ver" data-include="./component/sustainable.html"></section>
+        
     </main>
     <footer class="container-f bg-green center-ver" data-include="./component/footer.html"></footer>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
