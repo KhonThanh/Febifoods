@@ -64,7 +64,7 @@ $(document).ready(function () {
         {
           breakpoint: 480,
           settings: {
-            slidesToShow: 1
+            slidesToShow: 2
           }
         }
       ]
@@ -347,6 +347,32 @@ $("[data-include]").load("file.html", function () {
           breakpoint: 551,
           settings: {
             slidesToShow: 1
+          }
+        }
+      ]
+    });
+  }
+});
+
+
+// list sản phẩm mobile
+document.addEventListener("DOMContentLoaded", () => {
+  const slider = document.querySelector(".all-product__image-mobile");
+
+  if (slider && typeof jQuery !== "undefined" && typeof jQuery(slider).slick === "function") {
+    jQuery(slider).slick({
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      arrows: false,
+      Infinity:true,
+      autoplay:400,
+      centerMode: true,
+      dots: false,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 3
           }
         }
       ]
