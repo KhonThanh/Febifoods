@@ -318,6 +318,10 @@
         display: none;
     }
 
+    .menu-mobile__content{
+       top: 61px; 
+    }
+
     .detail-product__image img {
         max-width: 200px;
     }
@@ -446,6 +450,10 @@
 
     .creation-process__item {
         width: 100vw;
+    }
+
+    .menu-mobile__content{
+        top: 37px;
     }
 
     .intro-custom__container h2,

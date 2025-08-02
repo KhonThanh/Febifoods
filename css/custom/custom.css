@@ -5,6 +5,35 @@
     position: relative;
 }
 
+.container-menu__mobile {
+    position: relative;
+}
+
+.menu-mobile__content {
+    position: absolute;
+    width: 100%;
+    background-color: var(--primary-color);
+    left: 0;
+    top: 66px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+}
+
+.menu-mobile__content.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.menu-mobile__item {
+    text-align: left;
+    padding: 10px 20px;
+    text-transform: capitalize;
+    font-size: var(--font-size-base);
+}
+
 .menu-bottom {
     position: absolute;
     bottom: -26px;
@@ -45,7 +74,7 @@
     font-size: var(--font-size-base);
 }
 
-.recruitment-btn::after {
+/* .recruitment-btn::after {
     content: "";
     display: inline-block;
     aspect-ratio: 71 / 79;
@@ -59,7 +88,7 @@
     top: 40%;
     transform: translate(-40%);
     right: 15px;
-}
+} */
 
 .custom-select {
     appearance: none;
@@ -117,7 +146,7 @@
     min-width: 80px;
     padding: 5px 10px;
     border: 50px;
-    font-size: var(--font-size-base);
+    font-size: calc(var(--font-size-base) + 4px);
     font-weight: 600;
     text-transform: uppercase;
     color: var(--primary-color);
@@ -245,7 +274,7 @@
 
 .creation-process__content p {
     text-align: center;
-    font-size: calc(var(--font-size-base) - 2px);
+    font-size: calc(var(--font-size-base) + 8px);
     text-transform: capitalize;
 }
 
@@ -1447,11 +1476,11 @@ body .environment-header {
 .top-news__item.square {
     flex: 0 0 30%;
     aspect-ratio: 1 / 1;
-    background-color:brown;
+    background-color: brown;
 }
 
 .top-news__item.rectangle img,
-.top-news__item.square img{
+.top-news__item.square img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1906,10 +1935,10 @@ body .all-product__container .product__container .product-item {
 }
 
 .footer-top {
-    padding: 31px 0px 36px;
+    padding: 31px 10px 36px;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 30px 20px;
+    gap: 10px 10px;
 }
 
 .footer-content h3 a,
@@ -1924,7 +1953,7 @@ body .all-product__container .product__container .product-item {
 
 .footer-content a {
     margin-bottom: 7px;
-    font-size: calc(var(--font-size-base) - 2px);
+    font-size: var(--font-size-base);
     text-transform: capitalize;
     transition: all 0.5s ease;
 }
@@ -2058,6 +2087,21 @@ body .all-product__container .product__container .product-item {
     aspect-ratio: 596 / 197;
     width: 100%;
     height: auto;
+}
+
+.footer-ecom{
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.footer-ecom a{
+    max-height: 32px;
+}
+
+.footer-ecom a img{
+    height: 100%;
+    width: auto;
+    object-fit: cover;
 }
 
 

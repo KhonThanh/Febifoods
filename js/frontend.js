@@ -379,3 +379,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+// js menu mobile
+document.addEventListener("includesLoaded", () => {
+    console.log("✅ Tất cả component đã load xong!");
+
+    // 👉 Viết JS khác ở đây (ví dụ: menu toggle)
+    const menuToggle = document.querySelector('#menumobile .menu__btn img[alt=""]');
+    const menuContent = document.querySelector('#menumobile .menu-mobile__content');
+
+    if (menuToggle && menuContent) {
+        menuToggle.addEventListener('click', () => {
+            menuContent.classList.toggle('active');
+        });
+    }
+});
