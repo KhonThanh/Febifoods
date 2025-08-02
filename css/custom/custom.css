@@ -2005,12 +2005,17 @@ body .all-product__container .product__container .product-item {
 .footer-title,
 .footer-address {
     color: var(--white-color);
-    text-transform: uppercase;
-    text-align: center;
+    text-align: left;
 }
 
+.footer-contact h4,
+.footer-title {
+    text-transform: uppercase;
+}
 
-
+.footer-address{
+    text-transform: capitalize;
+}
 
 .footer-logo__item img {
     max-height: 52px;
@@ -2089,16 +2094,16 @@ body .all-product__container .product__container .product-item {
     height: auto;
 }
 
-.footer-ecom{
+.footer-ecom {
     gap: 10px;
     margin-bottom: 10px;
 }
 
-.footer-ecom a{
+.footer-ecom a {
     max-height: 32px;
 }
 
-.footer-ecom a img{
+.footer-ecom a img {
     height: 100%;
     width: auto;
     object-fit: cover;
@@ -2117,3 +2122,58 @@ body .all-product__container .product__container .product-item {
     opacity: 1;
     transform: translateY(0);
 }
+
+
+/* css tuyển dụng */
+
+.recruitment-container {}
+
+.recruitment-menu {}
+
+.recruitment-form {}
+
+.recruitment-form__title {}
+
+.recruitment-form__input {}
+
+.recruitment-form__btn {}
+
+.job-expired {}
+
+.job-filter {}
+
+.job-filter__location {}
+
+.job-filter__time {}
+
+.job-filter__btn {}
+
+.job-status {}
+
+.job-status__updating {}
+
+.job-status__title {}
+
+.job-list {}
+
+.job-card {}
+
+.job-card__logo {}
+
+.job-card__info {}
+
+.job-card__title {}
+
+.job-card__company {}
+
+.job-card__salary {}
+
+.job-card__location {}
+
+.job-card__time {}
+
+.pagination {}
+
+.pagination__btn {}
+
+.pagination__current {}

@@ -37,10 +37,109 @@
                 </div>
             </div>
         </div>
-        <div id="menumobile" class="container-f flex bg-green container-menu__mobile" data-include="./component/menumobile.html"></div>
+        <div id="menumobile" class="container-f flex bg-green container-menu__mobile"
+            data-include="./component/menumobile.html"></div>
     </header>
     <main class="container-f flex flex-col center-hor">
-        
+        <section class="container-f bg-white">
+            <div class="container-l flex nav-bar">
+                <a href="#" class="nav-bar__item">trang chủ</a>
+                <a href="#" class="nav-bar__item">Tuyển dụng</a>
+            </div>
+        </section>
+        <section class="container-f bg-white">
+            <div class="container-l flex recruitment-container">
+
+                <aside class="recruitment-menu flex flex-col">
+                    <form class="flex flex-col recruitment-form">
+                        <h3 class="recruitment-form__title">Nhận tin tuyển dụng qua email</h3>
+                        <input type="text" class="recruitment-form__input" placeholder="Họ tên" required>
+                        <input type="email" class="recruitment-form__input" placeholder="Email của bạn" required>
+                        <button type="submit" class="recruitment-form__btn">Đăng ký</button>
+                    </form>
+                </aside>
+
+                <section class="job-expired">
+                    <div class="flex job-filter">
+                        <select class="job-filter__location">
+                            <option value="">-- Địa điểm --</option>
+                            <option value="angiang">An Giang</option>
+                            <option value="binhphuoc">Bình Phước</option>
+                            <option value="tphcm">TP.HCM</option>
+                        </select>
+
+                        <div class="job-filter__time">
+                            <label><input type="radio" name="time" checked> 30 ngày</label>
+                            <label><input type="radio" name="time"> 60 ngày</label>
+                            <label><input type="radio" name="time"> 90 ngày</label>
+                        </div>
+
+                        <button class="job-filter__btn" type="button">Tìm kiếm</button>
+                    </div>
+                    <header class="job-status">
+                        <p class="job-status__updating">Đang cập nhật.</p>
+                        <h2 class="job-status__title">CÔNG VIỆC <span>HẾT HẠN</span></h2>
+                    </header>
+                    <div class="flex job-list">
+                        <a href="#" class="job-card">
+                            <img src="./img/logo.png" alt="Lộc Trời" class="job-card__logo">
+                            <div class="job-card__info">
+                                <h3 class="job-card__title">Trưởng phòng Kho</h3>
+                                <p class="job-card__company">Công ty TNHH MTV Lương thực Vĩnh Bình</p>
+                                <p class="job-card__salary">Lương cạnh tranh</p>
+                                <p class="job-card__location">An Giang</p>
+                                <p class="job-card__time">4 ngày trước</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="job-card">
+                            <img src="./img/logo.png" alt="Lộc Trời" class="job-card__logo">
+                            <div class="job-card__info">
+                                <h3 class="job-card__title">Nhân viên Marketing</h3>
+                                <p class="job-card__company">VPDD Sóc Trăng</p>
+                                <p class="job-card__salary">Lương cạnh tranh</p>
+                                <p class="job-card__location">Sóc Trăng</p>
+                                <p class="job-card__time">39 ngày trước</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="job-card">
+                            <img src="./img/logo.png" alt="Lộc Trời" class="job-card__logo">
+                            <div class="job-card__info">
+                                <h3 class="job-card__title">Nhân viên bán hàng</h3>
+                                <p class="job-card__company">VPDD Bình Phước</p>
+                                <p class="job-card__salary">Cạnh tranh</p>
+                                <p class="job-card__location">Bình Phước</p>
+                                <p class="job-card__time">60 ngày trước</p>
+                            </div>
+                        </a>
+
+                        <a href="#" class="job-card">
+                            <img src="./img/logo.png" alt="Lộc Trời" class="job-card__logo">
+                            <div class="job-card__info">
+                                <h3 class="job-card__title">Chuyên viên Kinh doanh Xuất khẩu</h3>
+                                <p class="job-card__company">Phòng Xuất khẩu</p>
+                                <p class="job-card__salary">Cạnh tranh</p>
+                                <p class="job-card__location">TP.HCM</p>
+                                <p class="job-card__time">61 ngày trước</p>
+                            </div>
+                        </a>
+                       
+                    </div>
+
+                    <!-- Phân trang -->
+                    <nav class="flex center-hor pagination">
+                        <button type="button" class="pagination__btn">Đầu</button>
+                        <button type="button" class="pagination__btn">Trước</button>
+                        <span class="pagination__current">1</span>
+                        <button type="button" class="pagination__btn">2</button>
+                        <button type="button" class="pagination__btn">Sau</button>
+                        <button type="button" class="pagination__btn">Cuối</button>
+                    </nav>
+                </section>
+
+            </div>
+        </section>
     </main>
     <footer class="container-f bg-green center-ver" data-include="./component/footer.html"></footer>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
