@@ -18,6 +18,26 @@
     }
 }
 
+@media screen and (max-width: 991px) {
+    
+    .job-filter,
+    .recruitment-container {
+        flex-direction: column;
+    }
+
+    .recruitment-menu {
+        width: 100%;
+        position: unset;
+    }
+
+    .job-filter__time,
+    .job-filter__location{
+        width: 100%;
+    }
+    
+
+}
+
 @media screen and (max-width: 1024px) and (min-width: 768px) {
     .sustainable-list {
         margin-right: 30px;
@@ -318,8 +338,8 @@
         display: none;
     }
 
-    .menu-mobile__content{
-       top: 61px; 
+    .menu-mobile__content {
+        top: 61px;
     }
 
     .detail-product__image img {
@@ -440,6 +460,20 @@
     .list-time p {
         font-size: var(--font-size-base);
     }
+
+    .job-card {
+        width: 100%;
+    }
+
+    .pagination button, .job-status__pagination button{
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+
+    .job-header{
+        flex-direction: column;
+        gap: 0px;
+    }
 }
 
 @media screen and (max-width: 551px) {
@@ -452,7 +486,7 @@
         width: 100vw;
     }
 
-    .menu-mobile__content{
+    .menu-mobile__content {
         top: 37px;
     }
 
@@ -531,6 +565,10 @@
         max-width: 160px;
         min-height: 38px;
         font-size: var(--font-size-base);
+    }
+
+    .company-logo{
+        max-width: 100%;
     }
 
 }

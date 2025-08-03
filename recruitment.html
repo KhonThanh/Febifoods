@@ -50,17 +50,21 @@
         <section class="container-f bg-white">
             <div class="container-l flex recruitment-container">
 
-                <aside class="recruitment-menu flex flex-col">
+                <aside class="recruitment-menu">
                     <form class="flex flex-col recruitment-form">
-                        <h3 class="recruitment-form__title">Nhận tin tuyển dụng qua email</h3>
-                        <input type="text" class="recruitment-form__input" placeholder="Họ tên" required>
-                        <input type="email" class="recruitment-form__input" placeholder="Email của bạn" required>
-                        <button type="submit" class="recruitment-form__btn">Đăng ký</button>
+                        <div class="recruitment-form__title">
+                            <h3>Nhận tin tuyển dụng qua email</h3>
+                        </div>
+                        <div class=" flex flex-col recruitment-form__content">
+                            <input type="text" class="recruitment-form__input" placeholder="Họ tên" required>
+                            <input type="email" class="recruitment-form__input" placeholder="Email của bạn" required>
+                            <button type="submit" class="recruitment-form__btn">Đăng ký</button>
+                        </div>
                     </form>
                 </aside>
 
-                <section class="job-expired">
-                    <div class="flex job-filter">
+                <section class="flex flex-col job-expired">
+                    <div class="flex job-filter center-ver">
                         <select class="job-filter__location">
                             <option value="">-- Địa điểm --</option>
                             <option value="angiang">An Giang</option>
@@ -68,21 +72,29 @@
                             <option value="tphcm">TP.HCM</option>
                         </select>
 
-                        <div class="job-filter__time">
+                        <div class="flex job-filter__time center-ver">
                             <label><input type="radio" name="time" checked> 30 ngày</label>
                             <label><input type="radio" name="time"> 60 ngày</label>
                             <label><input type="radio" name="time"> 90 ngày</label>
+                             <button class="job-filter__btn" type="button">Tìm kiếm</button>
                         </div>
-
-                        <button class="job-filter__btn" type="button">Tìm kiếm</button>
+             
                     </div>
-                    <header class="job-status">
+                    <div class="job-status">
                         <p class="job-status__updating">Đang cập nhật.</p>
-                        <h2 class="job-status__title">CÔNG VIỆC <span>HẾT HẠN</span></h2>
-                    </header>
+                        <div class="center-hor flex job-status__pagination">
+                            <button>Đầu</button>
+                            <button>Trước</button>
+                            <button>Sau</button>
+                            <button>Cuối</button>
+                        </div>
+                    </div>
+                    <div class="job-status">
+                        <h2 class="job-status__title">CÔNG VIỆC <br> <span>HẾT HẠN</span></h2>
+                    </div>
                     <div class="flex job-list">
-                        <a href="#" class="job-card">
-                            <img src="./img/logo.png" alt="Lộc Trời" class="job-card__logo">
+                        <a target="_blank" href="./recruitment-detail.html" class="flex job-card">
+                            <img src="./img/logo/LOGO FEBI-09.svg" alt="Lộc Trời" class="job-card__logo">
                             <div class="job-card__info">
                                 <h3 class="job-card__title">Trưởng phòng Kho</h3>
                                 <p class="job-card__company">Công ty TNHH MTV Lương thực Vĩnh Bình</p>
@@ -92,8 +104,8 @@
                             </div>
                         </a>
 
-                        <a href="#" class="job-card">
-                            <img src="./img/logo.png" alt="Lộc Trời" class="job-card__logo">
+                        <a target="_blank" href="./recruitment-detail.html" class="flex job-card">
+                            <img src="./img/logo/LOGO FEBI-09.svg" alt="Lộc Trời" class="job-card__logo">
                             <div class="job-card__info">
                                 <h3 class="job-card__title">Nhân viên Marketing</h3>
                                 <p class="job-card__company">VPDD Sóc Trăng</p>
@@ -103,8 +115,8 @@
                             </div>
                         </a>
 
-                        <a href="#" class="job-card">
-                            <img src="./img/logo.png" alt="Lộc Trời" class="job-card__logo">
+                        <a target="_blank" href="./recruitment-detail.html" class="flex job-card">
+                            <img src="./img/logo/LOGO FEBI-09.svg" alt="Lộc Trời" class="job-card__logo">
                             <div class="job-card__info">
                                 <h3 class="job-card__title">Nhân viên bán hàng</h3>
                                 <p class="job-card__company">VPDD Bình Phước</p>
@@ -114,8 +126,8 @@
                             </div>
                         </a>
 
-                        <a href="#" class="job-card">
-                            <img src="./img/logo.png" alt="Lộc Trời" class="job-card__logo">
+                        <a target="_blank" href="./recruitment-detail.html" class="flex job-card">
+                            <img src="./img/logo/LOGO FEBI-09.svg" alt="Lộc Trời" class="job-card__logo">
                             <div class="job-card__info">
                                 <h3 class="job-card__title">Chuyên viên Kinh doanh Xuất khẩu</h3>
                                 <p class="job-card__company">Phòng Xuất khẩu</p>
@@ -129,12 +141,12 @@
 
                     <!-- Phân trang -->
                     <nav class="flex center-hor pagination">
-                        <button type="button" class="pagination__btn">Đầu</button>
-                        <button type="button" class="pagination__btn">Trước</button>
-                        <span class="pagination__current">1</span>
-                        <button type="button" class="pagination__btn">2</button>
-                        <button type="button" class="pagination__btn">Sau</button>
-                        <button type="button" class="pagination__btn">Cuối</button>
+                        <button type="button" class="">Đầu</button>
+                        <button type="button" class="">Trước</button>
+                        <button type="button" class="active">1</button>
+                        <button type="button" class="">2</button>
+                        <button type="button" class="">Sau</button>
+                        <button type="button" class="">Cuối</button>
                     </nav>
                 </section>
 
