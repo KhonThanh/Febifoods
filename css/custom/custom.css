@@ -666,6 +666,7 @@
     margin-bottom: 36px;
 }
 
+.btn-readmore,
 .all-btn {
     text-transform: uppercase;
     max-width: 224px;
@@ -2342,4 +2343,100 @@ body .all-product__container .product__container .product-item {
 
 .job-description ul {
     padding-left: 30px;
+}
+
+/* css news */
+
+.post-header {
+    gap: 60px;
+    padding-bottom: 30px;
+}
+
+.post-thumbnail {
+    flex: 1 1 45%;
+    max-height: 372px;
+}
+
+.post-thumbnail img{
+    width: 100%;
+    height: auto;
+}
+
+.post-title-section {
+    gap: 20px;
+    flex: 1 1 65%;
+}
+
+.post-title-section h1{
+    font-size: calc(var(--font-size-base) * 2);
+    color: var(--primary-color);
+}
+
+.post-excerpt {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-height: 4.5em; 
+  transition: max-height 0.6s ease, -webkit-line-clamp 0.6s ease;
+}
+
+.post-excerpt.expanded {
+  -webkit-line-clamp: unset;
+  max-height: 500px; 
+}
+
+.btn-readmore {
+    border: none;
+}
+
+.post-sidebar{
+    width: 35%;
+    height: fit-content;
+    background-color: var(--light-gray-color);
+    border-radius: 30px;
+    top: 200px;
+    position: sticky;
+}
+
+.post-sidebar h2{
+    width: 100%;
+    font-size: calc(var(--font-size-base) * 2);
+    color: var(--primary-color);
+    padding: 10px;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.toc-list li{
+    padding: 10px;
+    width: 100%;
+}
+
+.share-container{
+    gap: 10px;
+}
+
+.post-container{
+    gap: 30px;
+}
+
+.post-content{
+    gap: 10px;
+    padding-bottom: 40px;
+}
+
+.post-content h2{
+    font-size: calc(var(--font-size-base) * 2);
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.post-content p{
+    font-size: var(--font-size-base);
+    color: var(--black-color);
+}
+
+.post-content img{
+    width: 100%;
+    height: auto;
 }

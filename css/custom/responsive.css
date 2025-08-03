@@ -328,6 +328,20 @@
     .product-button img {
         margin: 0px 5px;
     }
+
+    .post-container,
+    .post-header{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .post-thumbnail{
+        max-height: none;
+    }
+
+    .post-sidebar{
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 620px) {
@@ -474,6 +488,8 @@
         flex-direction: column;
         gap: 0px;
     }
+    
+    
 }
 
 @media screen and (max-width: 551px) {

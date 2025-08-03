@@ -394,3 +394,51 @@ document.addEventListener("includesLoaded", () => {
         });
     }
 });
+
+// js nội dung bài viết
+document.addEventListener('DOMContentLoaded', function () {
+  const btn = document.querySelector('.btn-readmore');
+  const excerpt = document.querySelector('.post-excerpt');
+
+  if (!btn || !excerpt) return; // ✅ Không có thì không chạy
+
+  btn.addEventListener('click', function () {
+    excerpt.classList.toggle('expanded');
+    btn.textContent = excerpt.classList.contains('expanded') 
+      ? 'THU GỌN' 
+      : 'XEM THÊM';
+  });
+});
+
+// js nôi dung bài viét
+document.addEventListener('DOMContentLoaded', function () {
+  const postContent = document.querySelector('.post-content');
+  const tocList = document.querySelector('.toc-list');
+
+  if (!postContent || !tocList) return;
+
+  const headings = postContent.querySelectorAll('h2, h3, h4, h5, h6');
+  if (headings.length === 0) return;
+
+  tocList.innerHTML = '';
+
+  headings.forEach((heading) => {
+    const text = heading.textContent.trim();
+    const id = text
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '') 
+      .replace(/[^\w\s-]/g, '')        
+      .replace(/\s+/g, '-')            
+      .toLowerCase();
+
+    heading.id = id;
+
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    a.href = `#${id}`;
+    a.textContent = text; 
+
+    li.appendChild(a);
+    tocList.appendChild(li);
+  });
+});
