@@ -342,6 +342,11 @@
     .post-sidebar{
         width: 100%;
     }
+
+
+    .post-sidebar{
+        position: unset;
+    }
 }
 
 @media screen and (max-width: 620px) {
