@@ -304,7 +304,7 @@ document.addEventListener('DOMContentLoaded', function () {
 $(document).ready(function () {
   if ($('.all-product__container').length) {
     $('.all-product__container').slick({
-      slidesToShow: 1,  
+      slidesToShow: 1,
       slidesToScroll: 1,
       infinite: false,
       arrows: false,
@@ -364,8 +364,8 @@ document.addEventListener("DOMContentLoaded", () => {
       slidesToShow: 5,
       slidesToScroll: 1,
       arrows: false,
-      Infinity:true,
-      autoplay:400,
+      Infinity: true,
+      autoplay: 400,
       centerMode: true,
       dots: false,
       responsive: [
@@ -382,17 +382,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // js menu mobile
 document.addEventListener("includesLoaded", () => {
-    console.log("✅ Tất cả component đã load xong!");
+  console.log("✅ Tất cả component đã load xong!");
 
-    // 👉 Viết JS khác ở đây (ví dụ: menu toggle)
-    const menuToggle = document.querySelector('#menumobile .menu__btn img[alt=""]');
-    const menuContent = document.querySelector('#menumobile .menu-mobile__content');
+  // 👉 Viết JS khác ở đây (ví dụ: menu toggle)
+  const menuToggle = document.querySelector('#menumobile .menu__btn img[alt=""]');
+  const menuContent = document.querySelector('#menumobile .menu-mobile__content');
 
-    if (menuToggle && menuContent) {
-        menuToggle.addEventListener('click', () => {
-            menuContent.classList.toggle('active');
-        });
-    }
+  if (menuToggle && menuContent) {
+    menuToggle.addEventListener('click', () => {
+      menuContent.classList.toggle('active');
+    });
+  }
 });
 
 // js nội dung bài viết
@@ -404,8 +404,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   btn.addEventListener('click', function () {
     excerpt.classList.toggle('expanded');
-    btn.textContent = excerpt.classList.contains('expanded') 
-      ? 'THU GỌN' 
+    btn.textContent = excerpt.classList.contains('expanded')
+      ? 'THU GỌN'
       : 'XEM THÊM';
   });
 });
@@ -426,9 +426,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const text = heading.textContent.trim();
     const id = text
       .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '') 
-      .replace(/[^\w\s-]/g, '')        
-      .replace(/\s+/g, '-')            
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^\w\s-]/g, '')
+      .replace(/\s+/g, '-')
       .toLowerCase();
 
     heading.id = id;
@@ -436,10 +436,19 @@ document.addEventListener('DOMContentLoaded', function () {
     const li = document.createElement('li');
     const a = document.createElement('a');
     a.href = `#${id}`;
-    a.textContent = text; 
+    a.textContent = text;
 
     li.appendChild(a);
     tocList.appendChild(li);
+  });
+
+  tocList.addEventListener('click', function (e) {
+    const clickedLi = e.target.closest('li');
+    if (!clickedLi) return;
+
+    const lis = tocList.querySelectorAll('li');
+    lis.forEach(li => li.classList.remove('active'));
+    clickedLi.classList.add('active');
   });
 });
 
