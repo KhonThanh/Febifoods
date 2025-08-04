@@ -442,3 +442,17 @@ document.addEventListener('DOMContentLoaded', function () {
     tocList.appendChild(li);
   });
 });
+
+// js nạp alt cho hình trong bài viết
+const postContent = document.querySelector('.post-content');
+
+if (postContent) {
+  postContent.querySelectorAll('img').forEach(img => {
+    if (img.alt.trim() !== '') {   // chỉ tạo caption nếu có alt
+      const caption = document.createElement('span');
+      caption.textContent = img.alt;
+      caption.className = 'img-caption';
+      img.insertAdjacentElement('afterend', caption);
+    }
+  });
+}

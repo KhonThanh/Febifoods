@@ -19,7 +19,7 @@
 }
 
 @media screen and (max-width: 991px) {
-    
+
     .job-filter,
     .recruitment-container {
         flex-direction: column;
@@ -31,10 +31,10 @@
     }
 
     .job-filter__time,
-    .job-filter__location{
+    .job-filter__location {
         width: 100%;
     }
-    
+
 
 }
 
@@ -168,6 +168,30 @@
 
     .detail-product__content {
         width: 100%;
+    }
+
+    .top-new__item:first-child {
+        width: 100%;
+    }
+
+    .top-new__item:not(:first-child) {
+        width: calc(100% / 2 - 5px);
+    }
+
+    .top-new__content {
+        gap: 20px 10px;
+    }
+
+    .ad-img {
+        display: none;
+    }
+
+    .topnew-second__des p {
+        font-size: var(--font-size-base);
+    }
+
+    .topnew-second__des h3 {
+        font-size: calc(var(--font-size-base) + 4px);
     }
 }
 
@@ -330,22 +354,34 @@
     }
 
     .post-container,
-    .post-header{
+    .post-header {
         flex-direction: column;
         gap: 20px;
     }
 
-    .post-thumbnail{
+    .post-thumbnail {
         max-height: none;
     }
 
-    .post-sidebar{
+    .post-sidebar {
         width: 100%;
     }
 
 
-    .post-sidebar{
+    .post-sidebar {
         position: unset;
+    }
+
+    .news-ỉtem__container {
+        flex-direction: column;
+    }
+
+    .item-small__des h3 {
+        font-size: calc(var(--font-size-base) + 10px);
+    }
+
+    .item-small__des p {
+        font-size: var(--font-size-base);
     }
 }
 
@@ -484,17 +520,40 @@
         width: 100%;
     }
 
-    .pagination button, .job-status__pagination button{
+    .pagination button,
+    .job-status__pagination button {
         padding: 5px 10px;
         border-radius: 5px;
     }
 
-    .job-header{
+    .job-header {
         flex-direction: column;
         gap: 0px;
     }
-    
-    
+
+    .top-new__item:not(:first-child) {
+        width: 100%;
+    }
+
+    .top-new__container {
+        padding: 50px 20px;
+    }
+
+    .topnew-second__container {
+        flex-direction: column;
+    }
+
+    .topnew-second__item-square {
+        aspect-ratio: 1 / 1;
+        display: block;
+        max-height: 600px;
+        width: 100%;
+        min-width: unset;
+    }
+
+    .topnew-second__container{
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width: 551px) {
@@ -588,8 +647,16 @@
         font-size: var(--font-size-base);
     }
 
-    .company-logo{
+    .company-logo {
         max-width: 100%;
+    }
+
+    .item-small__des h3 {
+        font-size: var(--font-size-base);
+    }
+
+    .item-small__des p {
+        font-size: calc(var(--font-size-base) - 2px);
     }
 
 }
