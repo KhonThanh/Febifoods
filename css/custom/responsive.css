@@ -28,6 +28,30 @@
     }
 }
 
+@media screen and (max-width: 1151px) {
+    .product-banner__content{
+        position: relative;
+    }
+
+    .product-menu__content{
+        position: absolute;
+        background-color: var(--white-color);
+        gap: 50px;
+        padding: 20px;
+        width: 100%;
+        justify-content: left;
+    }
+
+    .product-menu,.product-banner{
+        flex: 1 1 50%;
+    }
+
+    .product-banner__item img{
+        max-width: unset;
+    }
+
+}
+
 @media screen and (max-width: 991px) {
 
     .job-filter,
@@ -118,6 +142,15 @@
     .sustainable-list {
         margin-right: 0px;
         width: 100%;
+    }
+
+    .contact-title{
+        font-size: calc(var(--font-size-base) + 28px);
+        margin-bottom: 35px;
+    }
+
+    .connect-us {
+        display: none;
     }
 }
 
@@ -577,6 +610,7 @@
 
     .creation-process__item {
         width: 100vw;
+        padding: 0px 20px;
     }
 
     .menu-mobile__content {
