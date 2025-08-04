@@ -256,7 +256,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll("section, footer");
   if (!sections.length) return;
 
-  sections.forEach(sec => sec.classList.add("hidden-section"));
+  sections.forEach(sec => {
+    // Đảm bảo ẩn tất cả section và footer, dù nằm trong div nào
+    sec.classList.add("hidden-section");
+  });
 
   let revealIndex = 0;
 
@@ -274,8 +277,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }, {
-    threshold: 0,
-    rootMargin: "0px 0px -20% 0px"
+    threshold: 0.1,              // chỉ cần xuất hiện 10% là hiện
+    rootMargin: "0px 0px -10% 0px"
   });
 
   sections.forEach(sec => observer.observe(sec));
