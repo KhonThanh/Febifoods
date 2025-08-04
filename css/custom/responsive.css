@@ -1,4 +1,9 @@
-/* css reponsive size < 1151 > 961*/
+@media screen and (max-width: 1620px) {
+    .connect-us {
+        right: 0%;
+    }
+}
+
 @media screen and (max-width: 1151px) and (min-width: 961px) {
     #menumobile {
         display: block;
@@ -15,6 +20,11 @@
     .responsibility-button {
         justify-content: left;
         margin-top: 30px;
+    }
+
+    .connect-us {
+        right: 10px;
+        bottom: -50vh;
     }
 }
 
@@ -35,7 +45,10 @@
         width: 100%;
     }
 
-
+    .connect-us {
+        right: 10px;
+        bottom: -50vh;
+    }
 }
 
 @media screen and (max-width: 1024px) and (min-width: 768px) {
@@ -551,7 +564,7 @@
         min-width: unset;
     }
 
-    .topnew-second__container{
+    .topnew-second__container {
         flex-direction: column;
     }
 }

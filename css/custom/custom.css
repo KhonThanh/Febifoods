@@ -76,22 +76,6 @@
     font-size: var(--font-size-base);
 }
 
-/* .recruitment-btn::after {
-    content: "";
-    display: inline-block;
-    aspect-ratio: 71 / 79;
-    width: 12px;
-    height: auto;
-    background-image: url('../../img/icon/Vector-down.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: absolute;
-    top: 40%;
-    transform: translate(-40%);
-    right: 15px;
-} */
-
 .custom-select {
     appearance: none;
     -webkit-appearance: none;
@@ -136,6 +120,21 @@
 .header-bottom {
     margin-top: 34.5px;
     padding-bottom: 21px;
+    position: relative;
+}
+
+.connect-us {
+    position: absolute;
+    right: -5%;
+    bottom: -23vw;
+    padding: 10px;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+.connect-us .divider{
+    width: 100%;
+    height: 2px;
 }
 
 .header-content {
