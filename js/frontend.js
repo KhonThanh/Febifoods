@@ -468,3 +468,23 @@ if (postContent) {
     }
   });
 }
+
+// js đổi hình icon social 
+document.addEventListener('mouseover', (e) => {
+  if (e.target.matches('.footer-ecom a img, .footer-social a img')) {
+    const img = e.target;
+    if (!img.dataset.original) {
+      img.dataset.original = img.src; // Lưu src gốc
+    }
+    img.src = img.src.replace('.png', '-hover.png');
+  }
+});
+
+document.addEventListener('mouseout', (e) => {
+  if (e.target.matches('.footer-ecom a img, .footer-social a img')) {
+    const img = e.target;
+    if (img.dataset.original) {
+      img.src = img.dataset.original; // Trả lại src gốc
+    }
+  }
+});

@@ -79,6 +79,10 @@
     .sustainable-list {
         margin-right: 30px;
     }
+
+    .field-tab, .story-tab{
+        font-size: calc(var(--font-size-base) + 3px);
+    }
 }
 
 @media screen and (max-width: 766px) and (min-width: 551px) {
