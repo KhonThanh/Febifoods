@@ -545,3 +545,41 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
+
+//js sản phẩm 
+document.addEventListener("DOMContentLoaded", function () {
+    if (window.innerWidth < 1300) {
+        const menuLinks = document.querySelectorAll(".product-menu p");
+        const productMenu = document.querySelector(".product-menu__content");
+        
+        if (menuLinks.length && productMenu) {
+            menuLinks.forEach((link) => {
+                link.addEventListener("click", function (e) {
+                    e.preventDefault(); 
+                    
+                    const isActive = link.classList.contains("active");
+
+                    // Xóa active cũ
+                    menuLinks.forEach(p => p.classList.remove("active"));
+                    productMenu.classList.remove("active");
+
+                    // Nếu chưa active thì thêm
+                    if (!isActive) {
+                        link.classList.add("active");
+                        productMenu.classList.add("active");
+                    }
+                });
+            });
+
+            // Click ra ngoài -> remove active
+            document.addEventListener("click", function (e) {
+                const clickedInsideMenu = e.target.closest(".product-menu") || e.target.closest(".product-menu__content");
+                
+                if (!clickedInsideMenu) {
+                    menuLinks.forEach(p => p.classList.remove("active"));
+                    productMenu.classList.remove("active");
+                }
+            });
+        }
+    }
+});
