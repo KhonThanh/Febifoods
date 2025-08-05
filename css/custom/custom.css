@@ -2,6 +2,9 @@
 .header-bottom,
 .header-top {
     border-bottom: 1px solid var(--primary-color);
+}
+
+.header-top {
     position: relative;
 }
 
@@ -118,19 +121,22 @@
 }
 
 .header-bottom {
-    margin-top: 34.5px;
-    padding-bottom: 21px;
-    position: relative;
+    padding: 34.5px 0px 21px;
+    position: sticky;
+    z-index: 1;
+    background-color: var(--white-color);
+    top: 0px;
 }
 
 .connect-us {
     position: absolute;
     right: -5%;
-    bottom: -23vw;
+    bottom: -50vh;
     padding: 10px;
     border-radius: 10px;
     gap: 10px;
     border: 1px solid var(--white-color);
+    z-index: 11;
 }
 
 .connect-us .divider {

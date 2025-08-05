@@ -28,12 +28,12 @@ html {
   scroll-behavior: smooth;
 }
 
-header {
+/* header {
   position: sticky;
   top: 0;
   background: #fff;
   z-index: 1;
-}
+} */
 
 button{
   font-family: var(--font-name);
