@@ -19,16 +19,16 @@
     <section class="container-f flex center-hor header-bottom">
         <div class="container-l flex center-ver header-container">
             <div class="header-content flex">
-                <a class="flex center-hor  nav-active" href="./index.html">
+                <a class="flex center-hor  " href="./index.html">
                     <img src="./img/icon/home.png" alt="">
                 </a>
-                <a class="flex center-hor" href="./story.html">câu chuyện</a>
+                <a class="flex center-hor " href="./story.html">câu chuyện</a>
                 <a class="flex center-hor" href="./fieldofactivity.html">lĩnh vực hoạt động</a>
                 <a class="flex center-hor " href="./product.html">sản phẩm</a>
                 <a class="flex center-hor" href="./sustainabledevelopment.html">phát triễn bền vững</a>
                 <a class="flex center-hor" href="./community.html">quan hệ cổ đông</a>
-                <a class="flex center-hor" href="./contact.html">liên hệ</a>
                 <a class="flex center-hor" href="./news.html">tin tức</a>
+                <a class="flex center-hor" href="./contact.html">liên hệ</a>
                 <div class="flex center-ver search-box">
                     <input type="text" placeholder="Search..." />
                     <button class="flex center-hor " type="submit">
@@ -51,8 +51,58 @@
             </div>
         </div>
     </section>
-    <section id="menumobile" class="container-f flex bg-green container-menu__mobile"
-        data-include="./component/menumobile.html"></section>
+    <section id="menumobile" class="container-f flex bg-green container-menu__mobile">
+        <div class="container-xs flex ">
+            <button id="btn-menu" class=" flex center-ver menu__btn">
+                <img src="./img/icon/Vector-bar.png" alt="">
+            </button>
+            <a class=" flex center-ver menu__btn">
+                <img src="./img/icon/nuffam-mini.png" alt="">
+            </a>
+            <a class=" flex center-ver menu__btn">
+                <img src="./img/icon/vuagao-mini.png" alt="">
+                <p>Vua Gạo</p>
+            </a>
+            <a class=" flex center-ver menu__btn">
+                <img src="./img/icon/ong-cu-mini.png" alt="">
+                <p>Ông Cụ</p>
+            </a>
+            <a class=" flex center-ver menu__btn">
+                <img src="./img/icon/tuyen-dung.png" alt="">
+                <p>Tuyển dụng</p>
+            </a>
+            <div class=" flex center-ver menu__btn">
+                <p><a href="">Tiếng việt</a>/<a href="">English</a></p>
+            </div>
+            <div class="menu-mobile__content flex flex-col">
+                <div class="flex btn-close">
+                    <button><img src="./img/icon/close.png" alt=""></button>
+                </div>
+                <a class="flex center-hor menu-mobile__item" href="./index.html">trang chủ</a>
+                <a class="flex center-hor menu-mobile__item" href="./story.html">câu chuyện</a>
+                <a class="flex center-hor menu-mobile__item" href="./fieldofactivity.html">lĩnh vực hoạt động</a>
+                <a class="flex center-hor menu-mobile__item" href="./product.html">sản phẩm</a>
+                <a class="flex center-hor menu-mobile__item" href="./sustainabledevelopment.html">phát triễn bền vững</a>
+                <a class="flex center-hor menu-mobile__item" href="./community.html">quan hệ cổ đông</a>
+                <a class="flex center-hor menu-mobile__item" href="./news.html">tin tức</a>
+                <a class="flex center-hor menu-mobile__item" href="./contact.html">liên hệ</a>
+            </div>
+            <div class="background-mobile"></div>
+            <div class="connect-us flex flex-col bg-green center-ver">
+                <a class="connect-us__icon">
+                    <img src="./img/icon/pin.png " alt="">
+                </a>
+                <div class="divider"></div>
+                <a class="connect-us__icon">
+                    <img src="./img/icon/phone.png " alt="">
+                </a>
+                <div class="divider"></div>
+                <a class="connect-us__icon">
+                    <img src="./img/icon/mail.png " alt="">
+                </a>
+            </div>
+        </div>
+    </section>
     <main class="container-f flex flex-col center-hor">
         <section class="container-f bg-white">
             <div class="container-l flex nav-bar">
@@ -75,14 +125,14 @@
 
         <div id="tab1" class="container-f center-hor tab-content show bg-white">
             <section class="flex flex-col container-l bg-white intro-custom__container padding-small" `>
-                <h1 class="flex center-ver flex-wrap">giới thiệu<span>febi foods</span></h1>
                 <div class="flex flex-wrap ">
-                    <div class="flex flex-col intro-custom__content">
-                        <p>Khởi nguồn từ hạt gạo – Hành trình nâng tầm giá trị Việt Hạt gạo – biểu tượng văn hóa, linh
-                            hồn ẩm thực của người Việt – đã gắn bó với đời sống hàng triệu gia đình qua bao thế hệ. Tuy
-                            nhiên, trong guồng quay hiện đại, làm sao để gạo không chỉ là lương thực thiết yếu, mà còn
-                            trở thành sản phẩm chất lượng cao, tiện lợi, thân thiện môi trường và phù hợp với xu hướng
-                            tiêu dùng mới?</p>
+                    <div class="flex flex-col center-hor intro-custom__content">
+                        <h1 class="flex center-ver flex-wrap">giới thiệu<span>febi foods</span></h1>
+                        <p class="more-space">Khởi nguồn từ hạt gạo – Hành trình nâng tầm giá trị Việt <br> Hạt gạo – biểu
+                            tượng văn hóa, linh hồn ẩm thực của người Việt – đã gắn bó với đời sống hàng triệu gia đình
+                            qua bao thế hệ. Tuy nhiên, trong guồng quay hiện đại, làm sao để gạo không chỉ là lương thực
+                            thiết yếu, mà còn trở thành sản phẩm chất lượng cao, tiện lợi, thân thiện môi trường và phù
+                            hợp với xu hướng tiêu dùng mới?</p>
                         <a href="#" class="flex center-ver all-btn">Xem thêm <img src="../img/icon/Vector-down.png"
                                 alt=""></a>
                     </div>
@@ -93,7 +143,7 @@
             </section>
             <section class="container-f bg-light-gray padding-medium">
                 <div class="flex container-l flex-wrap intro-custom__container ">
-                    <div class="flex flex-col intro-custom__content">
+                    <div class="flex flex-col center-hor intro-custom__content">
                         <h2>Định vị thương hiệu: F.E.B.I</h2>
                         <p>FEBI không chỉ là tên gọi, mà là tuyên ngôn giá trị mà công ty theo đuổi: <br>F – Fulfilling:
                             Mỗi bữa ăn
@@ -120,7 +170,7 @@
                         <img src="../img/intro/CÁZDS 1.png" alt="">
                         <img class="product-fall" src="../img/intro/product-fall.png" alt="">
                     </div>
-                    <div class="flex flex-col intro-custom__content">
+                    <div class="flex flex-col center-hor intro-custom__content">
                         <h2>Sản phẩm chủ lực</h2>
                         <p>FEBI FOODS tập trung chuyên sâu vào các dòng sản phẩm từ gạo, chia thành 3 nhóm chính: <br>
                             a. Gạo sạch chất

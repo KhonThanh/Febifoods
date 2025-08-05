@@ -1,37 +1,30 @@
 // js phần component
-document.addEventListener("DOMContentLoaded", () => {
-  const includeElements = document.querySelectorAll("[data-include]");
-  let loadedCount = 0;
+const includeElements = document.querySelectorAll("[data-include]");
+let loadedCount = 0;
 
-  includeElements.forEach(async (el) => {
+Promise.all(
+  [...includeElements].map(async (el) => {
     const file = el.getAttribute("data-include");
     if (!file) return;
 
-    try {
+    const cacheKey = `comp-${file}`;
+    let html = sessionStorage.getItem(cacheKey);
+
+    if (!html) {
       const response = await fetch(`${file}?v=${Date.now()}`, { cache: "no-store" });
-      if (!response.ok) throw new Error(`Không tìm thấy file: ${file}`);
-
-      const text = await response.text();
-      el.innerHTML = text;
-
-      if (typeof initResponsive === "function") {
-        initResponsive(el);
-      }
-    } catch (err) {
-      el.innerHTML = `
-        <div style="color: red; padding: 1rem; background: #fff0f0; border: 1px solid red;">
-          ⚠ Không tải được component: <strong>${file}</strong>
-        </div>
-      `;
-      console.error("Lỗi khi fetch:", file, err);
-    } finally {
-      loadedCount++;
-      if (loadedCount === includeElements.length) {
-        document.dispatchEvent(new Event("includesLoaded")); // 🔑 bắn sự kiện
-      }
+      html = await response.text();
+      sessionStorage.setItem(cacheKey, html);
     }
-  });
-});
+
+    el.innerHTML = html;
+    if (typeof initResponsive === "function") initResponsive(el);
+
+    loadedCount++;
+    if (loadedCount === includeElements.length) {
+      document.dispatchEvent(new Event("includesLoaded"));
+    }
+  })
+);
 
 
 // js enviroment
@@ -99,12 +92,12 @@ document.addEventListener("includesLoaded", () => {
 
 // js slide
 if (!$('.homepageslide').length) {
-  console.error('❌ .homepageslide not found');
+  console.warn('⚠️ .homepageslide not found');
 } else if (!$('.dot-slide').length) {
-  console.error('❌ .dot-slide not found');
+  console.warn('⚠️ .dot-slide not found');
 } else {
   $('.homepageslide').slick({
-    Infinite: true,
+    infinite: true, // lưu ý "Infinite" => "infinite"
     dots: true,
     appendDots: $('.dot-slide'),
     arrows: false,
@@ -384,16 +377,29 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // js menu mobile
-document.addEventListener("includesLoaded", () => {
-  console.log("✅ Tất cả component đã load xong!");
+document.addEventListener("DOMContentLoaded", () => {
+  const btnMenu = document.getElementById("btn-menu");
+  const menuContent = document.querySelector(".menu-mobile__content");
+  const menuBackground = document.querySelector(".background-mobile");
+  const btnClose = document.querySelector(".btn-close button");
 
-  // 👉 Viết JS khác ở đây (ví dụ: menu toggle)
-  const menuToggle = document.querySelector('#menumobile .menu__btn img[alt=""]');
-  const menuContent = document.querySelector('#menumobile .menu-mobile__content');
+  if (btnMenu && menuContent && menuBackground && btnClose) {
+    // Mở menu
+    btnMenu.addEventListener("click", () => {
+      menuContent.classList.add("active");
+      menuBackground.classList.add("active");
+    });
 
-  if (menuToggle && menuContent) {
-    menuToggle.addEventListener('click', () => {
-      menuContent.classList.toggle('active');
+    // Đóng menu khi click nền đen
+    menuBackground.addEventListener("click", () => {
+      menuContent.classList.remove("active");
+      menuBackground.classList.remove("active");
+    });
+
+    // Đóng menu khi click nút close
+    btnClose.addEventListener("click", () => {
+      menuContent.classList.remove("active");
+      menuBackground.classList.remove("active");
     });
   }
 });
@@ -402,14 +408,22 @@ document.addEventListener("includesLoaded", () => {
 document.addEventListener('DOMContentLoaded', function () {
   const btn = document.querySelector('.btn-readmore');
   const excerpt = document.querySelector('.post-excerpt');
+  const btnIcon = btn ? btn.querySelector('img') : null;
 
-  if (!btn || !excerpt) return; // ✅ Không có thì không chạy
+  if (!btn || !excerpt || !btnIcon) return;
 
   btn.addEventListener('click', function () {
-    excerpt.classList.toggle('expanded');
-    btn.textContent = excerpt.classList.contains('expanded')
-      ? 'THU GỌN'
-      : 'XEM THÊM';
+    const isExpanded = excerpt.classList.toggle('expanded');
+    
+    btn.textContent = isExpanded ? 'THU GỌN' : 'XEM THÊM';
+    
+    // 🛠 Giữ lại icon khi đổi text
+    btn.appendChild(btnIcon);
+
+    // 🔄 Đổi icon
+    btnIcon.src = isExpanded 
+      ? './img/icon/down-rev.png' 
+      : './img/icon/down.png';
   });
 });
 
@@ -485,6 +499,49 @@ document.addEventListener('mouseout', (e) => {
     const img = e.target;
     if (img.dataset.original) {
       img.src = img.dataset.original; // Trả lại src gốc
+    }
+  }
+});
+
+//js xác định và gấn class active cho menu 
+document.addEventListener("DOMContentLoaded", () => {
+  let currentPath = window.location.pathname.split("/").pop() || "index.html";
+
+  // 🔥 Bỏ hậu tố chi tiết để nhận diện menu cha
+  const childSuffixes = ["-detail", "-info", "-view"];
+  childSuffixes.forEach(suffix => {
+    if (currentPath.includes(suffix)) {
+      currentPath = currentPath.replace(suffix, "");
+    }
+  });
+
+  // ====== Desktop Menu ======
+  const desktopHeader = document.querySelector(".header-bottom");
+  if (desktopHeader) {
+    const menuLinks = desktopHeader.querySelectorAll("a[href]");
+    if (menuLinks.length) {
+      menuLinks.forEach(link => link.classList.remove("nav-active"));
+      menuLinks.forEach(link => {
+        const linkPath = link.getAttribute("href").replace("./", "");
+        if (linkPath === currentPath) {
+          link.classList.add("nav-active");
+        }
+      });
+    }
+  }
+
+  // ====== Mobile Menu ======
+  const mobileMenu = document.querySelector("#menumobile");
+  if (mobileMenu) {
+    const mobileLinks = mobileMenu.querySelectorAll(".menu-mobile__item[href]");
+    if (mobileLinks.length) {
+      mobileLinks.forEach(link => link.classList.remove("mb-nav-active"));
+      mobileLinks.forEach(link => {
+        const linkPath = link.getAttribute("href").replace("./", "");
+        if (linkPath === currentPath) {
+          link.classList.add("mb-nav-active");
+        }
+      });
     }
   }
 });
