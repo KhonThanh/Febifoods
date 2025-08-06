@@ -1,4 +1,5 @@
 @media screen and (max-width: 1620px) {
+
     .scroll-to-top,
     .connect-us {
         right: 0%;
@@ -499,6 +500,12 @@
     .creation-process__img,
     .creation-process__content {
         max-width: 30vw;
+    }
+
+    .field-of-operation__toptitle,
+    .field-of-operation__title {
+        font-size: calc(var(--font-size-base) + 32px);
+        text-align: center;
     }
 }
 
