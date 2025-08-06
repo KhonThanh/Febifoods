@@ -479,7 +479,7 @@
         margin: 0px 20px;
     }
 
-    .product-menu__content{
+    .product-menu__content {
         max-height: 80%;
         overflow-y: auto;
     }
@@ -671,6 +671,19 @@
 
     .footer-title {
         font-size: calc(var(--font-size-base) + 10px);
+    }
+
+    .product-banner__content {
+        flex-direction: column;
+    }
+
+    .product-banner{
+        gap: 20px;
+    }
+
+    .product-menu {
+        display: flex;
+        overflow-x: auto;
     }
 
 }
