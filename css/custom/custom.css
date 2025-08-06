@@ -249,6 +249,8 @@
 #menumobile {
     display: none;
     z-index: 1;
+    position: sticky;
+    top: 0px;
 }
 
 .container-menu__mobile {

@@ -478,6 +478,11 @@
     .divider {
         margin: 0px 20px;
     }
+
+    .product-menu__content{
+        max-height: 80%;
+        overflow-y: auto;
+    }
 }
 
 @media screen and (max-width: 620px) {
