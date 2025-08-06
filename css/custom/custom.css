@@ -1615,6 +1615,8 @@ body .environment-header {
 .product-menu {
     flex: 0 0 33.33%;
     padding-right: 13px;
+    overflow-y: auto;
+    aspect-ratio: 1 / 1;
 }
 
 .product-menu p {
