@@ -475,6 +475,7 @@
     .footer-logo {
         flex-wrap: wrap;
         justify-content: center;
+        gap: 2vw 1vw;
     }
 
     .divider {

@@ -655,9 +655,9 @@
 
 .field-tab,
 .story-tab {
-    max-height: 320px;
+    max-width: 320px;
     width: 100%;
-    padding: 7px 30px;
+    padding: 7px 10px;
     border-radius: 50px;
     background-color: transparent;
     border: none;
@@ -773,7 +773,9 @@
 }
 
 .product-fall {
-    top: -92%;
+    top: -106%;
+    right: -76%;
+    width: 115% !important;
 }
 
 .rice-fall {
