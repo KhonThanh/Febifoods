@@ -583,3 +583,35 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 });
+
+//js scroll to top
+
+document.addEventListener("DOMContentLoaded", function () {
+    const scrollBtn = document.getElementById("scrollToTop");
+
+    if (scrollBtn) { // ✅ Chỉ chạy khi tồn tại nút
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 300) {
+                scrollBtn.classList.add("show");
+            } else {
+                scrollBtn.classList.remove("show");
+            }
+        });
+
+        scrollBtn.addEventListener("click", function () {
+            const currentScroll = window.scrollY;
+
+            if (currentScroll > 50) {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+
+                // Force về 0 sau animation (an toàn)
+                setTimeout(() => {
+                    if (window.scrollY !== 0) window.scrollTo(0, 0);
+                }, 600);
+            }
+        });
+    }
+});

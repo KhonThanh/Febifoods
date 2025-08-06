@@ -1,4 +1,5 @@
 @media screen and (max-width: 1620px) {
+    .scroll-to-top,
     .connect-us {
         right: 0%;
     }
@@ -13,6 +14,10 @@
 @media screen and (max-width: 1151px) and (min-width: 961px) {
     .header-bottom {
         display: none;
+    }
+
+    #menumobile {
+        display: block;
     }
 
     .responsibility-container {
@@ -109,6 +114,10 @@
     .field-tab,
     .story-tab {
         font-size: calc(var(--font-size-base) + 3px);
+    }
+
+    .creation-process__content p {
+        font-size: calc(var(--font-size-base) + 2px);
     }
 }
 
@@ -485,6 +494,11 @@
     .product-menu__content {
         max-height: 80%;
         overflow-y: auto;
+    }
+
+    .creation-process__img,
+    .creation-process__content {
+        max-width: 30vw;
     }
 }
 
