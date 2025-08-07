@@ -354,7 +354,7 @@
 }
 
 /* css responsibility */
-.responsibility-group .responsibility-container {
+.responsibility-group.responsibility-container {
     padding-top: 0px;
     padding-bottom: 70px;
 }
