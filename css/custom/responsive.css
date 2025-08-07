@@ -1009,4 +1009,8 @@
         margin-left: 10px;
     }
 
+    .intro-custom__container h2{
+        margin-bottom: 5px !important;
+    }
+
 }
