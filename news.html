@@ -13,22 +13,100 @@
 </head>
 
 <body>
-    <header class="bg-white">
-        <div class="container-f flex center-hor header-top" data-include="./component/header-top.html"></div>
+    <header class="">
+        <div class="container-f flex center-hor bg-white header-top" data-include="./component/header-top.html"></div>
+        <div id="menumobile" class="container-f flex bg-white container-menu__mobile">
+            <div class="container-l flex menu-bar__mb">
+                <div class="content-left__mb flex">
+                    <button id="btn-menu" class=" flex center-ver menu__btn">
+                        <img src="./img/logo/menu-bar-green.png" alt="">
+                    </button>
+                    <div class="flex center-ver">
+                        <select class="custom-select option-bg">
+                            <option>English</option>
+                            <option>Vietnamese</option>
+                        </select>
+                        <a class="recruitment-btn" href="../recruitment.html">Tuyển dụng</a>
+                    </div>
+                </div>
+                <div class="content-right__mb flex center-ver">
+                    <div class="flex header-content__containermb">
+                        <a class="center-ver flex logo-partner__mb">
+                            <img title="logo đối tác" src="./img/logo/logo nuffam CAM 2.png" alt="">
+                        </a>
+                        <a class="center-ver flex logo-partner__mb">
+                            <img title="logo đối tác" src="./img/logo/Group 1.png" alt="">
+                        </a>
+                        <a class="center-ver flex logo-partner__mb">
+                            <img title="logo đối tác" src="./img/logo/Logo_ 2.png" alt="">
+                        </a>
+                        <a class="center-ver flex logo-partner__mb">
+                            <img title="logo đối tác" src="./img/logo/Logo Mowari (final) 3.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-mobile__content flex flex-col">
+                <div class="flex btn-close">
+                    <button><img src="./img/icon/close.png" alt=""></button>
+                </div>
+                <div class="flex center-hor social-land">
+                    <p class="btn-land">
+                        <img src="./img/menu/eng.png" alt="">
+                    </p>
+                    <a href="#" target="_blank" class="social-item">
+                        <img src="./img/menu/facebook.png" alt="">
+                    </a>
+                    <a href="#" target="_blank" class="social-item">
+                        <img src="./img/menu/messenger.png" alt="">
+                    </a>
+                    <a href="#" target="_blank" class="social-item">
+                        <img src="./img/menu/youtube.png" alt="">
+                    </a>
+                    <a href="#" target="_blank" class="social-item">
+                        <img src="./img/menu/instragram.png" alt="">
+                    </a>
+                </div>
+                <div class="">
+                    <a class="flex center-hor menu-mobile__item" href="./index.html">trang chủ</a>
+                    <a class="flex center-hor menu-mobile__item" href="./story.html">câu chuyện</a>
+                    <a class="flex center-hor menu-mobile__item" href="./fieldofactivity.html">lĩnh vực hoạt
+                        động</a>
+                    <a class="flex center-hor menu-mobile__item" href="./product.html">sản phẩm</a>
+                    <a class="flex center-hor menu-mobile__item" href="./sustainabledevelopment.html">phát triễn bền
+                        vững</a>
+                    <a class="flex center-hor menu-mobile__item" href="./community.html">quan hệ cổ đông</a>
+                    <a class="flex center-hor menu-mobile__item" href="./news.html">tin tức</a>
+                    <a class="flex center-hor menu-mobile__item" href="./contact.html">liên hệ</a>
+                </div>
+                <div class="flex center-ver search-box_mb">
+                    <input type="text" placeholder="Search...">
+                    <button class="flex center-hor " type="submit">
+                        <img src="./img/icon/search-line.png" alt="Search">
+                    </button>
+                </div>
+            </div>
+            <div class="background-mobile"></div>
+        </div>
     </header>
     <section class="container-f flex center-hor header-bottom">
         <div class="container-l flex center-ver header-container">
-            <div class="header-content flex">
-                <a class="flex center-hor " href="./index.html">
-                    <img src="./img/icon/home.png" alt="">
-                </a>
-                <a class="flex center-hor" href="./story.html">câu chuyện</a>
-                <a class="flex center-hor" href="./fieldofactivity.html">lĩnh vực hoạt động</a>
-                <a class="flex center-hor " href="./product.html">sản phẩm</a>
-                <a class="flex center-hor" href="./sustainabledevelopment.html">phát triễn bền vững</a>
-                <a class="flex center-hor" href="./community.html">quan hệ cổ đông</a>
-                <a class="flex center-hor " href="./news.html">tin tức</a>
-                <a class="flex center-hor" href="./contact.html">liên hệ</a>
+            <div class="header-content flex center-ver">
+                <div title="logo menu" class="logo-menu">
+                    <img src="./img/logo/logo-menu.png" alt="">
+                </div>
+                <div class="flex center-ver menu-container">
+                    <a class="flex center-ver center-hor " href="./index.html">
+                        <img src="./img/icon/home.png" alt="">
+                    </a>
+                    <a class="flex center-hor center-ver" href="./story.html">câu chuyện</a>
+                    <a class="flex center-hor center-ver" href="./fieldofactivity.html">lĩnh vực hoạt động</a>
+                    <a class="flex center-hor center-ver " href="./product.html">sản phẩm</a>
+                    <a class="flex center-hor center-ver" href="./sustainabledevelopment.html">phát triễn bền vững</a>
+                    <a class="flex center-hor center-ver" href="./community.html">quan hệ cổ đông</a>
+                    <a class="flex center-hor center-ver" href="./news.html">tin tức</a>
+                    <a class="flex center-hor center-ver" href="./contact.html">liên hệ</a>
+                </div>
                 <div class="flex center-ver search-box">
                     <input type="text" placeholder="Search..." />
                     <button class="flex center-hor " type="submit">
@@ -36,73 +114,10 @@
                     </button>
                 </div>
             </div>
-            <div class="connect-us flex flex-col bg-green center-ver">
-                <a class="connect-us__icon">
-                    <img src="./img/icon/pin.png " alt="">
-                </a>
-                <div class="divider"></div>
-                <a class="connect-us__icon">
-                    <img src="./img/icon/phone.png " alt="">
-                </a>
-                <div class="divider"></div>
-                <a class="connect-us__icon">
-                    <img src="./img/icon/mail.png " alt="">
-                </a>
+            <div class="connect-us flex flex-col bg-white center-ver" data-include="./component/contact-component.html">
             </div>
             <div id="scrollToTop" class="scroll-to-top">
                 <img src="./img/icon/icon-to-top.png" alt="">
-            </div>
-        </div>
-    </section>
-    <section id="menumobile" class="container-f flex bg-green container-menu__mobile">
-        <div class="container-xs flex ">
-            <button id="btn-menu" class=" flex center-ver menu__btn">
-                <img src="./img/icon/Vector-bar.png" alt="">
-            </button>
-            <a class=" flex center-ver menu__btn">
-                <img src="./img/icon/nuffam-mini.png" alt="">
-            </a>
-            <a class=" flex center-ver menu__btn">
-                <img src="./img/icon/vuagao-mini.png" alt="">
-                <p>Vua Gạo</p>
-            </a>
-            <a class=" flex center-ver menu__btn">
-                <img src="./img/icon/ong-cu-mini.png" alt="">
-                <p>Ông Cụ</p>
-            </a>
-            <a class=" flex center-ver menu__btn">
-                <img src="./img/icon/tuyen-dung.png" alt="">
-                <p>Tuyển dụng</p>
-            </a>
-            <div class=" flex center-ver menu__btn">
-                <p><a href="">Tiếng việt</a>/<a href="">English</a></p>
-            </div>
-            <div class="menu-mobile__content flex flex-col">
-                <div class="flex btn-close">
-                    <button><img src="./img/icon/close.png" alt=""></button>
-                </div>
-                <a class="flex center-hor menu-mobile__item" href="./index.html">trang chủ</a>
-                <a class="flex center-hor menu-mobile__item" href="./story.html">câu chuyện</a>
-                <a class="flex center-hor menu-mobile__item" href="./fieldofactivity.html">lĩnh vực hoạt động</a>
-                <a class="flex center-hor menu-mobile__item" href="./product.html">sản phẩm</a>
-                <a class="flex center-hor menu-mobile__item" href="./sustainabledevelopment.html">phát triễn bền vững</a>
-                <a class="flex center-hor menu-mobile__item" href="./community.html">quan hệ cổ đông</a>
-                <a class="flex center-hor menu-mobile__item" href="./news.html">tin tức</a>
-                <a class="flex center-hor menu-mobile__item" href="./contact.html">liên hệ</a>
-            </div>
-            <div class="background-mobile"></div>
-            <div class="connect-us flex flex-col bg-green center-ver">
-                <a class="connect-us__icon">
-                    <img src="./img/icon/pin.png " alt="">
-                </a>
-                <div class="divider"></div>
-                <a class="connect-us__icon">
-                    <img src="./img/icon/phone.png " alt="">
-                </a>
-                <div class="divider"></div>
-                <a class="connect-us__icon">
-                    <img src="./img/icon/mail.png " alt="">
-                </a>
             </div>
         </div>
     </section>

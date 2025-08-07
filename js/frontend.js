@@ -414,15 +414,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
   btn.addEventListener('click', function () {
     const isExpanded = excerpt.classList.toggle('expanded');
-    
+
     btn.textContent = isExpanded ? 'THU GỌN' : 'XEM THÊM';
-    
+
     // 🛠 Giữ lại icon khi đổi text
     btn.appendChild(btnIcon);
 
     // 🔄 Đổi icon
-    btnIcon.src = isExpanded 
-      ? './img/icon/down-rev.png' 
+    btnIcon.src = isExpanded
+      ? './img/icon/down-rev.png'
       : './img/icon/down.png';
   });
 });
@@ -548,70 +548,87 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //js sản phẩm 
 document.addEventListener("DOMContentLoaded", function () {
-    if (window.innerWidth < 1300) {
-        const menuLinks = document.querySelectorAll(".product-menu p");
-        const productMenu = document.querySelector(".product-menu__content");
-        
-        if (menuLinks.length && productMenu) {
-            menuLinks.forEach((link) => {
-                link.addEventListener("click", function (e) {
-                    e.preventDefault(); 
-                    
-                    const isActive = link.classList.contains("active");
+  if (window.innerWidth < 1300) {
+    const menuLinks = document.querySelectorAll(".product-menu p");
+    const productMenu = document.querySelector(".product-menu__content");
 
-                    // Xóa active cũ
-                    menuLinks.forEach(p => p.classList.remove("active"));
-                    productMenu.classList.remove("active");
+    if (menuLinks.length && productMenu) {
+      menuLinks.forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
 
-                    // Nếu chưa active thì thêm
-                    if (!isActive) {
-                        link.classList.add("active");
-                        productMenu.classList.add("active");
-                    }
-                });
-            });
+          const isActive = link.classList.contains("active");
 
-            // Click ra ngoài -> remove active
-            document.addEventListener("click", function (e) {
-                const clickedInsideMenu = e.target.closest(".product-menu") || e.target.closest(".product-menu__content");
-                
-                if (!clickedInsideMenu) {
-                    menuLinks.forEach(p => p.classList.remove("active"));
-                    productMenu.classList.remove("active");
-                }
-            });
+          // Xóa active cũ
+          menuLinks.forEach(p => p.classList.remove("active"));
+          productMenu.classList.remove("active");
+
+          // Nếu chưa active thì thêm
+          if (!isActive) {
+            link.classList.add("active");
+            productMenu.classList.add("active");
+          }
+        });
+      });
+
+      // Click ra ngoài -> remove active
+      document.addEventListener("click", function (e) {
+        const clickedInsideMenu = e.target.closest(".product-menu") || e.target.closest(".product-menu__content");
+
+        if (!clickedInsideMenu) {
+          menuLinks.forEach(p => p.classList.remove("active"));
+          productMenu.classList.remove("active");
         }
+      });
     }
+  }
 });
 
 //js scroll to top
 
 document.addEventListener("DOMContentLoaded", function () {
-    const scrollBtn = document.getElementById("scrollToTop");
+  const scrollBtn = document.getElementById("scrollToTop");
 
-    if (scrollBtn) { // ✅ Chỉ chạy khi tồn tại nút
-        window.addEventListener("scroll", function () {
-            if (window.scrollY > 300) {
-                scrollBtn.classList.add("show");
-            } else {
-                scrollBtn.classList.remove("show");
-            }
+  if (scrollBtn) { // ✅ Chỉ chạy khi tồn tại nút
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 300) {
+        scrollBtn.classList.add("show");
+      } else {
+        scrollBtn.classList.remove("show");
+      }
+    });
+
+    scrollBtn.addEventListener("click", function () {
+      const currentScroll = window.scrollY;
+
+      if (currentScroll > 50) {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
         });
 
-        scrollBtn.addEventListener("click", function () {
-            const currentScroll = window.scrollY;
+        // Force về 0 sau animation (an toàn)
+        setTimeout(() => {
+          if (window.scrollY !== 0) window.scrollTo(0, 0);
+        }, 600);
+      }
+    });
+  }
+});
 
-            if (currentScroll > 50) {
-                window.scrollTo({
-                    top: 0,
-                    behavior: "smooth"
-                });
+// js menu
+document.addEventListener('DOMContentLoaded', function () {
+  const headerBottom = document.querySelector('.header-bottom');
 
-                // Force về 0 sau animation (an toàn)
-                setTimeout(() => {
-                    if (window.scrollY !== 0) window.scrollTo(0, 0);
-                }, 600);
-            }
-        });
-    }
+  if (headerBottom) {
+    window.addEventListener('scroll', function () {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+      if (scrollTop >= 100) {
+        headerBottom.classList.add('header-bottom__stick');
+      } else {
+        headerBottom.classList.remove('header-bottom__stick');
+      }
+    });
+  }
 });
