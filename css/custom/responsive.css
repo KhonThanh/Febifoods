@@ -226,11 +226,6 @@
 
 @media screen and (max-width: 1024px) {
 
-    .product-fall,
-    .rice-fall {
-        display: none;
-    }
-
     .intro-custom__content,
     .intro-custom__image {
         width: 100%;
@@ -318,6 +313,48 @@
 
     .responsibility-button img:last-child {
         aspect-ratio: 16 / 7;
+    }
+
+    .col-rev {
+        flex-direction: column-reverse !important;
+    }
+
+    .col-rev.intro-custom__container p {
+        width: 60%;
+    }
+
+    .padding-medium {
+        padding: 40px 0px;
+    }
+
+    .intro-custom__container .small {
+        display: flex;
+        justify-content: right;
+    }
+
+    .intro-custom__container .small img {
+        width: 80%;
+    }
+
+    .rice-fall {
+        width: 80% !important;
+        top: -74%;
+        left: -14%;
+    }
+
+    .padding-small {
+        padding: 116px 0px 0px 0px;
+    }
+
+    .product-fall {
+        top: -85%;
+        right: -16%;
+        width: 78% !important;
+        transform: rotate(-44deg);
+    }
+
+    .padding-larger {
+        padding: 80px 0px 80px;
     }
 }
 
@@ -581,6 +618,33 @@
     .menu__btn {
         margin-right: 5px;
     }
+
+    .all-btn {
+        padding: 9px 15px;
+        max-width: 120px;
+    }
+
+    .intro-custom__container h2 {
+        font-size: var(--font-size-base);
+    }
+
+    .intro-custom__container p {
+        font-size: calc(var(--font-size-base) - 6px);
+    }
+
+    .all-btn {
+        font-size: calc(var(--font-size-base) - 6px);
+    }
+
+    .intro-custom__container h1 {
+        font-size: calc(var(--font-size-base) + 12px);
+    }
+
+
+    .intro-custom__container h1 span {
+        font-size: calc(var(--font-size-base) + 40px);
+        margin-left: 10px;
+    }
 }
 
 @media screen and (max-width: 620px) {
@@ -824,27 +888,22 @@
         height: 180px;
         object-fit: cover;
     }
+
+    .more-space {
+        padding-bottom: 10px;
+        margin-bottom: 20px !important;
+    }
+
+    .padding-larger {
+        padding: 20px 0px 80px;
+    }
 }
 
 @media screen and (max-width: 551px) {
 
-    :root {
-        --font-size-base: 12px;
-    }
-
     .creation-process__item {
         width: 100vw;
         padding: 0px 20px;
-    }
-
-
-    .intro-custom__container h2,
-    .intro-custom__container h1 {
-        font-size: calc(var(--font-size-base) + 24px);
-    }
-
-    .intro-custom__container h1 span {
-        font-size: calc(var(--font-size-base) + 64px);
     }
 
     .menu-bottom img {
@@ -930,6 +989,20 @@
 
     .header-content__containermb {
         gap: 0.5vw;
+    }
+
+    .intro-custom__container p {
+        margin-bottom: 10px;
+    }
+
+    .intro-custom__container h1  {
+        font-size: calc(var(--font-size-base) + 6px);
+        margin-bottom: 10px;
+    }
+
+    .intro-custom__container h1 span {
+        font-size: calc(var(--font-size-base) + 28px);
+        margin-left: 10px;
     }
 
 }

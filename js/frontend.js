@@ -261,7 +261,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (entry.isIntersecting) {
         const el = entry.target;
 
-        el.style.transitionDelay = `${revealIndex * 50}ms`;
+        el.style.transitionDelay = `${revealIndex * 20}ms`;
         revealIndex++;
 
         el.classList.add("show-up");
@@ -270,7 +270,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }, {
-    threshold: 0.1,              // chỉ cần xuất hiện 10% là hiện
+    threshold: 0.08,              // chỉ cần xuất hiện 10% là hiện
     rootMargin: "0px 0px -10% 0px"
   });
 
