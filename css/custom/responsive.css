@@ -222,6 +222,12 @@
         width: 190px !important;
         height: auto;
     }
+
+    .field-tab,
+    .story-tab {
+        font-size: calc(var(--font-size-base) - 0.8vw) !important;
+        padding: 3px 6px;
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -1009,7 +1015,7 @@
         margin-left: 10px;
     }
 
-    .intro-custom__container h2{
+    .intro-custom__container h2 {
         margin-bottom: 5px !important;
     }
 

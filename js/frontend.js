@@ -446,6 +446,7 @@ document.addEventListener('DOMContentLoaded', function () {
       .replace(/[\u0300-\u036f]/g, '')
       .replace(/[^\w\s-]/g, '')
       .replace(/\s+/g, '-')
+      .replace(/^[0-9]+\.\s*/, "") 
       .toLowerCase();
 
     heading.id = id;
@@ -631,4 +632,27 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
+});
+
+// js sản phảm
+$('.type-product').slick({
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  infinite: true,
+  arrows: true,
+  dots: false,
+  responsive: [
+    {
+      breakpoint: 1299, // dưới 1300px
+      settings: {
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 768, // dưới 768px (mobile)
+      settings: {
+        slidesToShow: 1
+      }
+    }
+  ]
 });
