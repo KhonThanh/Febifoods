@@ -26,35 +26,6 @@ Promise.all(
   })
 );
 
-
-//js sản phảm
-document.addEventListener("DOMContentLoaded", function () {
-  var slider = document.querySelector('.all-type__product');
-  if (slider) {
-    $('.all-type__product').slick({
-      slidesToShow: 5,
-      slidesToScroll: 1,
-      infinite: true,
-      arrows: false,
-      dots: false,
-      responsive: [
-        {
-          breakpoint: 1299,
-          settings: {
-            slidesToShow: 3
-          }
-        },
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 1
-          }
-        }
-      ]
-    });
-  }
-});
-
 // js enviroment
 
 $(document).ready(function () {
@@ -94,28 +65,36 @@ $(document).ready(function () {
 });
 
 // js thêm width và height vào bất kì thẻ img
-document.addEventListener("includesLoaded", () => {
-  const images = document.querySelectorAll("img");
-
-  images.forEach((img) => {
-    if (!img.hasAttribute("loading")) {
-      img.setAttribute("loading", "lazy");
-    }
-    if (img.complete) {
-      setDimensions(img);
-    } else {
-      img.addEventListener("load", () => setDimensions(img));
-    }
-  });
-
-  function setDimensions(img) {
-    if (!img.hasAttribute("width")) {
-      img.setAttribute("width", img.naturalWidth);
-    }
-    if (!img.hasAttribute("height")) {
-      img.setAttribute("height", img.naturalHeight);
-    }
+function applyLazyAndDimensions(img) {
+  if (!img.hasAttribute("loading")) {
+    img.setAttribute("loading", "lazy");
   }
+  if (img.complete) {
+    setDimensions(img);
+  } else {
+    img.addEventListener("load", () => setDimensions(img));
+  }
+}
+
+function setDimensions(img) {
+  if (!img.hasAttribute("width")) {
+    img.setAttribute("width", img.naturalWidth);
+  }
+  if (!img.hasAttribute("height")) {
+    img.setAttribute("height", img.naturalHeight);
+  }
+}
+
+// Chạy khi includesLoaded
+document.addEventListener("includesLoaded", () => {
+  document.querySelectorAll("img").forEach(applyLazyAndDimensions);
+});
+
+// Chạy lại mỗi khi Slick init hoặc reInit
+$(document).on('init reInit afterChange', '.slick-slider', function () {
+  $(this).find('img').each(function () {
+    applyLazyAndDimensions(this);
+  });
 });
 
 // js slide
@@ -204,23 +183,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
-
-// js map
-
-function toggleBg() {
-  const section = document.getElementById('mapSection');
-  const title = document.getElementById('map-marketing__title');
-
-  if (section.classList.contains('bg-white')) {
-    section.classList.remove('bg-white');
-    section.classList.add('bg-green');
-    title.classList.add('title-color');
-  } else {
-    section.classList.remove('bg-green');
-    section.classList.add('bg-white');
-    title.classList.remove('title-color');
-  }
-}
 
 // js slide product
 document.addEventListener("DOMContentLoaded", () => {
@@ -324,15 +286,19 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-// js product
-$(document).ready(function () {
-  if ($('.all-product__container').length) {
-    $('.all-product__container').slick({
-      slidesToShow: 1,
+//js product
+document.addEventListener("DOMContentLoaded", function () {
+  if (document.querySelector('.all-type__container')) {
+    $('.all-type__container').slick({
+      slidesToShow: 5,
       slidesToScroll: 1,
-      infinite: false,
-      arrows: false,
+      infinite: true,
+      arrows: true,
       dots: false,
+      responsive: [
+        { breakpoint: 1299, settings: { slidesToShow: 3 } },
+        { breakpoint: 768, settings: { slidesToShow: 1 } }
+      ]
     });
   }
 });
@@ -474,7 +440,7 @@ document.addEventListener('DOMContentLoaded', function () {
       .replace(/[\u0300-\u036f]/g, '')
       .replace(/[^\w\s-]/g, '')
       .replace(/\s+/g, '-')
-      .replace(/^[0-9]+\.\s*/, "") 
+      .replace(/^[0-9]+\.\s*/, "")
       .toLowerCase();
 
     heading.id = id;
