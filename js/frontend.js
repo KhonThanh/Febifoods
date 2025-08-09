@@ -27,6 +27,34 @@ Promise.all(
 );
 
 
+//js sản phảm
+document.addEventListener("DOMContentLoaded", function () {
+  var slider = document.querySelector('.all-type__product');
+  if (slider) {
+    $('.all-type__product').slick({
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      infinite: true,
+      arrows: false,
+      dots: false,
+      responsive: [
+        {
+          breakpoint: 1299,
+          settings: {
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
+  }
+});
+
 // js enviroment
 
 $(document).ready(function () {
@@ -632,27 +660,4 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
-});
-
-// js sản phảm
-$('.type-product').slick({
-  slidesToShow: 5,
-  slidesToScroll: 1,
-  infinite: true,
-  arrows: true,
-  dots: false,
-  responsive: [
-    {
-      breakpoint: 1299, // dưới 1300px
-      settings: {
-        slidesToShow: 3
-      }
-    },
-    {
-      breakpoint: 768, // dưới 768px (mobile)
-      settings: {
-        slidesToShow: 1
-      }
-    }
-  ]
 });
