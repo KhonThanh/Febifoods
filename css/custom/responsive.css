@@ -676,6 +676,17 @@
         font-size: calc(var(--font-size-base) + 40px);
         margin-left: 10px;
     }
+
+    .all-certification .slick-slide {
+        transform: scale(0.8);
+        opacity: 0.5;
+        transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+
+    .all-certification .slick-center {
+        transform: scale(1.1);
+        opacity: 1;
+    }
 }
 
 @media screen and (max-width: 620px) {

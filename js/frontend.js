@@ -69,11 +69,29 @@ function applyLazyAndDimensions(img) {
   if (!img.hasAttribute("loading")) {
     img.setAttribute("loading", "lazy");
   }
-  if (img.complete) {
-    setDimensions(img);
-  } else {
-    img.addEventListener("load", () => setDimensions(img));
-  }
+
+  const updateSize = () => {
+    if (img.naturalWidth > 0 && img.naturalHeight > 0) {
+      setDimensions(img);
+      return true;
+    }
+    return false;
+  };
+
+  if (updateSize()) return; // có kích thước rồi thì thôi
+
+  img.addEventListener("load", () => updateSize());
+
+  // Nếu trong tab ẩn, đợi nó hiển thị rồi mới set
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        updateSize();
+        observer.disconnect();
+      }
+    });
+  });
+  observer.observe(img);
 }
 
 function setDimensions(img) {
@@ -700,5 +718,65 @@ document.addEventListener('DOMContentLoaded', function () {
     thumb.addEventListener('click', function () {
       mainImage.src = this.src;
     });
+  });
+});
+
+// js cho certification
+document.addEventListener("DOMContentLoaded", function () {
+  const container = document.querySelector(".all-certification");
+  if (!container) return;
+
+  let items = container.querySelectorAll(".certification-item");
+  if (items.length === 0) return;
+
+  // Clone cho đủ 5 item
+  while (items.length < 5) {
+    const clone = items[items.length % items.length === 0 ? 0 : items.length % items.length].cloneNode(true);
+    container.appendChild(clone);
+    items = container.querySelectorAll(".certification-item");
+  }
+
+  function setPositions(mainIndex) {
+    items.forEach((item, i) => {
+      item.classList.remove("main", "left", "right");
+      if (i === mainIndex) {
+        item.classList.add("main");
+      } else if (i < mainIndex) {
+        item.classList.add("left");
+      } else {
+        item.classList.add("right");
+      }
+    });
+  }
+
+  function initDesktop() {
+    setPositions(2);
+    items.forEach((item, index) => {
+      item.addEventListener("mouseenter", () => {
+        setPositions(index);
+      });
+    });
+  }
+
+  function initMobile() {
+    $(container).slick({
+      centerMode: true,
+      slidesToShow: 3,
+      infinite: true,
+      arrows: false,
+      dots: false,
+      autoplay: 300,
+    });
+  }
+
+  if (window.innerWidth > 768) {
+    initDesktop();
+  } else {
+    initMobile();
+  }
+
+  // Nếu resize qua lại thì reload
+  window.addEventListener("resize", () => {
+    location.reload();
   });
 });
