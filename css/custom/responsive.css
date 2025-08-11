@@ -26,6 +26,11 @@
     .header-content__left .menu__btn {
         display: block;
     }
+
+    .filter-item__left,
+    .filter-item__right {
+        gap: 10px;
+    }
 }
 
 @media screen and (max-width: 1151px) and (min-width: 961px) {
@@ -62,8 +67,17 @@
         display: block;
     }
 
+    .product-filter,
     .all-product__status {
         display: none;
+    }
+
+    .product-filter__container .product-filter {
+        display: block;
+    }
+
+    .filter-item__left {
+        margin-bottom: 20px;
     }
 
     .product-menu__mb,
@@ -140,11 +154,11 @@
         font-size: calc(var(--font-size-base) + 2px);
     }
 
-    .product-menu__mbContainer{
+    .product-menu__mbContainer {
         display: block;
     }
 
-    .product-menu__mbContainer>div{
+    .product-menu__mbContainer>div {
         margin-bottom: 30px;
     }
 
@@ -676,6 +690,24 @@
         gap: 10px;
     }
 
+    .filter-item__right {
+        flex-direction: column;
+        align-items: start;
+        border-radius: 25px;
+    }
+
+    .filter-item__right div,
+    .filter-item__right div select {
+        width: 100%;
+    }
+
+    .filter-item__left select,
+    .filter-item__right select,
+    .filter-item__left span,
+    .filter-item__right span {
+        font-size: var(--font-size-base);
+    }
+
     .menu-mobile__content {
         width: 80vw;
     }
@@ -919,19 +951,20 @@
         padding: 20px 0px 80px;
     }
 
-    .Business-container h2, .core-values__title{
+    .Business-container h2,
+    .core-values__title {
         margin-bottom: 20px;
     }
 
-    .core-values__container{
+    .core-values__container {
         padding-top: 30px;
     }
 
-    .core-values__container p{
+    .core-values__container p {
         padding-bottom: 30px;
     }
 
-    .core-values__title-second{
+    .core-values__title-second {
         margin-bottom: 30px;
     }
 
@@ -942,11 +975,13 @@
         font-size: calc(var(--font-size-base) + 8px);
     }
 
-    .core-values__item p{
-            font-size: calc(var(--font-size-base) + 12px);
+    .core-values__item p {
+        font-size: calc(var(--font-size-base) + 12px);
     }
 
-    .Business-container p, .core-values__container strong, .core-values__container p,
+    .Business-container p,
+    .core-values__container strong,
+    .core-values__container p,
     .intro-custom__container p {
         font-size: var(--font-size-base);
     }
@@ -1076,6 +1111,16 @@
     }
 
     body .all-product__container .product__container .product-item {
-        width: 100% !important;
+        width: calc(100% / 2 - 20px);
+    }
+
+    .product-fullinfo__quality,
+    .product-fullinfo {
+        padding: 10px;
+    }
+
+    .product-title__second,
+    .product-title {
+        white-space: nowrap;
     }
 }
