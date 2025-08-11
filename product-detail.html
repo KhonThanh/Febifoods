@@ -14,76 +14,101 @@
 
 <body>
     <header class="">
-        <div class="container-f flex center-hor bg-white header-top" data-include="./component/header-top.html"></div>
-        <div id="menumobile" class="container-f flex bg-white container-menu__mobile">
-            <div class="container-l flex menu-bar__mb">
-                <div class="content-left__mb flex">
+        <div class="container-f flex center-hor bg-white header-top">
+            <div class="container-l flex center-ver header-container">
+                <div class="flex center-ver header-content__left">
                     <button id="btn-menu" class=" flex center-ver menu__btn">
                         <img src="./img/logo/menu-bar-green.png" alt="">
                     </button>
-                    <div class="flex center-ver">
-                        <select class="custom-select option-bg">
-                            <option>English</option>
-                            <option>Vietnamese</option>
-                        </select>
-                        <a class="recruitment-btn" href="../recruitment.html">Tuyển dụng</a>
-                    </div>
+                    <select class="custom-select option-bg">
+                        <option>English</option>
+                        <option>Vietnamese</option>
+                    </select>
+
+                    <a class="recruitment-btn" href="../recruitment.html">Tuyển dụng</a>
                 </div>
-                <div class="content-right__mb flex center-ver">
-                    <div class="flex header-content__containermb">
-                        <a class="center-ver flex logo-partner__mb">
+                <a href="../index.html" class="logo">
+                    <img title="logo trang chủ" src="./img/logo/LOGO FEBI-09.svg" alt="">
+                </a>
+                <div class="header-content__right">
+                    <div class="flex header-content__container">
+                        <a class="center-hor flex logo-partner">
                             <img title="logo đối tác" src="./img/logo/logo nuffam CAM 2.png" alt="">
                         </a>
-                        <a class="center-ver flex logo-partner__mb">
+                        <a class="center-hor flex logo-partner">
                             <img title="logo đối tác" src="./img/logo/Group 1.png" alt="">
                         </a>
-                        <a class="center-ver flex logo-partner__mb">
+                        <a class="center-hor flex logo-partner">
                             <img title="logo đối tác" src="./img/logo/Logo_ 2.png" alt="">
                         </a>
-                        <a class="center-ver flex logo-partner__mb">
+                        <a class="center-hor flex logo-partner">
                             <img title="logo đối tác" src="./img/logo/Logo Mowari (final) 3.png" alt="">
                         </a>
                     </div>
                 </div>
+                <div class="menu-bottom">
+                    <img src="./img/icon/bottommenu.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div id="menumobile" class="container-f flex bg-white container-menu__mobile">
+            <div class="container-l flex menu-bar__mb">
+                <div class="logo-part flex">
+                    <a class="center-ver flex logo-partner__mb">
+                        <img title="logo đối tác" src="./img/logo/logo nuffam CAM 2.png" alt="">
+                    </a>
+                    <a class="center-ver flex logo-partner__mb">
+                        <img title="logo đối tác" src="./img/logo/Group 1.png" alt="">
+                    </a>
+                </div>
+                <div class="logo-part flex">
+                    <a class="center-ver flex logo-partner__mb">
+                        <img title="logo đối tác" src="./img/logo/Logo_ 2.png" alt="">
+                    </a>
+                    <a class="center-ver flex logo-partner__mb">
+                        <img title="logo đối tác" src="./img/logo/Logo Mowari (final) 3.png" alt="">
+                    </a>
+                </div>
             </div>
             <div class="menu-mobile__content flex flex-col">
-                <div class="flex btn-close">
-                    <button><img src="./img/icon/close.png" alt=""></button>
-                </div>
-                <div class="flex center-hor social-land">
-                    <p class="btn-land">
-                        <img src="./img/menu/eng.png" alt="">
-                    </p>
-                    <a href="#" target="_blank" class="social-item">
-                        <img src="./img/menu/facebook.png" alt="">
-                    </a>
-                    <a href="#" target="_blank" class="social-item">
-                        <img src="./img/menu/messenger.png" alt="">
-                    </a>
-                    <a href="#" target="_blank" class="social-item">
-                        <img src="./img/menu/youtube.png" alt="">
-                    </a>
-                    <a href="#" target="_blank" class="social-item">
-                        <img src="./img/menu/instragram.png" alt="">
-                    </a>
-                </div>
-                <div class="">
-                    <a class="flex center-hor menu-mobile__item" href="./index.html">trang chủ</a>
-                    <a class="flex center-hor menu-mobile__item" href="./story.html">câu chuyện</a>
-                    <a class="flex center-hor menu-mobile__item" href="./fieldofactivity.html">lĩnh vực hoạt
-                        động</a>
-                    <a class="flex center-hor menu-mobile__item" href="./product.html">sản phẩm</a>
-                    <a class="flex center-hor menu-mobile__item" href="./sustainabledevelopment.html">phát triễn bền
-                        vững</a>
-                    <a class="flex center-hor menu-mobile__item" href="./community.html">quan hệ cổ đông</a>
-                    <a class="flex center-hor menu-mobile__item" href="./news.html">tin tức</a>
-                    <a class="flex center-hor menu-mobile__item" href="./contact.html">liên hệ</a>
-                </div>
-                <div class="flex center-ver search-box_mb">
-                    <input type="text" placeholder="Search...">
-                    <button class="flex center-hor " type="submit">
-                        <img src="./img/icon/search-line.png" alt="Search">
-                    </button>
+                <div class="menu-content__inside">
+                    <div class="flex btn-close">
+                        <button><img src="./img/icon/btn-close.png" alt=""></button>
+                    </div>
+                    <div class="">
+                        <a class="flex center-hor menu-mobile__item" href="./index.html">trang chủ</a>
+                        <a class="flex center-hor menu-mobile__item" href="./story.html">câu chuyện</a>
+                        <a class="flex center-hor menu-mobile__item" href="./fieldofactivity.html">lĩnh vực hoạt
+                            động</a>
+                        <a class="flex center-hor menu-mobile__item" href="./product.html">sản phẩm</a>
+                        <a class="flex center-hor menu-mobile__item" href="./sustainabledevelopment.html">phát triễn bền
+                            vững</a>
+                        <a class="flex center-hor menu-mobile__item" href="./community.html">quan hệ cổ đông</a>
+                        <a class="flex center-hor menu-mobile__item" href="./news.html">tin tức</a>
+                        <a class="flex center-hor menu-mobile__item" href="./contact.html">liên hệ</a>
+                    </div>
+                    <div class="flex center-ver search-box_mb">
+                        <input type="text" placeholder="Search...">
+                        <button class="flex center-hor " type="submit">
+                            <img src="./img/icon/Vector-search-white.png" alt="Search">
+                        </button>
+                    </div>
+                    <div class="flex flex-col center-ver logo-mb__container">
+                        <div class="flex center-ver logo-mb__leverOne">
+                            <a href="#" class="flex center-ver center-hor"><img src="../img/icon/shoppe.png" alt=""></a>
+                            <a href="#" class="flex center-ver center-hor"><img src="../img/icon/tiktok-shop.png"
+                                    alt=""></a>
+                            <!-- <a href="#" class="flex center-ver center-hor"><img src="../img/icon/grab.png" alt=""></a> -->
+                            <a href="#" class="flex center-ver center-hor"><img src="../img/icon/lazada.png" alt=""></a>
+                        </div>
+                        <div class="flex center-ver logo-mb__leverTwo">
+                            <a href="#" target="_blank"><img src="./img/icon/you.png" alt=""></a>
+                            <a href="#" target="_blank"><img src="./img/icon/zalo.png" alt=""></a>
+                            <a href="#" target="_blank"><img src="./img/icon/fac.png" alt=""></a>
+                            <a href="#" target="_blank"><img src="./img/icon/ins.png" alt=""></a>
+                            <a href="#" target="_blank"><img src="./img/icon/in.png" alt=""></a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="background-mobile"></div>
@@ -214,56 +239,275 @@
                 <img src="./img/product/gao-st25+.png" alt="">
             </div>
         </section>
-        <section class="flex flex-col center-ver container-f all-product bg-white">
-            <h2>sản phẩm cùng thương hiệu</h2>
-            <div class="flex container-l center-hor all-product__image" data-include="./component/allproduct.html">
-            </div>
-            <div class="container-l all-product__image-mobile">
-                <a href="#" class="flex flex-col center-hor all-product__item-mb">
-                    <img src="./img/product/phu-sa.png" alt="Sản phẩm" class="product-image" />
-                    <img src="./img/product/phu-sa.png" alt="Phản chiếu" class="product-reflect" />
-                </a>
-                <a href="#" class="flex flex-col center-hor all-product__item-mb">
-                    <img src="./img/product/gao-st24.png" alt="Sản phẩm" class="product-image" />
-                    <img src="./img/product/gao-st24.png" alt="Phản chiếu" class="product-reflect" />
-                </a>
-                <a href="#" class="flex flex-col center-hor all-product__item-mb">
-                    <img src="./img/product/gao-st25.png" alt="Sản phẩm" class="product-image" />
-                    <img src="./img/product/gao-st25.png" alt="Phản chiếu" class="product-reflect" />
-                </a>
-                <a href="#" class="flex flex-col center-hor all-product__item-mb">
-                    <img src="./img/product/lua-tom.png" alt="Sản phẩm" class="product-image" />
-                    <img src="./img/product/lua-tom.png" alt="Phản chiếu" class="product-reflect" />
-                </a>
-                <a href="#" class="flex flex-col center-hor all-product__item-mb">
-                    <img src="./img/product/ca-mau-st-25.png" alt="Sản phẩm" class="product-image" />
-                    <img src="./img/product/ca-mau-st-25.png" alt="Phản chiếu" class="product-reflect" />
-                </a>
-                <a href="#" class="flex flex-col center-hor all-product__item-mb">
-                    <img src="./img/product/ca-mau.png" alt="Sản phẩm" class="product-image" />
-                    <img src="./img/product/ca-mau.png" alt="Phản chiếu" class="product-reflect" />
-                </a>
-                <a href="#" class="flex flex-col center-hor all-product__item-mb">
-                    <img src="./img/product/gao-st25+.png" alt="Sản phẩm" class="product-image" />
-                    <img src="./img/product/gao-st25+.png" alt="Phản chiếu" class="product-reflect" />
-                </a>
-                <a href="#" class="flex flex-col center-hor all-product__item-mb">
-                    <img src="./img/product/st25-dak-lak.png" alt="Sản phẩm" class="product-image" />
-                    <img src="./img/product/st25-dak-lak.png" alt="Phản chiếu" class="product-reflect" />
-                </a>
-                <a href="#" class="flex flex-col center-hor all-product__item-mb">
-                    <img src="./img/product/st-25-krong-ana.png" alt="Sản phẩm" class="product-image" />
-                    <img src="./img/product/st-25-krong-ana.png" alt="Phản chiếu" class="product-reflect" />
-                </a>
-                <a href="#" class="flex flex-col center-hor all-product__item-mb">
-                    <img src="./img/product/st25-premium.png" alt="Sản phẩm" class="product-image" />
-                    <img src="./img/product/st25-premium.png" alt="Phản chiếu" class="product-reflect" />
-                </a>
-                <a href="#" class="flex flex-col center-hor all-product__item-mb">
-                    <img src="./img/product/gao-lang-ta.png" alt="Sản phẩm" class="product-image" />
-                    <img src="./img/product/gao-lang-ta.png" alt="Phản chiếu" class="product-reflect" />
-                </a>
+        <section class="container-f">
+            <div class="container-l post-header flex">
+                <div class="post-thumbnail">
+                    <img src="./img/new/new 2.png" alt="Trà sữa gạo rang">
+                </div>
+                <div class="flex flex-col post-title-section">
+                    <h1>Trà Sữa Gạo Rang: Toàn Tập 5 Công Thức Từ Truyền Thống Đến Healthy</h1>
+                    <p class="post-meta">23/05/2025 • Đăng bởi Healthy Life</p>
+                    <p class="post-excerpt">
+                        Không quá ngọt gắt, không quá béo ngấy, trà sữa gạo rang chinh phục thực khách bởi sự cân bằng
+                        hoàn hảo, trở thành xu hướng mới trong làng trà sữa. Bài viết này là cẩm nang toàn tập, hướng
+                        dẫn bạn từ A-Z mọi thứ về trà sữa gạo rang, từ công thức chuẩn vị Việt Nam đến các phiên bản độc
+                        đáo của Nhật Bản, Hàn Quốc và cả công thức trà sữa "eat clean" cho người ăn kiêng.
+                        Hãy cùng Vua Gạo khám phá và tự tay pha chế những ly trà sữa thơm ngon ngay tại nhà!
+                        Không quá ngọt gắt, không quá béo ngấy, trà sữa gạo rang chinh phục thực khách bởi sự cân bằng
+                        hoàn hảo, trở thành xu hướng mới trong làng trà sữa. Bài viết này là cẩm nang toàn tập, hướng
+                        dẫn bạn từ A-Z mọi thứ về trà sữa gạo rang, từ công thức chuẩn vị Việt Nam đến các phiên bản độc
+                        đáo của Nhật Bản, Hàn Quốc và cả công thức trà sữa "eat clean" cho người ăn kiêng.
+                        Hãy cùng Vua Gạo khám phá và tự tay pha chế những ly trà sữa thơm ngon ngay tại nhà!
 
+                    </p>
+                    <button class="flex center-ver btn-readmore">XEM THÊM <img src="./img/icon/Vector-down.png"
+                            alt=""></button>
+                    <div class=" flex center-ver share-container">
+                        <p>Chia sẻ :</p>
+                        <a><img src="./img/icon/zalo-news.png" alt=""></a>
+                        <a><img src="./img/icon/facebook-news.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container-f">
+            <div class="container-l flex post-container ">
+                <aside class="flex flex-col post-sidebar">
+                    <h2>Nội Dung Bài Viết</h2>
+                    <ul class="toc-list">
+                        <li><a href="#section1">1. Trà Sữa Gạo Rang Là Gì?...</a></li>
+                        <li><a href="#section2">2. Trà Sữa Gạo Rang Bao Nhiêu Calo?... </a></li>
+                        <li><a href="#section3">3. Cách Pha Trà Sữa Gạo Rang...</a></li>
+                        <!-- ... -->
+                    </ul>
+                </aside>
+
+                <article class=" flex flex-col post-content">
+                    <h2>1. Trà Sữa Gạo Rang Là Gì? Vì Sao Lại Gây "Sốt"?</h2>
+                    <img src="./img/new/new 29/new-2.png" alt="Trà sữa gạo rang">
+                    <p>Trà sữa gạo rang
+                        Trà sữa gạo rang là một thức uống được kết hợp hài hòa giữa ba thành phần chính: trà (thường là
+                        lục trà hoặc ô long), sữa và linh hồn của món nước – gạo rang.Điểm đặc biệt làm nên sức hút của
+                        nó chính là mùi thơm quyến rũ, nồng ấm của những hạt gạo được rang đến độ vàng nâu hoàn hảo.
+                        Hương thơm này khi quyện với vị chát dịu của trà và vị béo nhẹ của sữa đã tạo ra một thức uống
+                        độc đáo:Hương vị cân bằng: Không ngọt gắt, không béo ngấy.Hậu vị bùi thơm: Vị bùi của gạo rang
+                        lưu lại nơi cuống họng, tạo cảm giác dễ chịu.Phù hợp khẩu vị Việt: Hương gạo rang vốn đã rất
+                        quen thuộc trong ẩm thực Việt Nam, tạo cảm giác gần gũi, thân quen.
+                        Tham khảo : Gạo dành cho người tiểu đường</p>
+                    <h2>2. Trà Sữa Gạo Rang Bao Nhiêu Calo?...</h2>
+                    <p>Đây là câu hỏi được rất nhiều người quan tâm, đặc biệt là những ai đang kiểm soát cân nặng. Lượng
+                        calo trong một ly trà sữa gạo rang (size M, khoảng 500ml) có thể dao động rất nhiều tùy thuộc
+                        vào công thức pha chế: .</p>
+                    <ul>
+                        <li>Loại 1: Cơ bản (ít calo nhất)
+                            <ul>
+                                <li>Thành phần: Chỉ có trà, nước gạo rang và sữa hạt (hoặc sữa tươi không đường), không
+                                    thêm đường.</li>
+                                <li>Lượng calo: Khoảng 100 – 150 kcal. Đây là lựa chọn lý tưởng cho người theo chế độ
+                                    "eat clean".</li>
+                            </ul>
+                        </li>
+                        <li>Loại 2: Phổ thông (có đường/sữa đặc)
+                            <ul>
+                                <li>Thành phần: Có thêm đường hoặc sữa đặc để tăng vị ngọt.</li>
+                                <li>Lượng calo: Khoảng 200 – 300 kcal. Mức năng lượng này tương đương một bữa ăn nhẹ.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Loại 3: Full Topping
+                            <ul>
+                                <li>Thành phần: Thêm đầy đủ topping như trân châu, thạch, kem cheese...</li>
+                                <li>Lượng calo: Có thể lên tới 350 – 500 kcal, gần bằng một bữa ăn chính.</li>
+                                <li>Kết luận: Trà sữa gạo rang hoàn toàn có thể là một thức uống lành mạnh nếu bạn chọn
+                                    phiên bản ít đường, ít topping.
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h2>3. Cách Pha Trà Sữa Gạo Rang</h2>
+                    <h3>3.1 Công Thức 1: Trà Sữa Gạo Rang Truyền Thống (Chuẩn Vị Quán)</h3>
+                    <img src="./img/new/new 29/news-3.png" alt="Trà sữa gạo rang truyền thống">
+                    <p>Hãy bắt đầu với hương vị nguyên bản, quen thuộc nhất – một tấm vé đưa bạn quay về với ly trà sữa
+                        thơm ngon tại quán quen. Công thức này là sự cân bằng hoàn hảo giữa vị ngọt béo của sữa đặc và
+                        hương thơm nồng nàn của gạo mới rang, dễ uống, dễ gây nghiện và là nền tảng cho mọi biến tấu
+                        sáng tạo.</p>
+                    <ul>
+                        <li>Nguyên Liệu:
+                            <ul>
+                                <li>Gạo: 50g (Ưu tiên các loại gạo thơm, dẻo như gạo ST25 của Vua Gạo để hương vị thơm
+                                    ngon vượt trội).</li>
+                                <li>Trà: 2 túi trà lọc (trà Lipton, ô long hoặc lục trà).</li>
+                                <li>Sữa tươi không đường: 500ml.</li>
+                                <li>Sữa đặc: 40ml (có thể điều chỉnh).</li>
+                                <li>Đường: 30g (dùng đường phèn sẽ cho vị ngọt thanh hơn).</li>
+                                <li>Nước lọc: 1 lít.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h3>3.2. Công Thức 2: Trà Sữa Gạo Rang Hàn Quốc (Nurungji Latte)</h3>
+                    <img src="./img/new/new 29/new-4.png" alt="Trà sữa gạo rang hàn quốc">
+                    <p>Cùng du hành đến xứ sở kim chi với Nurungji Latte, một thức uống mang hương vị của ký ức.
+                        "Nurungji" chính là lớp cơm cháy vàng giòn ở đáy nồi gang, mang theo hương thơm mộc mạc, đậm đà
+                        và sâu lắng. Đây không chỉ là một ly trà sữa, mà còn là một cái ôm ấm áp, gợi nhớ về những bữa
+                        cơm gia đình quây quần.</p>
+                    <ul>
+                        <li>Nguyên Liệu:
+                            <ul>
+                                <li>Cơm cháy (Nurungji): 40g. Bạn có thể tự làm bằng cách áp chảo một lớp cơm mỏng từ
+                                    gạo dẻo Việt Nam cho vàng giòn, hoặc mua gói làm sẵn ở siêu thị Hàn.</li>
+                                <li>Sữa tươi không đường: 400ml.</li>
+                                <li>Chất tạo ngọt: 2 muỗng si-rô đường nâu hoặc mật ong.</li>
+                                <li>Sữa đặc: 40ml (có thể điều chỉnh).</li>
+                                <li>Trà: 1 túi trà đen hoặc trà lúa mạch (boricha).</li>
+                                <li>Bột ngũ cốc rang (Misugaru): 1 muỗng canh (tùy chọn, giúp tăng độ béo bùi).</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>Cách Làm:
+                            <ul>
+                                <li>Nấu Nước Cốt Cơm Cháy: Bẻ nhỏ cơm cháy, cho vào nồi cùng 300ml nước, đun sôi rồi hạ
+                                    nhỏ lửa nấu 10-15 phút đến khi nước có màu nâu nhạt và thơm. Lọc lấy nước cốt.</li>
+                                <li>Ủ Trà: Ủ trà với 100ml nước sôi trong 3-5 phút.</li>
+                                <li>Pha Chế: Hâm nóng sữa tươi (không đun sôi). Cho nước cốt cơm cháy, nước cốt trà và
+                                    si-rô đường nâu vào, khuấy đều trên lửa nhỏ cho hòa quyện.</li>
+                                <li>Thưởng Thức: Ngon nhất khi uống nóng. Có thể rắc thêm ít vụn cơm cháy giòn lên trên.
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>Xem thêm <a href="https://vuagaovn.com/gao-gia-la-gi">Cách phân biệt gạo giả và gạo thật</a></p>
+                    <h3>3.3. Công Thức 3: Trà Sữa Gạo Rang Nhật Bản (Genmaicha Latte)</h3>
+                    <img src="./img/new/new 29/new-5.png" alt="Trà sữa gạo rang nhật bản">
+                    <p>Nếu bạn tìm kiếm sự tĩnh lặng và tinh tế, Genmaicha Latte chính là câu trả lời. Mang tinh thần
+                        của trà đạo Nhật Bản, công thức này là sự hòa quyện thanh tao giữa vị tươi mát của trà xanh
+                        Sencha và vị bùi sâu lắng của gạo lứt rang. Mỗi ngụm trà là một khoảnh khắc thiền định, giúp bạn
+                        tìm thấy sự cân bằng và an yên.</p>
+                    <ul>
+                        <li>Nguyên Liệu:
+                            <ul>
+                                <li>Trà Genmaicha: 2 túi lọc hoặc 2 muỗng cà phê trà rời (hỗn hợp trà xanh và gạo lứt
+                                    rang).</li>
+                                <li>Sữa tươi không đường: 400ml (hoặc sữa đậu nành để chuẩn vị Nhật hơn).</li>
+                                <li>Chất tạo ngọt: 1-2 muỗng cà phê mật ong hoặc si-rô đường đen (Kuromitsu).</li>
+                                <li>Gợi ý: Bạn có thể tự làm Genmaicha bằng cách rang gạo lứt hay gạo Japonica của Vua
+                                    Gạo đến khi thơm nồng rồi trộn với trà xanh theo tỷ lệ 1:1.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>Cách Làm:
+                            <ul>
+                                <li>Ủ Trà: Dùng nước nóng khoảng 80°C để ủ trà trong 3 phút. Nhiệt độ này giúp trà không
+                                    bị đắng chát. Lọc bỏ bã trà ngay.</li>
+                                <li>Pha Chế: Hâm nóng sữa, cho nước cốt trà và mật ong vào. Dùng phới lồng khuấy nhẹ để
+                                    tạo một lớp bọt mỏng mịn.</li>
+                                <li>Thưởng Thức: Uống nóng trong cốc gốm để cảm nhận trọn vẹn sự tinh tế.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h3>3.4. Công Thức 4: Trà Sữa Gạo Rang Lá Dứa Thơm Mát </h3>
+                    <p>Đây là một bản giao hưởng đồng quê, nơi hương thơm mộc mạc của hạt gạo Việt được rang vàng gặp gỡ
+                        mùi lá dứa (lá nếp) thanh mát, dịu dàng. Màu xanh ngọc bắt mắt cùng hương vị quen thuộc nhưng
+                        đầy sáng tạo này sẽ đánh thức mọi giác quan, mang đến một cảm giác tươi mới và cực kỳ thư giãn.
+                    </p>
+                    <img src="./img/new/new 29/new-6.png" alt="Trà sữa gạo rang lá dứa">
+                    <ul>
+                        <li>Nguyên Liệu:
+                            <ul>
+                                <li>Gạo thơm: 50g</li>
+                                <li>Lá dứa: 10 lá, chọn lá xanh đậm</li>
+                                <li>Trà: 2 túi lục trà hoặc ô long</li>
+                                <li>Sữa tươi không đường: 500ml</li>
+                                <li>Sữa đặc/Kem béo: 40ml</li>
+                                <li>Đường: 30g</li>
+                            </ul>
+                        </li>
+                        <li>Cách Làm:
+                            <ul>
+                                <li><strong>Sơ Chế:</strong> Rang gạo cho vàng thơm. Lá dứa cắt nhỏ, xay nhuyễn với
+                                    200ml nước rồi lọc lấy nước cốt.</li>
+                                <li><strong>Nấu Nền Trà Sữa:</strong> Nấu nước gạo rang, sau đó cho trà vào ủ như công
+                                    thức truyền thống.</li>
+                                <li><strong>Hoàn Thiện:</strong> Cho sữa tươi, sữa đặc, đường vào nồi trà sữa, khuấy
+                                    đều. Khi hỗn hợp nóng già, từ từ đổ nước cốt lá dứa vào, khuấy đều cho trà chuyển
+                                    màu xanh ngọc rồi tắt bếp.</li>
+                                <li><strong>Thưởng Thức:</strong> Uống lạnh với đá và các loại thạch lá dứa, sương sáo.
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h3>Công Thức 5: Trà Sữa Gạo Lứt Healthy (Eat Clean)</h3>
+                    <p>Dành cho những tâm hồn yêu thích lối sống "eat clean"... Hãy thưởng thức một ly trà sữa gạo lứt
+                        để nạp lại năng lượng một cách nhẹ nhàng và an yên.</p>
+                    <ul>
+                        <li>Nguyên Liệu:
+                            <ul>
+                                <li>Gạo lứt: 50g (gạo lứt huyết rồng hoặc gạo lứt tím)</li>
+                                <li>Sữa hạt không đường: 500ml (sữa yến mạch, hạnh nhân, óc chó)</li>
+                                <li>Trà: 2 túi trà đen</li>
+                                <li>Chất tạo ngọt tự nhiên: 2–3 quả chà là (bỏ hạt, xay nhuyễn) hoặc đường ăn kiêng
+                                    Stevia</li>
+                            </ul>
+                        </li>
+                        <li>Cách Làm:
+                            <ul>
+                                <li><strong>Rang Gạo:</strong> Rang gạo lứt trên chảo đến khi thơm nồng, hạt sậm màu.
+                                </li>
+                                <li><strong>Nấu Nước Cốt:</strong> Nấu gạo lứt với 1 lít nước trong 20–30 phút để tiết
+                                    ra hết dưỡng chất. Lọc lấy nước cốt.</li>
+                                <li><strong>Ủ Trà:</strong> Dùng nước cốt gạo lứt còn nóng để ủ trà trong 5–7 phút.</li>
+                                <li><strong>Hoàn Thiện:</strong> Hâm nóng nhẹ hỗn hợp trà gạo lứt, từ từ cho sữa hạt và
+                                    chất tạo ngọt tự nhiên vào, khuấy đều rồi tắt bếp.</li>
+                                <li><strong>Thưởng Thức:</strong> Có thể uống nóng hoặc lạnh.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h3>4. Bí Quyết & Câu Hỏi Thường Gặp</h3>
+                    <ul>
+                        <li>
+                            <strong>Làm sao để trà sữa không bị đắng?</strong>
+                            <ul>
+                                <li>Nguyên nhân 1: Rang gạo bị cháy → Rang ở lửa nhỏ, đảo đều tay.</li>
+                                <li>Nguyên nhân 2: Ủ trà quá lâu → Chỉ ủ 5–7 phút.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Chọn loại gạo nào ngon nhất?</strong>
+                            <p>Gạo càng thơm thì trà sữa càng ngon. Các loại gạo đặc sản Việt Nam như
+                                <em>ST25</em>, <em>ST24</em> từ thương hiệu uy tín (Vua Gạo) là lựa chọn hàng đầu.
+                            </p>
+                        </li>
+                        <li>
+                            <strong>Bảo quản trà sữa gạo rang được bao lâu?</strong>
+                            <p>Nên bảo quản trong chai kín, để ngăn mát tủ lạnh và dùng tốt nhất trong 2 ngày để giữ
+                                hương vị.</p>
+                        </li>
+                    </ul>
+
+                    <p>Chúc bạn thành công với những công thức trên và có được những ly trà sữa gạo rang thơm ngon, chất
+                        lượng ngay tại nhà.</p>
+
+                    <p><strong>Tag:</strong>
+                        <span>trà sữa gạo rang</span>,
+                        <span>cách làm trà sữa gạo rang</span>,
+                        <span>trà sữa gạo rang Hàn Quốc</span>,
+                        <span>trà sữa gạo rang Nhật Bản</span>
+                    </p>
+                    <div class="footer-post__content">
+                        <h3>CÔNG TY CP THỰC PHẨM THIÊN NHIÊN KING GREEN</h3>
+                        <p>
+                            Showroom: 88 Tôn Thất Tùng, Phường Bến Thành, Quận 1, TP.HCM<br>
+                            Văn phòng: EnterPrise Tower, 290 Đ. Bến Vân Đồn, Phường 2, Quận 4, Hồ Chí Minh.<br>
+                            Nhà máy sản xuất: Ấp Tây, xã Kim Sơn, huyện Châu Thành, tỉnh Tiền Giang.<br>
+                            Điện Thoại: 18008012<br>
+                            Email: info@vuagaovn.com<br>
+                            Facebook: facebook.com/vuagaovn<br>
+                            Website: vuagaovn.com
+                        </p>
+                    </div>
+                </article>
             </div>
         </section>
     </main>

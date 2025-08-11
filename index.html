@@ -14,76 +14,101 @@
 
 <body>
     <header class="">
-        <div class="container-f flex center-hor bg-white header-top" data-include="./component/header-top.html"></div>
-        <div id="menumobile" class="container-f flex bg-white container-menu__mobile">
-            <div class="container-l flex menu-bar__mb">
-                <div class="content-left__mb flex">
+        <div class="container-f flex center-hor bg-white header-top">
+            <div class="container-l flex center-ver header-container">
+                <div class="flex center-ver header-content__left">
                     <button id="btn-menu" class=" flex center-ver menu__btn">
                         <img src="./img/logo/menu-bar-green.png" alt="">
                     </button>
-                    <div class="flex center-ver">
-                        <select class="custom-select option-bg">
-                            <option>English</option>
-                            <option>Vietnamese</option>
-                        </select>
-                        <a class="recruitment-btn" href="../recruitment.html">Tuyển dụng</a>
-                    </div>
+                    <select class="custom-select option-bg">
+                        <option>English</option>
+                        <option>Vietnamese</option>
+                    </select>
+
+                    <a class="recruitment-btn" href="../recruitment.html">Tuyển dụng</a>
                 </div>
-                <div class="content-right__mb flex center-ver">
-                    <div class="flex header-content__containermb">
-                        <a class="center-ver flex logo-partner__mb">
+                <a href="../index.html" class="logo">
+                    <img title="logo trang chủ" src="./img/logo/LOGO FEBI-09.svg" alt="">
+                </a>
+                <div class="header-content__right">
+                    <div class="flex header-content__container">
+                        <a class="center-hor flex logo-partner">
                             <img title="logo đối tác" src="./img/logo/logo nuffam CAM 2.png" alt="">
                         </a>
-                        <a class="center-ver flex logo-partner__mb">
+                        <a class="center-hor flex logo-partner">
                             <img title="logo đối tác" src="./img/logo/Group 1.png" alt="">
                         </a>
-                        <a class="center-ver flex logo-partner__mb">
+                        <a class="center-hor flex logo-partner">
                             <img title="logo đối tác" src="./img/logo/Logo_ 2.png" alt="">
                         </a>
-                        <a class="center-ver flex logo-partner__mb">
+                        <a class="center-hor flex logo-partner">
                             <img title="logo đối tác" src="./img/logo/Logo Mowari (final) 3.png" alt="">
                         </a>
                     </div>
                 </div>
+                <div class="menu-bottom">
+                    <img src="./img/icon/bottommenu.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div id="menumobile" class="container-f flex bg-white container-menu__mobile">
+            <div class="container-l flex menu-bar__mb">
+                <div class="logo-part flex">
+                    <a class="center-ver flex logo-partner__mb">
+                        <img title="logo đối tác" src="./img/logo/logo nuffam CAM 2.png" alt="">
+                    </a>
+                    <a class="center-ver flex logo-partner__mb">
+                        <img title="logo đối tác" src="./img/logo/Group 1.png" alt="">
+                    </a>
+                </div>
+                <div class="logo-part flex">
+                    <a class="center-ver flex logo-partner__mb">
+                        <img title="logo đối tác" src="./img/logo/Logo_ 2.png" alt="">
+                    </a>
+                    <a class="center-ver flex logo-partner__mb">
+                        <img title="logo đối tác" src="./img/logo/Logo Mowari (final) 3.png" alt="">
+                    </a>
+                </div>
             </div>
             <div class="menu-mobile__content flex flex-col">
-                <div class="flex btn-close">
-                    <button><img src="./img/icon/close.png" alt=""></button>
-                </div>
-                <div class="flex center-hor social-land">
-                    <p class="btn-land">
-                        <img src="./img/menu/eng.png" alt="">
-                    </p>
-                    <a href="#" target="_blank" class="social-item">
-                        <img src="./img/menu/facebook.png" alt="">
-                    </a>
-                    <a href="#" target="_blank" class="social-item">
-                        <img src="./img/menu/messenger.png" alt="">
-                    </a>
-                    <a href="#" target="_blank" class="social-item">
-                        <img src="./img/menu/youtube.png" alt="">
-                    </a>
-                    <a href="#" target="_blank" class="social-item">
-                        <img src="./img/menu/instragram.png" alt="">
-                    </a>
-                </div>
-                <div class="">
-                    <a class="flex center-hor menu-mobile__item" href="./index.html">trang chủ</a>
-                    <a class="flex center-hor menu-mobile__item" href="./story.html">câu chuyện</a>
-                    <a class="flex center-hor menu-mobile__item" href="./fieldofactivity.html">lĩnh vực hoạt
-                        động</a>
-                    <a class="flex center-hor menu-mobile__item" href="./product.html">sản phẩm</a>
-                    <a class="flex center-hor menu-mobile__item" href="./sustainabledevelopment.html">phát triễn bền
-                        vững</a>
-                    <a class="flex center-hor menu-mobile__item" href="./community.html">quan hệ cổ đông</a>
-                    <a class="flex center-hor menu-mobile__item" href="./news.html">tin tức</a>
-                    <a class="flex center-hor menu-mobile__item" href="./contact.html">liên hệ</a>
-                </div>
-                <div class="flex center-ver search-box_mb">
-                    <input type="text" placeholder="Search...">
-                    <button class="flex center-hor " type="submit">
-                        <img src="./img/icon/search-line.png" alt="Search">
-                    </button>
+                <div class="menu-content__inside">
+                    <div class="flex btn-close">
+                        <button><img src="./img/icon/btn-close.png" alt=""></button>
+                    </div>
+                    <div class="">
+                        <a class="flex center-hor menu-mobile__item" href="./index.html">trang chủ</a>
+                        <a class="flex center-hor menu-mobile__item" href="./story.html">câu chuyện</a>
+                        <a class="flex center-hor menu-mobile__item" href="./fieldofactivity.html">lĩnh vực hoạt
+                            động</a>
+                        <a class="flex center-hor menu-mobile__item" href="./product.html">sản phẩm</a>
+                        <a class="flex center-hor menu-mobile__item" href="./sustainabledevelopment.html">phát triễn bền
+                            vững</a>
+                        <a class="flex center-hor menu-mobile__item" href="./community.html">quan hệ cổ đông</a>
+                        <a class="flex center-hor menu-mobile__item" href="./news.html">tin tức</a>
+                        <a class="flex center-hor menu-mobile__item" href="./contact.html">liên hệ</a>
+                    </div>
+                    <div class="flex center-ver search-box_mb">
+                        <input type="text" placeholder="Search...">
+                        <button class="flex center-hor " type="submit">
+                            <img src="./img/icon/Vector-search-white.png" alt="Search">
+                        </button>
+                    </div>
+                    <div class="flex flex-col center-ver logo-mb__container">
+                        <div class="flex center-ver logo-mb__leverOne">
+                            <a href="#" class="flex center-ver center-hor"><img src="../img/icon/shoppe.png" alt=""></a>
+                            <a href="#" class="flex center-ver center-hor"><img src="../img/icon/tiktok-shop.png"
+                                    alt=""></a>
+                            <!-- <a href="#" class="flex center-ver center-hor"><img src="../img/icon/grab.png" alt=""></a> -->
+                            <a href="#" class="flex center-ver center-hor"><img src="../img/icon/lazada.png" alt=""></a>
+                        </div>
+                        <div class="flex center-ver logo-mb__leverTwo">
+                            <a href="#" target="_blank"><img src="./img/icon/you.png" alt=""></a>
+                            <a href="#" target="_blank"><img src="./img/icon/zalo.png" alt=""></a>
+                            <a href="#" target="_blank"><img src="./img/icon/fac.png" alt=""></a>
+                            <a href="#" target="_blank"><img src="./img/icon/ins.png" alt=""></a>
+                            <a href="#" target="_blank"><img src="./img/icon/in.png" alt=""></a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="background-mobile"></div>
@@ -92,9 +117,9 @@
     <section class="container-f flex center-hor header-bottom">
         <div class="container-l flex center-ver header-container">
             <div class="header-content flex center-ver">
-                <d title="logo menu" class="logo-menu">
+                <div title="logo menu" class="logo-menu">
                     <img src="./img/logo/logo-menu.png" alt="">
-                </d>
+                </div>
                 <div class="flex center-ver menu-container">
                     <a class="flex center-ver center-hor " href="./index.html">
                         <img src="./img/icon/home.png" alt="">

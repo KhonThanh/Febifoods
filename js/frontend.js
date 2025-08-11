@@ -162,26 +162,57 @@ document.addEventListener('DOMContentLoaded', function () {
   const tabButtons = document.querySelectorAll('.story-tab');
   const tabContents = document.querySelectorAll('.tab-content');
 
-  // Kiểm tra nếu có ít nhất một tab và một content
   if (tabButtons.length && tabContents.length) {
-    tabButtons.forEach(btn => {
+    // Gán active + show mặc định cho cái đầu tiên
+    tabButtons[0].classList.add('active');
+    tabContents[0].classList.add('show');
+
+    tabButtons.forEach((btn, index) => {
       btn.addEventListener('click', function () {
         if (this.classList.contains('active')) return;
 
-        // Reset active và show
         tabButtons.forEach(b => b.classList.remove('active'));
         this.classList.add('active');
 
         tabContents.forEach(c => c.classList.remove('show'));
-
         const targetId = this.dataset.target;
         const targetSection = document.getElementById(targetId);
         if (targetSection) {
           targetSection.classList.add('show');
         }
+
+        // Nếu đang ở mobile & slick tồn tại → sync slick
+        if (window.innerWidth <= 551 && $('.story-tab_container').hasClass('slick-initialized')) {
+          $('.story-tab_container').slick('slickGoTo', index);
+        }
       });
     });
   }
+
+  // Hàm init slick ở mobile
+  function initStoryTabsSlider() {
+    if (window.innerWidth <= 551) {
+      if (!$('.story-tab_container').hasClass('slick-initialized')) {
+        $('.story-tab_container').slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true,
+          infinite: true,
+          prevArrow: '<button class="slick-prev custom-arrow" aria-label="Previous"><</button>',
+          nextArrow: '<button class="slick-next custom-arrow" aria-label="Next">></button>',
+        }).on('afterChange', function (event, slick, currentSlide) {
+          tabButtons[currentSlide].click();
+        });
+      }
+    } else {
+      if ($('.story-tab_container').hasClass('slick-initialized')) {
+        $('.story-tab_container').slick('unslick');
+      }
+    }
+  }
+
+  window.addEventListener('load', initStoryTabsSlider);
+  window.addEventListener('resize', initStoryTabsSlider);
 });
 
 // js slide product
@@ -288,19 +319,39 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //js product
 document.addEventListener("DOMContentLoaded", function () {
-  if (document.querySelector('.all-type__container')) {
-    $('.all-type__container').slick({
-      slidesToShow: 5,
-      slidesToScroll: 1,
-      infinite: true,
-      arrows: true,
-      dots: false,
-      responsive: [
-        { breakpoint: 1299, settings: { slidesToShow: 3 } },
-        { breakpoint: 768, settings: { slidesToShow: 1 } }
-      ]
-    });
+  let $slider = $('.all-type__content');
+
+  function initSlick() {
+    if (window.innerWidth <= 1024) {
+      if (!$slider.hasClass('slick-initialized')) {
+        $slider.slick({
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          centerMode: true,
+          arrows: true,
+          dots: false,
+          prevArrow: '<button class="slick-prev custom-arrow" aria-label="Previous"><</button>',
+          nextArrow: '<button class="slick-next custom-arrow" aria-label="Next">></button>',
+          responsive: [
+            {
+              breakpoint: 586,
+              settings: {
+                slidesToShow: 1
+              }
+            }
+          ]
+        });
+      }
+    } else {
+      if ($slider.hasClass('slick-initialized')) {
+        $slider.slick('unslick');
+      }
+    }
   }
+
+  initSlick();
+  window.addEventListener('resize', initSlick);
 });
 
 
@@ -626,4 +677,28 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
+});
+
+
+// js khi bám ảnh sản phẩm
+document.addEventListener('DOMContentLoaded', function () {
+  const mainImage = document.querySelector('.detail-product__image img');
+  const thumbnails = document.querySelectorAll('.thumbnail-images img');
+
+  function checkElement(element, name) {
+    if (!element || (element.length !== undefined && element.length === 0)) {
+      console.error(`❌ Không tìm thấy phần tử: ${name}`);
+      return false;
+    }
+    return true;
+  }
+
+  if (!checkElement(mainImage, 'Ảnh chính (.detail-product__image img)')) return;
+  if (!checkElement(thumbnails, 'Ảnh thumbnail (.thumbnail-images img)')) return;
+
+  thumbnails.forEach(thumb => {
+    thumb.addEventListener('click', function () {
+      mainImage.src = this.src;
+    });
+  });
 });
