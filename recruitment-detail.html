@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 
-<body>
+<body class="recruitment-zone">
     <header class="">
         <div class="container-f flex center-hor bg-white header-top">
             <div class="container-l flex center-ver header-container">
@@ -300,14 +300,42 @@
                 </div>
             </div>
         </section>
-        <!-- <section class="container-f">
-            <div class="recruitment-form__popup">
-
-            </div>
-            <div class="recruitment-backgroup__popup"></div>
-        </section> -->
     </main>
     <footer class="container-f bg-green center-ver" data-include="./component/footer.html"></footer>
+    <div class="container-f recruitment-popup">
+        <div class="flex center-hor center-ver recruitment-backgroup__popup">
+            <div class="flex flex-col bg-white recruitment-form__container">
+                <h2 class="flex recruitment-popup__title bg-light-gray">
+                    ứng tuyển ngay
+                    <span id="close-btn">X</span>
+                </h2>
+                <form class="flex flex-col recruitment-form__popup">
+                    <div class="flex flex-col input-email">
+                        <label for="email">Gmail:</label>
+                        <div class="flex input-email__content">
+                            <div class="input-email__icon">
+                                <img src="./img/icon/mail-rec.png" alt="">
+                            </div>
+                            <input type="email" id="email" name="email" required placeholder="gmail của bạn" />
+                        </div>
+                    </div>
+                    <p>đính kèm CV</p>
+                    <div class="flex flex-col recruitment-upload__container">
+                        <div class="flex recruitment-upload__choose">
+                            <input type="radio" id="fileAttach" name="option" value="file" />
+                            <label for="fileAttach">Đính kèm ứng tuyển</label>
+                        </div>
+                        <div class="flex flex-col center-ver recruitment-upload">
+                            <img src="./img/icon/update-file.png" alt="">
+                            <strong>Nhấn để tải lên</strong>
+                            <p>hỗ trợ định dạng .doc, .docx, pdf có kích thước dưới <strong>5mb</strong></p>
+                        </div>
+                    </div>
+                    <button class="bg-green recruitment-btn__submit">ứng tuyển ngay</button>
+                </form>
+            </div>
+        </div>
+    </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>

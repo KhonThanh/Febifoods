@@ -1134,4 +1134,12 @@
     .product-title {
         white-space: nowrap;
     }
+
+    .recruitment-popup__title{
+        padding: 15px 20px;
+    }
+
+    .recruitment-form__popup{
+        padding: 10px 25px;
+    }
 }

@@ -467,6 +467,32 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// js phần tắt mở popup đăng ký
+document.addEventListener("DOMContentLoaded", () => {
+  const btnRec = document.getElementById("recruitmentReg");
+  const popupRecContainer = document.querySelector(".recruitment-popup");
+  const btnClose = document.getElementById("close-btn");
+  const popupContainer = document.querySelector(".recruitment-form__container");
+
+  if (!btnRec || !popupRecContainer || !btnClose || !popupContainer) return;
+
+  btnRec.addEventListener("click", () => {
+    popupRecContainer.classList.add("active");
+  });
+
+  btnClose.addEventListener("click", () => {
+    popupRecContainer.classList.remove("active");
+  });
+
+  popupRecContainer.addEventListener("click", (e) => {
+    if (!popupContainer.contains(e.target)) {
+      popupRecContainer.classList.remove("active");
+    }
+  });
+
+
+});
+
 // js nội dung bài viết
 document.addEventListener('DOMContentLoaded', function () {
   const btn = document.querySelector('.btn-readmore');
