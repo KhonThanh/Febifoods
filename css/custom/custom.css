@@ -3416,6 +3416,22 @@ body .all-product__container .product__container .product-item {
     height: 100%;
 }
 
+.certification-intro{
+    padding-bottom: 50px;
+}
+
+
+.certification-intro h3{
+    font-size: calc(var(--font-size-base) * 2);
+    margin-bottom: 20px;
+}
+
+.certification-intro p{
+    font-size: var(--font-size-base);
+    margin-bottom: 20px;
+}
+
+
 /* css brand */
 .brand-slide__dot .slick-dots {
     display: flex !important;
