@@ -2121,6 +2121,7 @@ body .all-product__container .product__container .product-item {
 .product-filter {
     justify-content: space-between;
     padding: 20px 0px;
+    gap: 40px;
 }
 
 .filter-item__left,
@@ -2187,11 +2188,11 @@ body .all-product__container .product__container .product-item {
 }
 
 .filter-item__left {
-    flex: 0 0 40%;
+    flex: 0 0 30%;
 }
 
 .filter-item__right {
-    flex: 0 0 50%;
+    flex: 1 1 50%;
 }
 
 /* css detail product */
