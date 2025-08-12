@@ -177,60 +177,94 @@ $(document).ready(function () {
 
 //js story
 document.addEventListener('DOMContentLoaded', function () {
-  const tabButtons = document.querySelectorAll('.story-tab');
-  const tabContents = document.querySelectorAll('.tab-content');
+  const tabButtons = Array.from(document.querySelectorAll('.story-tab'));
+  const tabContents = Array.from(document.querySelectorAll('.tab-content'));
+  const sliderSelector = '.story-tab_container';
+  const $slider = $(sliderSelector);
 
-  if (tabButtons.length && tabContents.length) {
-    // Gán active + show mặc định cho cái đầu tiên
-    tabButtons[0].classList.add('active');
-    tabContents[0].classList.add('show');
+  if (!tabButtons.length || !tabContents.length) return;
 
-    tabButtons.forEach((btn, index) => {
-      btn.addEventListener('click', function () {
-        if (this.classList.contains('active')) return;
-
-        tabButtons.forEach(b => b.classList.remove('active'));
-        this.classList.add('active');
-
-        tabContents.forEach(c => c.classList.remove('show'));
-        const targetId = this.dataset.target;
-        const targetSection = document.getElementById(targetId);
-        if (targetSection) {
-          targetSection.classList.add('show');
-        }
-
-        // Nếu đang ở mobile & slick tồn tại → sync slick
-        if (window.innerWidth <= 551 && $('.story-tab_container').hasClass('slick-initialized')) {
-          $('.story-tab_container').slick('slickGoTo', index);
-        }
-      });
-    });
+  // helper: set active/tab content theo index (không click để tránh vòng lặp)
+  function setActiveByIndex(idx) {
+    tabButtons.forEach(b => b.classList.remove('active'));
+    tabContents.forEach(c => c.classList.remove('show'));
+    if (tabButtons[idx]) tabButtons[idx].classList.add('active');
+    if (tabContents[idx]) tabContents[idx].classList.add('show');
   }
 
-  // Hàm init slick ở mobile
+  // mặc định active = 0 (sẽ được override nếu slider init ở mobile)
+  setActiveByIndex(0);
+
+  // click trên tab (desktop hoặc mobile)
+  tabButtons.forEach((btn, index) => {
+    btn.addEventListener('click', function () {
+      if (this.classList.contains('active')) return;
+
+      // nếu slider mobile đang active -> điều hướng slick (afterChange sẽ sync active)
+      if (window.innerWidth <= 551 && $slider.hasClass('slick-initialized')) {
+        $slider.slick('slickGoTo', index);
+      } else {
+        // desktop: set trực tiếp
+        setActiveByIndex(index);
+      }
+    });
+  });
+
+  // Khởi tạo / destroy slick tuỳ kích thước
   function initStoryTabsSlider() {
     if (window.innerWidth <= 551) {
-      if (!$('.story-tab_container').hasClass('slick-initialized')) {
-        $('.story-tab_container').slick({
+      if (!$slider.hasClass('slick-initialized')) {
+        // Gắn sự kiện init trước khi gọi slick
+        $slider.on('init.storyTabs', function (event, slick) {
+          // sau init lấy center slide để sync active
+          const $center = $slider.find('.slick-slide.slick-center').first();
+          const dataIdx = $center.attr('data-slick-index');
+          const idx = dataIdx !== undefined ? parseInt(dataIdx, 10) : 0;
+          const total = tabButtons.length;
+          const normalized = ((idx % total) + total) % total;
+          setActiveByIndex(normalized);
+        });
+
+        // afterChange: tìm slide center rồi sync active/tab content
+        $slider.on('afterChange.storyTabs', function (event, slick, currentSlide) {
+          const $center = $slider.find('.slick-slide.slick-center').first();
+          const dataIdx = $center.attr('data-slick-index');
+          const idx = dataIdx !== undefined ? parseInt(dataIdx, 10) : currentSlide;
+          const total = tabButtons.length;
+          const normalized = ((idx % total) + total) % total;
+          setActiveByIndex(normalized);
+        });
+
+        // call slick
+        $slider.slick({
           slidesToShow: 1,
           slidesToScroll: 1,
           arrows: true,
           infinite: true,
+          centerMode: true,
+          centerPadding: '0px',
           prevArrow: '<button class="slick-prev custom-arrow" aria-label="Previous"><</button>',
           nextArrow: '<button class="slick-next custom-arrow" aria-label="Next">></button>',
-        }).on('afterChange', function (event, slick, currentSlide) {
-          tabButtons[currentSlide].click();
         });
       }
     } else {
-      if ($('.story-tab_container').hasClass('slick-initialized')) {
-        $('.story-tab_container').slick('unslick');
+      if ($slider.hasClass('slick-initialized')) {
+        $slider.slick('unslick');
+        // hủy event namespace nếu muốn (an toàn)
+        $slider.off('.storyTabs');
+        // reset active về tab 0 hoặc giữ tab hiện tại tuỳ bạn
+        setActiveByIndex(0);
       }
     }
   }
 
-  window.addEventListener('load', initStoryTabsSlider);
-  window.addEventListener('resize', initStoryTabsSlider);
+  // chạy lần đầu và khi resize (debounce)
+  initStoryTabsSlider();
+  let _t;
+  window.addEventListener('resize', function () {
+    clearTimeout(_t);
+    _t = setTimeout(initStoryTabsSlider, 120);
+  });
 });
 
 // js slide product

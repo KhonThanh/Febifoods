@@ -854,7 +854,7 @@
 
 .field-tab,
 .story-tab {
-    max-width: 320px;
+    max-width: 350px;
     width: 100%;
     padding: 7px 10px;
     border-radius: 50px;
@@ -1717,6 +1717,10 @@
 
 .environment {
     padding: 0px 0px 60px;
+}
+
+.environment-mb{
+    display: none;
 }
 
 .environment-header>img {

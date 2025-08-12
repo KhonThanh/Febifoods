@@ -1000,6 +1000,60 @@
 
 @media screen and (max-width: 551px) {
 
+    .field-tab,
+    .story-tab {
+        max-width: unset !important;
+    }
+
+    .environment {
+        display: none;
+    }
+
+    .environment-mb {
+        display: flex;
+        gap: 20px;
+    }
+
+    .environment-header__mb {
+        width: calc(100% / 2 - 20px);
+        gap: 10px;
+    }
+
+    .environment-header__mb p {
+        font-size: var(--font-size-base);
+        text-transform: uppercase;
+        color: var(--primary-color);
+        font-weight: 550;
+        width: 80;
+    }
+
+    .environment-header__mb>div>img:first-child {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        border-radius: 40px;
+        box-shadow: 12px 8px 10.6px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .environment-header__mb>div {
+        position: relative;
+    }
+
+    .environment-header__mb>div>img:first-child,
+    .environment-header__mb>div>img:last-child{
+        object-fit: cover;
+        object-position: top;
+    }
+
+    .environment-header__mb>div>img:last-child {
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        width: 25%;
+    }
+
+    .environment-title__mb {}
+
     .padding-small {
         padding: 40px 0px 0px 0px;
     }
@@ -1135,11 +1189,11 @@
         white-space: nowrap;
     }
 
-    .recruitment-popup__title{
+    .recruitment-popup__title {
         padding: 15px 20px;
     }
 
-    .recruitment-form__popup{
+    .recruitment-form__popup {
         padding: 10px 25px;
     }
 }
