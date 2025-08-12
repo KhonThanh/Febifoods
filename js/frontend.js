@@ -840,3 +840,76 @@ document.addEventListener("DOMContentLoaded", function () {
     location.reload();
   });
 });
+
+//js cho phần brand
+
+$(document).ready(function () {
+  var $wrap = $('.brand-content');
+  if (!$wrap.length) return;
+  var $items = $wrap.children('.brand-content__item');
+  if (!$items.length) return;
+  if (!$wrap.children('.brand-content__item').length) return;
+  if ($wrap.hasClass('slick-initialized')) {
+    $wrap.slick('unslick');
+  }
+
+  $wrap.slick({
+    slidesToShow: 1, 
+    slidesToScroll: 1,
+    infinite: true,
+    // autoplay: true,
+    // autoplaySpeed: 3000,
+    centerMode: true,
+    centerPadding: '300px', 
+    dots: true,
+    appendDots: $('.brand-slide__dot'),
+    prevArrow: $('.brand-prev'),
+    nextArrow: $('.brand-next'),
+    responsive: [
+      {
+        breakpoint: 1165,
+        settings: {
+          centerPadding: '100px'
+        }
+      },
+      {
+        breakpoint: 769,
+        settings: {
+          centerPadding: '60px'
+        }
+      },
+
+      {
+        breakpoint: 551,
+        settings: {
+          centerPadding: '0px'
+        }
+      },
+    ]
+  });
+});
+
+// js marketing
+const btns = document.querySelectorAll('#asia, #africa, #northAmerica, #oceania');
+
+btns.forEach(btn => {
+    btn.addEventListener('click', function () {
+        const list = this.querySelector('.nation-list');
+        if (!list) return;
+
+        const isOpen = list.classList.contains('open');
+
+        // Đóng tất cả
+        document.querySelectorAll('.nation-list').forEach(l => {
+            l.style.height = '0px';
+            l.classList.remove('open');
+        });
+
+        // Nếu đang mở thì đóng luôn
+        if (isOpen) return;
+
+        // Mở cái mới
+        list.classList.add('open');
+        list.style.height = list.scrollHeight + 'px';
+    });
+});
