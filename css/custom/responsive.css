@@ -266,7 +266,7 @@
     }
 
     .header-content__left,
-    .selected_land{
+    .selected_land {
         gap: 5px !important;
     }
 }
@@ -700,6 +700,10 @@
     .all-certification .slick-center {
         transform: scale(1.1);
         opacity: 1;
+    }
+
+    .brand-content .slick-center {
+        transform: scale(1.03);
     }
 }
 
