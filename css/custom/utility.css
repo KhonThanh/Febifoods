@@ -3,6 +3,7 @@
 .bg-white { background-color: var(--white-color); }
 .bg-light-gray { background-color: var(--light-gray-color);}
 .bg-orange { background-color: var(--orange-color);}
+.bg-darker-green{background-color: var(--darker-green-color);}
 
 .flex { display: flex; }
 .flex-col {flex-direction: column;}

@@ -76,10 +76,6 @@
         display: block;
     }
 
-    .filter-item__left {
-        margin-bottom: 20px;
-    }
-
     .product-menu__mb,
     .product-banner__mb {
         flex: 1 1 50%;
@@ -114,6 +110,14 @@
     .product-menu__mb h2 {
         font-size: calc(var(--font-size-base) * 2);
         margin-bottom: 2vw;
+    }
+
+    .filter-item__right {
+        z-index: 2;
+    }
+
+    .product-menu__mbContainer {
+        display: block;
     }
 }
 
@@ -152,10 +156,6 @@
 
     .creation-process__content p {
         font-size: calc(var(--font-size-base) + 2px);
-    }
-
-    .product-menu__mbContainer {
-        display: block;
     }
 
     .product-menu__mbContainer>div {
@@ -263,6 +263,11 @@
 
     .logo-partner__mb img {
         max-height: 25px;
+    }
+
+    .header-content__left,
+    .selected_land{
+        gap: 5px !important;
     }
 }
 
@@ -473,15 +478,15 @@
         flex-direction: column;
     }
 
-    .marketing-container_mb{
+    .marketing-container_mb {
         display: flex;
     }
-    
+
     .community-dropdown {
         display: block;
     }
 
-    .marketing-container_mb{
+    .marketing-container_mb {
         margin-bottom: 30px !important;
     }
 
@@ -650,8 +655,7 @@
         width: 49%;
     }
 
-    .recruitment-btn,
-    .custom-select {
+    .recruitment-btn {
         padding: 5px;
         font-size: 2vw;
         width: fit-content;
@@ -1067,6 +1071,10 @@
         box-shadow: 12px 8px 10.6px 0px rgba(0, 0, 0, 0.25);
     }
 
+    .footer-copy-right p {
+        font-size: calc(var(--font-size-base) + 2px);
+    }
+
     .environment-header__mb>div {
         position: relative;
     }
@@ -1235,10 +1243,15 @@
     #oceania {
         width: calc(100% / 4 - 10px);
         font-size: calc(var(--font-size-base) - 2px);
-   
+
     }
 
-    .nation-list  li {
+    .nation-list li {
         font-size: calc(var(--font-size-base) - 2px);
+    }
+
+    .filter-item__left,
+    .filter-item__right {
+        padding: 5px 10px !important;
     }
 }

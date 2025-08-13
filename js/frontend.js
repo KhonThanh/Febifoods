@@ -415,15 +415,8 @@ document.addEventListener("click", function (e) {
     parent.querySelectorAll("li").forEach(li => li.classList.remove("active"));
     clickedItem.classList.add("active");
   }
-
-  // Xử lý cho .list-time a
-  if (e.target.closest(".list-time a")) {
-    const clickedLink = e.target.closest("a");
-    const parent = clickedLink.closest(".list-time");
-    parent.querySelectorAll("a").forEach(a => a.classList.remove("active"));
-    clickedLink.classList.add("active");
-  }
 });
+
 
 $("[data-include]").load("file.html", function () {
   const $slider = $(".all-product__image--mobile");
@@ -790,11 +783,11 @@ document.addEventListener("DOMContentLoaded", function () {
   if (items.length === 0) return;
 
   // Clone cho đủ 5 item
-  while (items.length < 5) {
-    const clone = items[items.length % items.length === 0 ? 0 : items.length % items.length].cloneNode(true);
-    container.appendChild(clone);
-    items = container.querySelectorAll(".certification-item");
-  }
+  // while (items.length < 5) {
+  //   const clone = items[items.length % items.length === 0 ? 0 : items.length % items.length].cloneNode(true);
+  //   container.appendChild(clone);
+  //   items = container.querySelectorAll(".certification-item");
+  // }
 
   function setPositions(mainIndex) {
     items.forEach((item, i) => {
@@ -854,13 +847,13 @@ $(document).ready(function () {
   }
 
   $wrap.slick({
-    slidesToShow: 1, 
+    slidesToShow: 1,
     slidesToScroll: 1,
     infinite: true,
     // autoplay: true,
     // autoplaySpeed: 3000,
     centerMode: true,
-    centerPadding: '300px', 
+    centerPadding: '400px',
     dots: true,
     appendDots: $('.brand-slide__dot'),
     prevArrow: $('.brand-prev'),
@@ -893,23 +886,84 @@ $(document).ready(function () {
 const btns = document.querySelectorAll('#asia, #africa, #northAmerica, #oceania');
 
 btns.forEach(btn => {
-    btn.addEventListener('click', function () {
-        const list = this.querySelector('.nation-list');
-        if (!list) return;
+  btn.addEventListener('click', function () {
+    const list = this.querySelector('.nation-list');
+    if (!list) return;
 
-        const isOpen = list.classList.contains('open');
+    const isOpen = list.classList.contains('open');
 
-        // Đóng tất cả
-        document.querySelectorAll('.nation-list').forEach(l => {
-            l.style.height = '0px';
-            l.classList.remove('open');
-        });
-
-        // Nếu đang mở thì đóng luôn
-        if (isOpen) return;
-
-        // Mở cái mới
-        list.classList.add('open');
-        list.style.height = list.scrollHeight + 'px';
+    // Đóng tất cả
+    document.querySelectorAll('.nation-list').forEach(l => {
+      l.style.height = '0px';
+      l.classList.remove('open');
     });
+
+    // Nếu đang mở thì đóng luôn
+    if (isOpen) return;
+
+    // Mở cái mới
+    list.classList.add('open');
+    list.style.height = list.scrollHeight + 'px';
+  });
+});
+
+// js pagination
+const paginationLinks = document.querySelectorAll('.pagination-content a');
+paginationLinks.forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    this.classList.add('active');
+  });
+});
+
+// js filter
+window.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".custom-select .selected").forEach(selectedEl => {
+    selectedEl.addEventListener("click", function () {
+      const optionsEl = this.parentElement.querySelector(".options");
+      optionsEl.classList.toggle("active");
+    });
+  });
+
+  document.querySelectorAll(".custom-select .option-container div").forEach(optionEl => {
+    optionEl.addEventListener("click", function () {
+      const value = this.getAttribute("data-value");
+      const customSelect = this.closest(".custom-select");
+      const selectedText = customSelect.querySelector(".selected p");
+
+      selectedText.textContent = value;
+      customSelect.querySelector(".options").classList.remove("active");
+    });
+  });
+});
+
+// js land
+window.addEventListener("DOMContentLoaded", function () {
+    // Bấm vào .selected_land để mở/đóng .options_land
+    document.querySelectorAll(".selected_land").forEach(selectedEl => {
+        selectedEl.addEventListener("click", function () {
+            const optionsEl = this.querySelector(".options_land");
+            optionsEl.classList.toggle("active");
+        });
+    });
+});
+// js thông tin quan hệ cổ đông
+document.addEventListener("click", function (e) {
+  const listTime = document.querySelector(".list-time");
+  const items = Array.from(listTime.querySelectorAll("a"));
+  const activeIndex = items.findIndex(a => a.classList.contains("active"));
+
+  // Nút trái
+  if (e.target.closest(".list-time button:first-child")) {
+    const newIndex = (activeIndex - 1 + items.length) % items.length;
+    items.forEach(a => a.classList.remove("active"));
+    items[newIndex].classList.add("active");
+  }
+
+  // Nút phải
+  if (e.target.closest(".list-time button:last-child")) {
+    const newIndex = (activeIndex + 1) % items.length;
+    items.forEach(a => a.classList.remove("active"));
+    items[newIndex].classList.add("active");
+  }
 });

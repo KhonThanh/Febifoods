@@ -21,10 +21,13 @@
                     <button id="btn-menu" class=" flex center-ver menu__btn">
                         <img src="./img/logo/menu-bar-green.png" alt="">
                     </button>
-                    <select class="custom-select option-bg">
-                        <option>English</option>
-                        <option>Vietnamese</option>
-                    </select>
+                    <div class="flex center-ver selected_land">
+                        <p>English</p>
+                        <img src="./img/icon/Vector-down.png" alt="">
+                        <div class="options_land">
+                            <div data-value="Vietnamese">Tiếng Việt</div>
+                        </div>
+                    </div>
 
                     <a class="recruitment-btn" href="../recruitment.html">Tuyển dụng</a>
                 </div>
@@ -86,6 +89,7 @@
                             vững</a>
                         <a class="flex center-hor menu-mobile__item" href="./community.html">quan hệ cổ đông</a>
                         <a class="flex center-hor menu-mobile__item" href="./news.html">tin tức</a>
+                        <a class="flex center-hor menu-mobile__item" href="./recruitment.html">tuyển dụng</a>
                         <a class="flex center-hor menu-mobile__item" href="./contact.html">liên hệ</a>
                     </div>
                     <div class="flex center-ver search-box_mb">
@@ -147,14 +151,69 @@
             </div>
         </div>
     </section>
-    <main class="container-f flex flex-col center-hor"> 
+    <main class="container-f flex flex-col center-hor">
         <section class="container-f bg-white">
             <div class="container-l flex nav-bar">
                 <a href="#" class="nav-bar__item">trang chủ</a>
                 <a href="#" class="nav-bar__item">sản phẩm</a>
             </div>
         </section>
-        <section class="container-f product-filter__container" data-include="./component/filter.html"></section>
+        <section class="container-f">
+            <div class="container-l flex product-filtermb">
+                <div class="center-ver flex bg-white filter-item__left">
+                    <span>Thương Hiệu</span>
+                    <div class="custom-select">
+                        <div class="flex center-ver selected">
+                            <p>Vua Gạo</p>
+                            <img src="./img/icon/Vector-down.png" alt="">
+                        </div>
+                        <div class=" options">
+                            <div class=" flex flex-col option-container">
+                                <div data-value="Vua Gạo">Vua Gạo</div>
+                                <div data-value="Gạo Lứt">Gạo Lứt</div>
+                                <div data-value="ST25">ST25</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="center-ver flex bg-white filter-item__right">
+                    <span>Tìm Sản Phẩm</span>
+                    <div class="custom-select">
+                        <div class="flex center-ver selected">
+                            <p>Tên / Mã Hàng</p>
+                            <img src="./img/icon/Vector-down.png" alt="">
+                        </div>
+                        <div class=" options">
+                            <div class="flex flex-col option-container">
+                                <div data-value="Tên / Mã Hàng">Tên / Mã Hàng</div>
+                                <div data-value="Loại Gạo">Loại Gạo</div>
+                                <div data-value="Xuất Xứ">Xuất Xứ</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="custom-select">
+                        <div class="flex center-ver selected">
+                            <p>Khối Lượng Tịnh</p>
+                            <img src="./img/icon/Vector-down.png" alt="">
+                        </div>
+                        <div class=" options">
+                            <div class="flex flex-col option-container">
+                                <div data-value="Khối Lượng Tịnh">Khối Lượng Tịnh</div>
+                                <div data-value="1kg">1kg</div>
+                                <div data-value="5kg">5kg</div>
+                                <div data-value="10kg">10kg</div>
+                                <div data-value="Khối Lượng Tịnh">Khối Lượng Tịnh</div>
+                                <div data-value="1kg">1kg</div>
+                                <div data-value="5kg">5kg</div>
+                                <div data-value="10kg">10kg</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="container-f all-product__status__mb">
             <div class="container-l all-product__container">
                 <div class="product__container flex">
@@ -445,15 +504,16 @@
                     </a>
                 </div>
             </div>
-            <div class="container-l">
-                <ul class="pagination flex center-hor">
-                    <li class="flex center-ver center-hor page-item"><a href="#" class="page-link">1</a></li>
-                    <li class="flex center-ver center-hor page-item active"><a href="#" class="page-link">2</a></li>
-                    <li class="flex center-ver center-hor page-item"><a href="#" class="page-link">3</a></li>
-                    <li class="flex center-ver center-hor page-item"><a href="#" class="page-link">4</a></li>
-                    <li class="flex center-ver center-hor page-item"><a href="#" class="page-link">5</a></li>
-                    <li class="flex center-ver center-hor page-item"><a href="#" class="page-link">...</a></li>
-                </ul>
+            <div class="container-l flex center-ver center-hor pagination-container">
+                <a href="#" title="arrow next and prew page" class="btn-custom flex center-hor"><img
+                        src="./img/icon/pre-page.png" alt=""></a>
+                <div class="flex center-hor pagination-content">
+                    <a class="flex center-hor center-ver active" href="#">1 </a>
+                    <a class="flex center-hor center-ver" href="#">2 </a>
+                    <a class="flex center-hor center-ver" href="#">3 </a>
+                </div>
+                <a href="#" title="arrow next and prew page" class="btn-custom flex center-hor"><img
+                        src="./img/icon/nex-page.png" alt=""></a>
             </div>
         </section>
     </main>
