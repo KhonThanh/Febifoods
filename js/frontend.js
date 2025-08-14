@@ -774,64 +774,52 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-// js cho certification
-document.addEventListener("DOMContentLoaded", function () {
-  const container = document.querySelector(".all-certification");
-  if (!container) return;
-
-  let items = container.querySelectorAll(".certification-item");
-  if (items.length === 0) return;
-
-  // Clone cho đủ 5 item
-  // while (items.length < 5) {
-  //   const clone = items[items.length % items.length === 0 ? 0 : items.length % items.length].cloneNode(true);
-  //   container.appendChild(clone);
-  //   items = container.querySelectorAll(".certification-item");
-  // }
-
-  function setPositions(mainIndex) {
-    items.forEach((item, i) => {
-      item.classList.remove("main", "left", "right");
-      if (i === mainIndex) {
-        item.classList.add("main");
-      } else if (i < mainIndex) {
-        item.classList.add("left");
-      } else {
-        item.classList.add("right");
-      }
+$(document).ready(function () {
+  if ($('.all-certification').length) {
+    $('.all-certification').on('init', function (event, slick) {
+      $(slick.$slideTrack).addClass('all-certification-margin');
     });
-  }
-
-  function initDesktop() {
-    setPositions(2);
-    items.forEach((item, index) => {
-      item.addEventListener("mouseenter", () => {
-        setPositions(index);
-      });
-    });
-  }
-
-  function initMobile() {
-    $(container).slick({
+    $('.all-certification').slick({
       centerMode: true,
-      slidesToShow: 3,
-      infinite: true,
+      centerPadding: '6px',
+      slidesToShow: 5,
+      autoplay: true,
+      autoplaySpeed: 2000,
       arrows: false,
-      dots: false,
-      autoplay: 300,
+      focusOnSelect: true,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            centerPadding: '40px'
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            centerPadding: '200px'
+          }
+        },
+        {
+          breakpoint: 593,
+          settings: {
+            slidesToShow: 1,
+            centerPadding: '180px'
+          }
+        },
+        {
+          breakpoint: 510,
+          settings: {
+            slidesToShow: 1,
+            centerPadding: '100px'
+          }
+        }
+      ]
     });
   }
 
-  if (window.innerWidth > 768) {
-    initDesktop();
-  } else {
-    initMobile();
-  }
-
-  // Nếu resize qua lại thì reload
-  window.addEventListener("resize", () => {
-    location.reload();
-  });
 });
 
 //js cho phần brand
@@ -846,18 +834,23 @@ $(document).ready(function () {
     $wrap.slick('unslick');
   }
 
+  $('.brand-content').on('init', function (event, slick) {
+    $(slick.$slideTrack).addClass('brand-content__margin');
+  });
+
   $wrap.slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     infinite: true,
-    // autoplay: true,
-    // autoplaySpeed: 3000,
+    autoplay: true,
+    autoplaySpeed: 3000,
     centerMode: true,
     centerPadding: '400px',
     dots: true,
     appendDots: $('.brand-slide__dot'),
     prevArrow: $('.brand-prev'),
     nextArrow: $('.brand-next'),
+    focusOnSelect: true,
     responsive: [
       {
         breakpoint: 1165,
@@ -939,31 +932,38 @@ window.addEventListener("DOMContentLoaded", function () {
 
 // js land
 window.addEventListener("DOMContentLoaded", function () {
-    // Bấm vào .selected_land để mở/đóng .options_land
-    document.querySelectorAll(".selected_land").forEach(selectedEl => {
-        selectedEl.addEventListener("click", function () {
-            const optionsEl = this.querySelector(".options_land");
-            optionsEl.classList.toggle("active");
-        });
+  // Bấm vào .selected_land để mở/đóng .options_land
+  document.querySelectorAll(".selected_land").forEach(selectedEl => {
+    selectedEl.addEventListener("click", function () {
+      const optionsEl = this.querySelector(".options_land");
+      optionsEl.classList.toggle("active");
     });
+  });
 });
+
 // js thông tin quan hệ cổ đông
 document.addEventListener("click", function (e) {
-  const listTime = document.querySelector(".list-time");
+  const activeTab = document.querySelector(".tab-content.show");
+  if (!activeTab) return;
+  const listTime = activeTab.querySelector(".list-time");
+  if (!listTime) return;
+
   const items = Array.from(listTime.querySelectorAll("a"));
   const activeIndex = items.findIndex(a => a.classList.contains("active"));
 
   // Nút trái
-  if (e.target.closest(".list-time button:first-child")) {
-    const newIndex = (activeIndex - 1 + items.length) % items.length;
-    items.forEach(a => a.classList.remove("active"));
-    items[newIndex].classList.add("active");
+  if (e.target.closest("#btnListTimeLeft")) {
+    if (activeIndex > 0) {
+      items.forEach(a => a.classList.remove("active"));
+      items[activeIndex - 1].classList.add("active");
+    }
   }
 
   // Nút phải
-  if (e.target.closest(".list-time button:last-child")) {
-    const newIndex = (activeIndex + 1) % items.length;
-    items.forEach(a => a.classList.remove("active"));
-    items[newIndex].classList.add("active");
+  if (e.target.closest("#btnListTimeRight")) {
+    if (activeIndex < items.length - 1) {
+      items.forEach(a => a.classList.remove("active"));
+      items[activeIndex + 1].classList.add("active");
+    }
   }
 });
