@@ -626,12 +626,12 @@
 }
 
 .all-product__status__mb {
-    z-index: -1;
+    z-index: 1;
 }
 
 .all-product__status {
     margin-bottom: 30px;
-    z-index: -1;
+    z-index: 1;
 }
 
 .all-product__image-mobile .slick-slide {
@@ -2170,6 +2170,10 @@ body .all-product__container .product__container .product-item {
 .product-filter {
     gap: 40px;
     padding-top: 30px;
+}
+
+.filter-zIndex{
+    z-index: 2;
 }
 
 .product-filtermb {

@@ -784,7 +784,8 @@ $(document).ready(function () {
       centerPadding: '6px',
       slidesToShow: 5,
       autoplay: true,
-      autoplaySpeed: 2000,
+      autoplaySpeed: 1000,
+      speed: 1500,
       arrows: false,
       focusOnSelect: true,
       responsive: [
@@ -902,9 +903,15 @@ btns.forEach(btn => {
 
 // js pagination
 const paginationLinks = document.querySelectorAll('.pagination-content a');
+if (paginationLinks.length) {
+  paginationLinks[0].classList.add('active');
+}
+
 paginationLinks.forEach(link => {
   link.addEventListener('click', function (e) {
     e.preventDefault();
+    paginationLinks.forEach(l => l.classList.remove('active'));
+
     this.classList.add('active');
   });
 });
