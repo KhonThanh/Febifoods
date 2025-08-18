@@ -206,7 +206,7 @@
     height: 20px;
 }
 
-.header-content a:hover,
+.menu-container a:hover,
 .nav-active {
     background-color: var(--orange-color);
     border-radius: 50px;
