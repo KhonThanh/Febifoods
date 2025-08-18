@@ -253,6 +253,7 @@
 
 .header-bottom__stick {
     position: sticky;
+    z-index: 3;
 }
 
 .header-bottom__stick .menu-container a:first-child {
@@ -2199,7 +2200,7 @@ body .all-product__container .product__container .product-item {
 .filter-item__right {
     border-radius: 50px;
     border: 3px solid var(--primary-color);
-    padding: 5px 35px;
+    padding: 5px 5px 5px 35px;
     gap: 15px;
 }
 
