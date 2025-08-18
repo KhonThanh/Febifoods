@@ -615,51 +615,22 @@ document.addEventListener('mouseout', (e) => {
   if (e.target.matches('.footer-ecom a img, .footer-social a img')) {
     const img = e.target;
     if (img.dataset.original) {
-      img.src = img.dataset.original; // Trả lại src gốc
+      img.src = img.dataset.original;
     }
   }
 });
 
-//js xác định và gấn class active cho menu 
+// js trong tab nội dung
 document.addEventListener("DOMContentLoaded", () => {
-  let currentPath = window.location.pathname.split("/").pop() || "index.html";
+  const menuItems = document.querySelectorAll(".product-menu p");
 
-  // 🔥 Bỏ hậu tố chi tiết để nhận diện menu cha
-  const childSuffixes = ["-detail", "-info", "-view"];
-  childSuffixes.forEach(suffix => {
-    if (currentPath.includes(suffix)) {
-      currentPath = currentPath.replace(suffix, "");
-    }
-  });
-
-  // ====== Desktop Menu ======
-  const desktopHeader = document.querySelector(".header-bottom");
-  if (desktopHeader) {
-    const menuLinks = desktopHeader.querySelectorAll("a[href]");
-    if (menuLinks.length) {
-      menuLinks.forEach(link => link.classList.remove("nav-active"));
-      menuLinks.forEach(link => {
-        const linkPath = link.getAttribute("href").replace("./", "");
-        if (linkPath === currentPath) {
-          link.classList.add("nav-active");
-        }
+  if (menuItems.length) {
+    menuItems.forEach(item => {
+      item.addEventListener("click", () => {
+        menuItems.forEach(el => el.classList.remove("active"));
+        item.classList.add("active");
       });
-    }
-  }
-
-  // ====== Mobile Menu ======
-  const mobileMenu = document.querySelector("#menumobile");
-  if (mobileMenu) {
-    const mobileLinks = mobileMenu.querySelectorAll(".menu-mobile__item[href]");
-    if (mobileLinks.length) {
-      mobileLinks.forEach(link => link.classList.remove("mb-nav-active"));
-      mobileLinks.forEach(link => {
-        const linkPath = link.getAttribute("href").replace("./", "");
-        if (linkPath === currentPath) {
-          link.classList.add("mb-nav-active");
-        }
-      });
-    }
+    });
   }
 });
 

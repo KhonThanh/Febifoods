@@ -10,6 +10,13 @@
     .header-content a {
         font-size: var(--font-size-base);
     }
+
+    .selected p,
+    .filter-item__left span,
+    .filter-item__right span {
+        font-size: calc(var(--font-size-base) + 2px);
+    }
+
 }
 
 @media screen and (max-width: 1151px) {
