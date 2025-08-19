@@ -23,7 +23,7 @@
     header {
         position: sticky;
         top: 0;
-        z-index: 1;
+        z-index: 3;
     }
 
     .product-banner__item img {
@@ -738,11 +738,19 @@
         flex-direction: column;
         align-items: start;
         border-radius: 25px;
+        padding: 5px;
     }
 
-    .filter-item__right div,
-    .filter-item__right div select {
+    .filter-item__right div {
         width: 100%;
+    }
+
+    .filter-item__right .custom-select .options{
+        width: 90%;
+    }
+
+    .zindex-mb__option{
+        z-index: 3;
     }
 
     .filter-item__left select,
@@ -1235,7 +1243,7 @@
     }
 
     body .all-product__container .product__container .product-item {
-        width: calc(100% / 2 - 20px);
+        width: calc(100% - 20px) !important;
     }
 
     .product-fullinfo__quality,
