@@ -1082,30 +1082,29 @@
 }
 
 .product-fall {
-    top: -70%;
-    right: -73%;
+    top: -51%;
+    right: -84%;
     width: 115% !important;
-    transform: rotate(-50deg);
+    transform: rotate(-23deg);
 }
 
 .rice-fall {
-    width: 134% !important;
+    width: 122% !important;
     height: auto;
-    top: -109%;
-    left: -62%;
+    top: -100%;
+    left: -58%;
 }
 
-
 .padding-larger {
-    padding: 246px 0px 160px;
+    padding: 188px 0px 30px;
 }
 
 .padding-medium {
-    padding: 130px 0px;
+    padding: 0px 0px 66px;
 }
 
 .padding-small {
-    padding: 116px 0px 73px 0px;
+    padding: 66px 0px;
 }
 
 .Business-container h2,
