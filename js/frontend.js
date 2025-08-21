@@ -811,13 +811,13 @@ $(document).ready(function () {
   });
 
   $wrap.slick({
-    slidesToShow: 1,
+    slidesToShow: 3,
     slidesToScroll: 1,
     infinite: true,
-    autoplay: true,
-    autoplaySpeed: 3000,
+    // autoplay: true,
+    // autoplaySpeed: 3000,
     centerMode: true,
-    centerPadding: '400px',
+    centerPadding: '0px',
     dots: true,
     appendDots: $('.brand-slide__dot'),
     prevArrow: $('.brand-prev'),
@@ -827,7 +827,7 @@ $(document).ready(function () {
       {
         breakpoint: 1165,
         settings: {
-          centerPadding: '100px'
+          centerPadding: '0px'
         }
       },
       {
