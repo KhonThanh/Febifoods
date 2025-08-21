@@ -11,6 +11,7 @@
   --font-size-base: 16px;
   --font-name: 'Oswald', sans-serif;
   --font-inter: 'Inter', sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
   --font-ooohbaby: 'Oooh Baby', sans-serif;
 }
 
@@ -72,4 +73,9 @@ a {
 
 *:not(input):not(textarea) {
   caret-color: transparent;
+}
+
+p{
+  font-family: var(--font-roboto);
+  line-height: 1.5;
 }
