@@ -492,6 +492,13 @@
     position: relative;
     justify-content: space-around;
     margin-bottom: 50px !important;
+    height: fit-content;
+}
+
+.creation-process__container picture,
+.creation-process__container picture img{
+    width: 100%;
+    height: auto;
 }
 
 .creation-process__item img:nth-child(2) {
