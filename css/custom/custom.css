@@ -3532,7 +3532,36 @@ body .all-product__container .product__container .product-item {
     gap: 20px;
     padding: 0px 0px 60px 0px;
     transform-style: preserve-3d;
+}
 
+.certification-content__container{
+    position: relative;
+}
+
+.certification-popup__image{
+    max-width: 400px;
+    width: calc(100% - 20px);
+}
+
+.certification-popup__image img{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.certification-popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 11;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.56);
+    display: none;
+}
+
+.certification-popup.active{
+    display: flex;
 }
 
 .all-certification-margin {
@@ -3544,6 +3573,7 @@ body .all-product__container .product__container .product-item {
     transform: scale(0.8);
     opacity: 0.6;
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
 }
 
 .all-certification .slick-slide {

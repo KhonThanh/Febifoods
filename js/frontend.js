@@ -750,14 +750,15 @@ $(document).ready(function () {
     $('.all-certification').on('init', function (event, slick) {
       $(slick.$slideTrack).addClass('all-certification-margin');
     });
+
     $('.all-certification').slick({
       centerMode: true,
       centerPadding: '6px',
       slidesToShow: 5,
+      arrows: false,
       autoplay: true,
       autoplaySpeed: 1000,
       speed: 1500,
-      arrows: false,
       focusOnSelect: true,
       responsive: [
         {
@@ -790,8 +791,27 @@ $(document).ready(function () {
         }
       ]
     });
-  }
 
+    // Popup logic
+    const certificationPopup = document.querySelector('.certification-popup');
+    const popupImage = certificationPopup.querySelector('img');
+
+    // Event delegation for click on slick-center
+    $('.all-certification').on('click', '.slick-center', function () {
+      const imgSrc = $(this).find('img').attr('src'); // lấy src từ ảnh trong slide
+      if (imgSrc) {
+        popupImage.setAttribute('src', imgSrc);
+      }
+      certificationPopup.classList.add('active');
+    });
+
+    // Close popup when click outside image
+    certificationPopup.addEventListener('click', function (e) {
+      if (!popupImage.contains(e.target)) {
+        certificationPopup.classList.remove('active');
+      }
+    });
+  }
 });
 
 //js cho phần brand
