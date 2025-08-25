@@ -847,20 +847,30 @@ $(document).ready(function () {
       {
         breakpoint: 1165,
         settings: {
-          centerPadding: '0px'
+          slidesToShow: 1,
+          centerPadding: '300px'
+        }
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          centerPadding: '200px'
         }
       },
       {
         breakpoint: 769,
         settings: {
-          centerPadding: '60px'
+          slidesToShow: 1,
+          centerPadding: '100px'
         }
       },
 
       {
         breakpoint: 551,
         settings: {
-          centerPadding: '0px'
+          slidesToShow: 1,
+          centerPadding: '20px'
         }
       },
     ]
