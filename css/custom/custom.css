@@ -496,7 +496,7 @@
 }
 
 .creation-process__container picture,
-.creation-process__container picture img{
+.creation-process__container picture img {
     width: 100%;
     height: auto;
 }
@@ -934,8 +934,15 @@
     display: none;
 }
 
-.story-tab_container {
+.story-tab__paddingSmall {
+    margin-bottom: 20px !important;
+}
+
+.story-tab__paddingMedium {
     margin-bottom: 73px !important;
+}
+
+.story-tab_container {
     padding: 7px 28px;
     border: 1px solid var(--primary-color);
     border-radius: 50px;
