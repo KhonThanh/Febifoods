@@ -947,7 +947,7 @@
 }
 
 .story-tab_container {
-    padding: 7px 28px;
+    padding: 7px 10px;
     border: 1px solid var(--primary-color);
     border-radius: 50px;
     justify-content: space-between;
