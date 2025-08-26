@@ -547,12 +547,20 @@
         background-repeat: no-repeat;
         background-size: contain;
     }
+
+    .news-item__container{
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width:768px) {
 
     .core-values__item:not(:last-child) {
         border-right: unset;
+    }
+
+    .menu-mobile__content{
+        width: 60vw;
     }
 
     .field-tab,
@@ -720,6 +728,10 @@
 
     .brand-content .slick-center {
         transform: scale(1.03);
+    }
+
+    .news-item__large img{
+        aspect-ratio: 16 / 9;
     }
 }
 

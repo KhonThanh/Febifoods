@@ -939,6 +939,10 @@
 }
 
 .story-tab__paddingMedium {
+    margin-bottom: 60px !important;
+}
+
+.story-tab__paddingLarge{
     margin-bottom: 73px !important;
 }
 
@@ -1034,10 +1038,10 @@
 }
 
 .intro-custom__container p {
-    font-size: var(--font-size-base);
+    font-size: calc(var(--font-size-base) + 4px);
     color: var(--black-color);
     margin-bottom: 38px;
-    width: 80%;
+    width: 95%;
 }
 
 .more-space {
@@ -1067,6 +1071,9 @@
     padding: 10px 22px;
 }
 
+.intro-custom__content{
+    margin-top: 56px;
+}
 
 .intro-custom__content,
 .intro-custom__image {
@@ -1144,7 +1151,7 @@
 }
 
 .field-of-operation__title {
-    margin-bottom: 73px;
+    margin-bottom: 60px;
 }
 
 .core-values__map,
@@ -1229,6 +1236,7 @@
     text-transform: uppercase;
     font-weight: bold;
     color: var(--black-color);
+    font-family: var(--font-name);
 }
 
 .core-values__item img {
@@ -2206,7 +2214,7 @@ body .all-product__container .product__container .product-item {
     font-weight: bold;
     color: var(--white-color);
     text-transform: uppercase;
-    padding: 8px;
+    padding: 5px;
     border-radius: 50px;
     justify-content: space-between;
 }
@@ -2218,7 +2226,7 @@ body .all-product__container .product__container .product-item {
 }
 
 .product-button img {
-    margin: 0px 20px;
+    margin: 0px 0px 0px 20px;
 }
 
 .product-title__second {}
@@ -2262,7 +2270,7 @@ body .all-product__container .product__container .product-item {
 
 .product-filtermb,
 .product-filter {
-    gap: 60px;
+    gap: 30px;
     padding-top: 30px;
 }
 
@@ -2307,6 +2315,10 @@ body .all-product__container .product__container .product-item {
     position: relative;
     flex-grow: 1;
     z-index: 2;
+}
+
+.custom-select p {
+    font-family: var(--font-name);
 }
 
 .selected {
@@ -2356,7 +2368,7 @@ body .all-product__container .product__container .product-item {
 
 .option-container {
     padding: 0px 24px;
-    max-height: 106px;
+    max-height: 130px;
     overflow-y: scroll;
     scrollbar-gutter: stable;
     gap: 10px;
@@ -2372,7 +2384,6 @@ body .all-product__container .product__container .product-item {
 
 .option-container>div {
     color: var(--primary-color);
-    font-family: var(--font-roboto);
     background-color: transparent;
     cursor: pointer;
     transition: all 0.6s ease;
@@ -3566,7 +3577,7 @@ body .all-product__container .product__container .product-item {
 }
 
 .all-certification-margin {
-    padding: 80px 0px 120px;
+    padding: 70px 0px 120px;
 }
 
 .certification-item {
