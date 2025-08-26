@@ -1185,11 +1185,13 @@
 }
 
 .Business-container p {
-    padding-bottom: 24px;
+    padding-bottom: 24px; 
+    font-weight: bold;
 }
 
 .core-values__container p {
     padding-bottom: 75px;
+    font-weight: bold;
 }
 
 .Business-img {
@@ -2214,9 +2216,10 @@ body .all-product__container .product__container .product-item {
     font-weight: bold;
     color: var(--white-color);
     text-transform: uppercase;
-    padding: 5px;
+    padding: 2px;
     border-radius: 50px;
     justify-content: space-between;
+    font-family: var(--font-name);
 }
 
 .product-button p {
