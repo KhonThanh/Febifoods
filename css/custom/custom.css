@@ -1586,7 +1586,8 @@
 }
 
 .community-list {
-    flex: 0 0 30%;
+    max-width: 350px;
+    min-width: 350px;
 }
 
 .community-list li {
@@ -1599,7 +1600,7 @@
 }
 
 .community-list li.active {
-    padding: 5px 20px;
+    padding: 5px 39px;
     border-radius: 50px;
     background-color: var(--orange-color);
     color: var(--primary-color);
@@ -1616,7 +1617,7 @@
 }
 
 .tap__container {
-    flex: 1 1 75%;
+    flex: 1 1 auto;
     border-bottom-left-radius: 76px;
     border-top-left-radius: 76px;
     box-shadow: -8px 4px 16.3px 9px rgba(0, 0, 0, 0.25);

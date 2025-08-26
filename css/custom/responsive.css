@@ -529,6 +529,7 @@
 
     .community-list {
         position: relative;
+        max-width: 100%;
     }
 
     /* Thêm icon mũi tên dropdown */
