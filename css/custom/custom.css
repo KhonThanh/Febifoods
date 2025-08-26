@@ -3487,6 +3487,7 @@ body .all-product__container .product__container .product-item {
     font-size: calc(var(--font-size-base) * 2);
 }
 
+.topnew-second__item-square-top .topnew-second__des h3,
 .topnew-second__item-square .topnew-second__des h3,
 .topnew-second__des p {
     font-size: calc(var(--font-size-base) + 4px);
