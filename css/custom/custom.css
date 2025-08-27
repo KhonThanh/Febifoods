@@ -324,6 +324,7 @@
     border-radius: 50px;
     gap: 20px;
     background-color: var(--yellow-green);
+    font-family: var(--font-roboto);
 }
 
 .options_land {
@@ -495,6 +496,12 @@
     height: fit-content;
 }
 
+.sustainable-container{
+    padding-bottom: 30px;
+}
+
+.sustainable-container,
+.sustainable-container img,
 .creation-process__container picture,
 .creation-process__container picture img {
     width: 100%;
@@ -1169,10 +1176,13 @@
     padding-top: 89px;
 }
 
-.Business-container p,
-.core-values__container strong,
-.core-values__container p {
+.core-values__container strong{
     font-size: calc(var(--font-size-base) * 2);
+}
+
+.Business-container p,
+.core-values__container p {
+    font-size: calc(var(--font-size-base) + 2px);
 }
 
 .core-values__container strong {
@@ -2080,6 +2090,7 @@ body .environment-header {
 
 .product-menu__item ul {
     gap: 12px;
+    font-family: var(--font-roboto);
 }
 
 .product-menu__item ul li a.active {
@@ -2173,6 +2184,7 @@ body .all-product__container .product__container .product-item {
 
 .product-fullinfo {
     gap: 15px;
+    font-family: var(--font-roboto);
 }
 
 .product-status {
@@ -2433,7 +2445,7 @@ body .all-product__container .product__container .product-item {
 
 .detail-product__content {
     width: 39%;
-    gap: 15px;
+    gap: 22px;
 }
 
 .detail-product__title,
@@ -2446,6 +2458,7 @@ body .all-product__container .product__container .product-item {
 .detail-product__content li {
     color: var(--primary-color);
     font-size: calc(var(--font-size-base) - 2px);
+    font-family: var(--font-roboto);
 }
 
 .detail-product__content li span {
@@ -3036,6 +3049,7 @@ body .all-product__container .product__container .product-item {
 
 .job-description {
     gap: 10px;
+    font-family: var(--font-roboto);
 }
 
 .job-description h2 {
@@ -3855,6 +3869,16 @@ body .all-product__container .product__container .product-item {
 
 .marketing-container {
     padding: 30px 0px;
+    margin-bottom: 20px;
+}
+
+.marketing-container img{
+    width: 100%;
+    height: auto;
+}
+
+.marketing-container__margin{
+    margin-bottom: 20px;
 }
 
 .marketing-container_mb {
