@@ -496,7 +496,7 @@
     height: fit-content;
 }
 
-.sustainable-container{
+.sustainable-container {
     padding-bottom: 30px;
 }
 
@@ -949,7 +949,7 @@
     margin-bottom: 60px !important;
 }
 
-.story-tab__paddingLarge{
+.story-tab__paddingLarge {
     margin-bottom: 73px !important;
 }
 
@@ -1078,7 +1078,7 @@
     padding: 10px 22px;
 }
 
-.intro-custom__content{
+.intro-custom__content {
     margin-top: 56px;
 }
 
@@ -1176,7 +1176,7 @@
     padding-top: 89px;
 }
 
-.core-values__container strong{
+.core-values__container strong {
     font-size: calc(var(--font-size-base) * 2);
 }
 
@@ -1195,7 +1195,7 @@
 }
 
 .Business-container p {
-    padding-bottom: 24px; 
+    padding-bottom: 24px;
     font-weight: bold;
 }
 
@@ -2956,6 +2956,15 @@ body .all-product__container .product__container .product-item {
 
 .job-filter__location {
     padding: 10px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #fff;
+    background-image: url('../../img/icon/down.png');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    cursor: pointer;
 }
 
 .job-filter__btn {
@@ -3564,22 +3573,22 @@ body .all-product__container .product__container .product-item {
     transform-style: preserve-3d;
 }
 
-.certification-content__container{
+.certification-content__container {
     position: relative;
 }
 
-.certification-popup__image{
+.certification-popup__image {
     max-width: 400px;
     width: calc(100% - 20px);
 }
 
-.certification-popup__image img{
+.certification-popup__image img {
     width: 100%;
     height: auto;
     border-radius: 5px;
 }
 
-.certification-popup{
+.certification-popup {
     position: fixed;
     top: 0;
     left: 0;
@@ -3590,7 +3599,7 @@ body .all-product__container .product__container .product-item {
     display: none;
 }
 
-.certification-popup.active{
+.certification-popup.active {
     display: flex;
 }
 
@@ -3872,12 +3881,12 @@ body .all-product__container .product__container .product-item {
     margin-bottom: 20px;
 }
 
-.marketing-container img{
+.marketing-container img {
     width: 100%;
     height: auto;
 }
 
-.marketing-container__margin{
+.marketing-container__margin {
     margin-bottom: 20px;
 }
 
