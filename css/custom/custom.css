@@ -2221,6 +2221,10 @@ body .all-product__container .product__container .product-item {
     min-height: 80px;
 }
 
+.product-info li{
+    margin-bottom: 5px;
+}
+
 .product-info li:nth-child(n+3){
     display: none;
 }
