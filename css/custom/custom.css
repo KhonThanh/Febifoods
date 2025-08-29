@@ -3993,7 +3993,7 @@ body .all-product__container .product__container .product-item {
 .footer-copy-right p {
     text-align: center;
     color: var(--white-color);
-    font-size: calc(var(--font-size-base) + 8px);
+    font-size: calc(var(--font-size-base) - 2px);
     text-transform: capitalize;
 }
 
