@@ -2217,7 +2217,12 @@ body .all-product__container .product__container .product-item {
     list-style: disc;
     padding-left: 21px;
     color: var(--primary-color);
-    font-size: calc(var(--font-size-base) - 5px);
+    font-size: var(--font-size-base);
+    min-height: 80px;
+}
+
+.product-info li:nth-child(n+3){
+    display: none;
 }
 
 .product-button {
@@ -3877,7 +3882,7 @@ body .all-product__container .product__container .product-item {
 }
 
 .marketing-container {
-    padding: 30px 0px;
+    padding: 40px 3vw;
     margin-bottom: 20px;
 }
 
