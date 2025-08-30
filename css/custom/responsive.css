@@ -733,6 +733,10 @@
     .news-item__large img{
         aspect-ratio: 16 / 9;
     }
+
+    .footer-contact__icon{
+        width: 45vw;
+    }
 }
 
 @media screen and (max-width: 620px) {
@@ -1072,6 +1076,10 @@
         font-size: calc(var(--font-size-base) * 2);
         text-align: center;
     }
+
+    .footer-contact__icon{
+        width: 50vw;
+    }
 }
 
 @media screen and (max-width: 551px) {
@@ -1148,7 +1156,7 @@
     }
 
     .menu-bottom {
-        bottom: -25px;
+        top:95.7% ;
     }
 
     .logo img {
@@ -1293,5 +1301,9 @@
     .filter-item__left,
     .filter-item__right {
         padding: 5px 10px !important;
+    }
+
+    .footer-contact__icon{
+        width: 60vw;
     }
 }
