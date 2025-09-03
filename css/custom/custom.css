@@ -1754,6 +1754,7 @@
     background-color: transparent;
     cursor: pointer;
     max-width: 40px;
+    -webkit-appearance: none;
 }
 
 
