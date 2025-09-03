@@ -1781,7 +1781,8 @@
 
 .pagination-content a {
     aspect-ratio: 1 / 1;
-    min-width: 52px;
+    max-width: 52px;
+    max-height: 52px;
     width: 52px;
     height: auto;
     background-color: var(--white-color);
