@@ -1753,7 +1753,7 @@
     height: auto;
     background-color: transparent;
     cursor: pointer;
-    display: block;
+    max-width: 40px;
 }
 
 
