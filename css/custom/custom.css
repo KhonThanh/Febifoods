@@ -85,7 +85,7 @@
 
 .menu-bottom {
     position: absolute;
-    top: 100%;
+    top: calc(100% - 9.5px);
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
@@ -336,7 +336,7 @@
 }
 
 .selected_land-mb__container {
-    z-index: 2;
+    z-index: 3;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -356,7 +356,7 @@
 .selected_land-mb {
     width: fit-content;
     display: none !important;
-    z-index: 1;
+    z-index: 2;
 }
 
 .options_land-mb {
