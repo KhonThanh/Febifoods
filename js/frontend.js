@@ -975,3 +975,18 @@ document.addEventListener("click", function (e) {
     }
   }
 });
+
+// js ngôn ngữ mobile
+const selectedLand = document.querySelector('.selected_land-mb');
+
+if (selectedLand) {
+    selectedLand.addEventListener('click', function () {
+        this.classList.toggle('active');
+    });
+
+    document.addEventListener('click', function (e) {
+        if (!selectedLand.contains(e.target)) {
+            selectedLand.classList.remove('active');
+        }
+    });
+}
