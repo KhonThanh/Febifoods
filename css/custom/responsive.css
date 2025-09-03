@@ -1091,6 +1091,14 @@
     .footer-contact__icon {
         width: 50vw;
     }
+
+    .footer-address{
+        font-size: calc(var(--font-size-base) - 1px);
+    }
+
+    .tab-container__content{
+        padding-right: 20px;
+    }
 }
 
 @media screen and (max-width: 551px) {
@@ -1098,6 +1106,10 @@
     .field-tab,
     .story-tab {
         max-width: unset !important;
+    }
+
+    .tab-container__content li{
+        gap: 20px;
     }
 
     .environment {
@@ -1317,5 +1329,14 @@
     }
     .tab__item{
         padding-left: 20px !important;
+    }
+
+    .topnew-second__item-rectangle{
+        min-height: 300px;
+    }
+
+    .topnew-second__item-rectangle .topnew-second__item-rectangle__image img{
+        height: 100% !important;
+        width: auto;
     }
 }

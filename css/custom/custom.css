@@ -1717,6 +1717,7 @@
 
 .tab-container__content li p {
     flex-grow: 1;
+    color: var(--primary-color);
 }
 
 .tab-container__content {
@@ -1758,11 +1759,14 @@
     cursor: pointer;
     max-width: 40px;
     -webkit-appearance: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
 .list-time button img {
-    width: 100%;
+    width: 40px;
     aspect-ratio: 1 / 1;
     height: auto;
     -webkit-appearance: none;
