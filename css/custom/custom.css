@@ -1022,6 +1022,8 @@
 }
 
 .story-tab_container .custom-arrow {
+    min-width: 30px;
+    aspect-ratio: 1 / 1;
     width: 30px;
     height: 30px;
     border-radius: 50px;
