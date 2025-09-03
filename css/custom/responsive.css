@@ -47,10 +47,6 @@
         display: none !important;
     }
 
-    .header-content__right{
-        justify-content: right !important;
-        display: flex;
-    }
 }
 
 @media screen and (max-width: 1151px) and (min-width: 961px) {
