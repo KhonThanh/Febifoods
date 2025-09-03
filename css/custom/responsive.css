@@ -556,6 +556,7 @@
         pointer-events: none;
         background-repeat: no-repeat;
         background-size: contain;
+        -webkit-appearance: none;
     }
 
     .news-item__container {
