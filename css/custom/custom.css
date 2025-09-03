@@ -3,7 +3,7 @@
 .header-top {
     /* border-bottom: 1px solid var(--primary-color); */
     border: none;
-    border-bottom: 1px solid var(--primary-color);
+    outline: 1px solid var(--primary-color) ;
     transition: border-color 0.3s ease;
 }
 
@@ -85,7 +85,7 @@
 
 .menu-bottom {
     position: absolute;
-    top: calc(100% - 9.5px);
+    top: 100%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
