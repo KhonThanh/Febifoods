@@ -295,6 +295,7 @@
 
 .menu-bar__mb {
     justify-content: space-between;
+    -webkit-appearance: none;
 }
 
 .menu__btn {
