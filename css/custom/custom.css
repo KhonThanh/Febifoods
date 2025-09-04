@@ -2745,6 +2745,9 @@ body .all-product__container .product__container .product-item {
     width: auto;
     height: 52px;
     -webkit-appearance: none;
+    object-fit: contain;
+    object-position: center;
+    display: block;
 }
 
 /* .footer-logo__item:not(:last-child) {
