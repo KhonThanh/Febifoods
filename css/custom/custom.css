@@ -2741,6 +2741,7 @@ body .all-product__container .product__container .product-item {
     max-height: 52px;
     width: auto;
     height: 100%;
+    -webkit-appearance: none;
 }
 
 /* .footer-logo__item:not(:last-child) {
