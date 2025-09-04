@@ -2740,6 +2740,7 @@ body .all-product__container .product__container .product-item {
 .footer-logo__item img {
     max-height: 52px;
     width: auto;
+    height: 100%;
 }
 
 /* .footer-logo__item:not(:last-child) {
