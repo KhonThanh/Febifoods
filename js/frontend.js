@@ -184,7 +184,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (!tabButtons.length || !tabContents.length) return;
 
-  // helper: set active/tab content theo index (không click để tránh vòng lặp)
   function setActiveByIndex(idx) {
     tabButtons.forEach(b => b.classList.remove('active'));
     tabContents.forEach(c => c.classList.remove('show'));
@@ -192,10 +191,8 @@ document.addEventListener('DOMContentLoaded', function () {
     if (tabContents[idx]) tabContents[idx].classList.add('show');
   }
 
-  // mặc định active = 0 (sẽ được override nếu slider init ở mobile)
   setActiveByIndex(0);
 
-  // click trên tab (desktop hoặc mobile)
   tabButtons.forEach((btn, index) => {
     btn.addEventListener('click', function () {
       if (this.classList.contains('active')) return;
@@ -214,9 +211,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function initStoryTabsSlider() {
     if (window.innerWidth <= 551) {
       if (!$slider.hasClass('slick-initialized')) {
-        // Gắn sự kiện init trước khi gọi slick
         $slider.on('init.storyTabs', function (event, slick) {
-          // sau init lấy center slide để sync active
           const $center = $slider.find('.slick-slide.slick-center').first();
           const dataIdx = $center.attr('data-slick-index');
           const idx = dataIdx !== undefined ? parseInt(dataIdx, 10) : 0;
@@ -225,7 +220,6 @@ document.addEventListener('DOMContentLoaded', function () {
           setActiveByIndex(normalized);
         });
 
-        // afterChange: tìm slide center rồi sync active/tab content
         $slider.on('afterChange.storyTabs', function (event, slick, currentSlide) {
           const $center = $slider.find('.slick-slide.slick-center').first();
           const dataIdx = $center.attr('data-slick-index');
@@ -235,7 +229,6 @@ document.addEventListener('DOMContentLoaded', function () {
           setActiveByIndex(normalized);
         });
 
-        // call slick
         $slider.slick({
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -249,10 +242,8 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     } else {
       if ($slider.hasClass('slick-initialized')) {
-        $slider.slick('unslick');
-        // hủy event namespace nếu muốn (an toàn)
+        $slider.slick('unslick');     
         $slider.off('.storyTabs');
-        // reset active về tab 0 hoặc giữ tab hiện tại tuỳ bạn
         setActiveByIndex(0);
       }
     }
