@@ -1111,6 +1111,10 @@
     .tab-container__content {
         padding-right: 20px;
     }
+
+    .intro-custom__container h1 span::after{
+        top: -27px !important;
+    }
 }
 
 @media screen and (max-width: 551px) {
@@ -1176,10 +1180,15 @@
     }
 
     .environment-title__mb {}
-
+/* 
     .padding-small {
         padding: 40px 0px 0px 0px;
+    } */
+
+    .padding-small {
+        padding: 0px 0px 0px 0px;
     }
+
 
     .creation-process__item {
         width: 100vw;
