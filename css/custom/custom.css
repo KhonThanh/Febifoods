@@ -3845,11 +3845,12 @@ body .all-product__container .product__container .product-item {
 
 .brand-logo {
     min-height: 100px;
+    align-items: center;
 }
 
 .brand-logo img {
-    width: auto;
-    height: 80%;
+    width: 70%;
+    height: auto;
 }
 
 .brand-des h2 {
