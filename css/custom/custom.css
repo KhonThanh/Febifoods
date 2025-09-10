@@ -26,17 +26,19 @@
     position: relative;
 }
 
-.header-top::after{
+.header-top::after {
     position: absolute;
     content: "";
     top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
     background-image: url(../../img/icon/bottommenu.svg);
     background-position: center;
+    background-repeat: no-repeat;
     background-size: contain;
-    aspect-ratio: 205 / 22;
-    max-width: 205px;
-    height: auto;
-    width: 39%;
+    width: 205px;    
+    height: 22px;      
+    max-width: 40%;    
 }
 
 .menu-mobile__content {
