@@ -29,7 +29,7 @@
 .header-top::after {
     position: absolute;
     content: "";
-    top: 100%;
+    top: 99%;
     left: 50%;
     transform: translateX(-50%);
     background-image: url(../../img/icon/bottommenu.svg);
