@@ -33,7 +33,7 @@
     left: 50%;
     transform: translateX(-50%);
     background-image: url(../../img/icon/bottommenu.svg);
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: contain;
     width: 205px;    
