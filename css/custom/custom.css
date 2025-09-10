@@ -86,7 +86,7 @@
 
 .menu-bottom {
     position: absolute;
-    top: 100%;
+    top: 99.8%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
