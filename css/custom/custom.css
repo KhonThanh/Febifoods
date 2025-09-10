@@ -8,7 +8,6 @@
 }
 
 .header-bottom {
-    border-top: 1px solid var(--primary-color);
     border-bottom: 1px solid var(--primary-color);
 }
 
@@ -28,18 +27,29 @@
 }
 
 .header-top::after {
-    position: absolute;
     content: "";
+    position: absolute;
     top: 99%;
     left: 50%;
     transform: translateX(-50%);
-    background-image: url(../../img/icon/bottommenu.svg);
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 205px;
-    height: 22px;
-    max-width: 40%;
+    width: 220px;
+    height: 28px;
+    background: white;
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
+    z-index: 2;
+}
+
+.header-top::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 222px; 
+  height: 28px; 
+  background:var(--primary-color); 
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
+  z-index: 1;
 }
 
 .menu-mobile__content {
