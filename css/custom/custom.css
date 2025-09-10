@@ -26,6 +26,19 @@
     position: relative;
 }
 
+.header-top::after{
+    position: absolute;
+    content: "";
+    top: 100%;
+    background-image: url(../../img/icon/bottommenu.svg);
+    background-position: center;
+    background-size: contain;
+    aspect-ratio: 205 / 22;
+    max-width: 205px;
+    height: auto;
+    width: 39%;
+}
+
 .menu-mobile__content {
     position: absolute;
     width: 40vw;
@@ -89,13 +102,13 @@
     visibility: visible;
 }
 
-.menu-bottom {
+/* .menu-bottom {
     position: absolute;
     top: 99.8%;
     left: 50%;
     transform: translateX(-50%);
     z-index:5;
-}
+} */
 
 .header-container {
     justify-content: space-between;
