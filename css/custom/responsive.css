@@ -387,6 +387,7 @@
 
     .responsibility-button img:last-child {
         aspect-ratio: 16 / 7;
+        width: 100%;
     }
 
     .col-rev {
@@ -726,10 +727,11 @@
         margin-right: 5px;
     }
 
+    .btn-readmore,
     .all-btn {
         padding: 9px 15px;
         max-width: 120px;
-        font-size: calc(var(--font-size-base) - 6px);
+        font-size: calc(var(--font-size-base) - 2px);
     }
 
     .intro-custom__container h1 {
@@ -1231,6 +1233,28 @@
     .rice-next {
         width: 19px;
         height: 19px;
+    }
+
+    .responsibility-content {
+        align-items: center;
+    }
+
+    .responsibility-content p{
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .responsibility-content h3{
+        font-size: calc(var(--font-size-base) + 10px);
+        text-align: center;
+    }
+
+    .all-product h2{
+        font-size: calc(var(--font-size-base) + 8px);
+    }
+
+    .responsibility-content button{
+         font-size: calc(var(--font-size-base));
     }
 
     .footer-mobile {

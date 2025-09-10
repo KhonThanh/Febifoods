@@ -36,7 +36,7 @@
     height: 28px;
     background: white;
     clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
-    z-index: 2;
+    z-index: 1;
 }
 
 .header-top::before {
@@ -49,7 +49,7 @@
   height: 28px; 
   background:var(--primary-color); 
   clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
-  z-index: 1;
+  z-index: 0;
 }
 
 .menu-mobile__content {
@@ -671,6 +671,7 @@
     border: none;
     width: fit-content !important;
     cursor: pointer;
+    font-weight: 550;
 }
 
 .responsibility-content p {
@@ -681,7 +682,7 @@
 .responsibility-content h3 {
     font-size: calc(var(--font-size-base) + 20px);
     color: var(--primary-color);
-    font-weight: 500;
+    font-weight: 600;
     text-transform: capitalize;
 }
 
@@ -3084,7 +3085,7 @@ body .all-product__container .product__container .product-item {
 }
 
 .job-filter__time {
-    gap: 30px;
+    justify-content: space-between;
 }
 
 .job-filter__location {
@@ -3664,7 +3665,7 @@ body .all-product__container .product__container .product-item {
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    bottom: -84vh;
+    bottom: -74vh;
     right: -5%;
     cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
