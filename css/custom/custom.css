@@ -7,7 +7,7 @@
     transition: border-color 0.3s ease;
 }
 
-.header-bottom{
+.header-bottom {
     border-top: 1px solid var(--primary-color);
     border-bottom: 1px solid var(--primary-color);
 }
@@ -20,6 +20,7 @@
 .header-top {
     position: relative;
     z-index: 4;
+    border-bottom: 1px solid var(--primary-color);
 }
 
 .container-menu__mobile {
@@ -36,9 +37,9 @@
     background-position: top;
     background-repeat: no-repeat;
     background-size: contain;
-    width: 205px;    
-    height: 22px;      
-    max-width: 40%;    
+    width: 205px;
+    height: 22px;
+    max-width: 40%;
 }
 
 .menu-mobile__content {
@@ -500,7 +501,6 @@
 
 #menumobile {
     display: none;
-    border-top: 1px solid var(--primary-color);
 }
 
 .container-menu__mobile {
