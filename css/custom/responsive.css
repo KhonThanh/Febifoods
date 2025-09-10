@@ -1117,6 +1117,14 @@
     .intro-custom__container h1 span::after{
         top: -27px !important;
     }
+
+    .responsibility-button a{
+        font-size: calc(var(--font-size-base));
+    }
+
+    .detail-product__button{
+        font-size: calc(var(--font-size-base) + 2px);
+    }
 }
 
 @media screen and (max-width: 551px) {
