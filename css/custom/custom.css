@@ -2,9 +2,14 @@
 .header-bottom,
 .header-top {
     /* border-bottom: 1px solid var(--primary-color); */
-    border: none;
-    outline: 1px solid var(--primary-color);
+    /* border: none;
+    outline: 1px solid var(--primary-color); */
     transition: border-color 0.3s ease;
+}
+
+.header-bottom{
+    border-top: 1px solid var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
 }
 
 .header-bottom:focus,
@@ -70,7 +75,7 @@
     background: rgba(255, 255, 255, 0.8);
     opacity: 0;
     visibility: hidden;
-    /* transition: all 0.3s ease; */
+    transition: all 0.3s ease;
     z-index: -1;
 }
 
@@ -480,6 +485,7 @@
 
 #menumobile {
     display: none;
+    border-top: 1px solid var(--primary-color);
 }
 
 .container-menu__mobile {
