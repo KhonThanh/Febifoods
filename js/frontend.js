@@ -910,10 +910,19 @@ paginationLinks.forEach(link => {
 
 // js filter
 window.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".custom-select .selected").forEach(selectedEl => {
+  document.querySelectorAll(".selected").forEach(selectedEl => {
     selectedEl.addEventListener("click", function () {
-      const optionsEl = this.parentElement.querySelector(".options");
-      optionsEl.classList.toggle("active");
+      const thisOptions = this.parentElement.querySelector(".options");
+
+      // đóng tất cả .options khác
+      document.querySelectorAll(".custom-select .options").forEach(opt => {
+        if (opt !== thisOptions) {
+          opt.classList.remove("active");
+        }
+      });
+
+      // toggle cho chính nó
+      thisOptions.classList.toggle("active");
     });
   });
 

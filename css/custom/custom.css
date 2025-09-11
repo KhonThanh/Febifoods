@@ -2415,6 +2415,10 @@ body .all-product__container .product__container .product-item {
     padding-top: 30px;
 }
 
+.product-filtermb{
+    position: relative;
+}
+
 .filter-zIndex {
     z-index: 2;
 }
@@ -2425,6 +2429,7 @@ body .all-product__container .product__container .product-item {
 
 .filter-item__left {
     flex: 0 0 40%;
+    z-index: 3;
 }
 
 .filter-item__left .custom-select {
@@ -2433,6 +2438,7 @@ body .all-product__container .product__container .product-item {
 
 .filter-item__right {
     flex: 1 1 50%;
+    z-index: 2;
 }
 
 .filter-item__left span,
