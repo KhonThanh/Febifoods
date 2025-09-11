@@ -990,3 +990,19 @@ if (selectedLand) {
         }
     });
 }
+
+// js đoạn giới thiệu ở câu chuỵen
+document.querySelectorAll(".intro-custom__content").forEach(section => {
+  const btn = section.querySelector(".all-btn");
+  const para = section.querySelector("p");
+
+  btn.addEventListener("click", e => {
+    e.preventDefault(); // tránh reload khi là <a href="#">
+    para.classList.toggle("expanded");
+    btn.querySelector("img").classList.toggle("rotated");
+
+    btn.firstChild.textContent = para.classList.contains("expanded")
+      ? "Thu gọn "
+      : "Xem thêm ";
+  });
+});
