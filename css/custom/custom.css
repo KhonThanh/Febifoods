@@ -2479,6 +2479,7 @@ body .all-product__container .product__container .product-item {
     padding: 5px 5px 5px 35px;
     gap: 15px;
     position: relative;
+    -webkit-appearance: none;
 }
 
 .custom-select {
@@ -2498,6 +2499,7 @@ body .all-product__container .product__container .product-item {
     border: 1px solid var(--primary-color);
     background-color: var(--white-color);
     cursor: pointer;
+    -webkit-appearance: none;
 }
 
 .selected p {
@@ -2528,6 +2530,7 @@ body .all-product__container .product__container .product-item {
     height: 0;
     overflow: hidden;
     transition: all 0.3s ease;
+    -webkit-appearance: none;
 }
 
 
