@@ -803,7 +803,7 @@
     }
 
     .zindex-mb__option {
-        z-index: 4;
+        z-index: 4 !important;
     }
 
     .filter-item__left select,
