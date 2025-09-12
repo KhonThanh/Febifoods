@@ -1200,9 +1200,15 @@
 
     .environment-header__mb>div>img:first-child,
     .environment-header__mb>div>img:last-child {
-        object-fit: cover;
         object-position: top;
         -webkit-appearance: none;
+    }
+
+    .environment-header__mb>div>img:first-child{
+        object-fit: cover;
+    }
+    .environment-header__mb>div>img:last-child {
+        object-fit: contain;
     }
 
     .environment-header__mb>div>img:last-child {
