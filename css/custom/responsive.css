@@ -785,6 +785,10 @@
     .option-container {
         font-size: calc(var(--font-size-base) + 2px);
     }
+
+    .job-content{
+        flex-wrap: wrap;
+    }
 }
 
 @media screen and (max-width: 620px) {
@@ -1169,6 +1173,10 @@
     .product-status__container ul{
         width: fit-content;
         gap: 5px;
+    }
+
+    .job-info h2{
+        font-size: calc(var(--font-size-base) + 8px);
     }
 }
 
