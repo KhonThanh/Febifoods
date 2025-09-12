@@ -242,7 +242,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     } else {
       if ($slider.hasClass('slick-initialized')) {
-        $slider.slick('unslick');     
+        $slider.slick('unslick');
         $slider.off('.storyTabs');
         setActiveByIndex(0);
       }
@@ -980,15 +980,15 @@ document.addEventListener("click", function (e) {
 const selectedLand = document.querySelector('.selected_land-mb');
 
 if (selectedLand) {
-    selectedLand.addEventListener('click', function () {
-        this.classList.toggle('active');
-    });
+  selectedLand.addEventListener('click', function () {
+    this.classList.toggle('active');
+  });
 
-    document.addEventListener('click', function (e) {
-        if (!selectedLand.contains(e.target)) {
-            selectedLand.classList.remove('active');
-        }
-    });
+  document.addEventListener('click', function (e) {
+    if (!selectedLand.contains(e.target)) {
+      selectedLand.classList.remove('active');
+    }
+  });
 }
 
 // js đoạn giới thiệu ở câu chuỵen
@@ -1004,5 +1004,38 @@ document.querySelectorAll(".intro-custom__content").forEach(section => {
     btn.firstChild.textContent = para.classList.contains("expanded")
       ? "Thu gọn "
       : "Xem thêm ";
+  });
+});
+
+// js option của cái phần quản trị công ty
+document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("click", (e) => {
+    const container = e.target.closest(".select-community__container");
+    const option = e.target.closest(".select-community__option div[data-value]");
+
+    // Nếu click vào container
+    if (container) {
+      e.stopPropagation();
+      const optionBox = container.parentElement.querySelector(".select-community__option");
+      optionBox.classList.toggle("active"); // mở/đóng option
+      return;
+    }
+
+    // Nếu click vào option
+    if (option) {
+      e.stopPropagation();
+      const value = option.getAttribute("data-value");
+      const parentContainer = option.closest(".community-list__new")?.querySelector(".select-community__container p");
+      if (value && parentContainer) {
+        parentContainer.textContent = value; // đổi text trong <p>
+      }
+      option.closest(".select-community__option").classList.remove("active"); // đóng dropdown
+      return;
+    }
+
+    // Nếu click ra ngoài → đóng hết
+    document.querySelectorAll(".select-community__option.active").forEach((box) => {
+      box.classList.remove("active");
+    });
   });
 });

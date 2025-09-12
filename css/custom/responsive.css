@@ -523,6 +523,7 @@
         display: flex;
     }
 
+    .community-list__new,
     .community-dropdown {
         display: block;
     }
@@ -537,6 +538,7 @@
         display: none;
     }
 
+    .select-community__container,
     .community-dropdown {
         appearance: none;
         background-color: var(--white-color);
@@ -551,6 +553,7 @@
         text-transform: capitalize;
         font-weight: 600;
         -webkit-appearance: none;
+        border: 1px solid var(--primary-color);
     }
 
     .community-list {
@@ -796,7 +799,7 @@
         gap: 10px;
     }
 
-    .filter-item__left{
+    .filter-item__left {
         padding: 10px;
     }
 
