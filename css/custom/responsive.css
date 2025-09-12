@@ -1146,6 +1146,19 @@
     .detail-product__button {
         font-size: calc(var(--font-size-base) + 2px);
     }
+
+    .product-standard__container {
+        width: 100%;
+    }
+
+    .field-of-operation__title,
+    .field-of-operation__toptitle,
+    .brand-title,
+    .responsibility-content h3,
+    .connection-title,
+    .all-product h2 {
+        font-size: calc(var(--font-size-base) + 8px);
+    }
 }
 
 @media screen and (max-width: 551px) {
@@ -1204,9 +1217,10 @@
         -webkit-appearance: none;
     }
 
-    .environment-header__mb>div>img:first-child{
+    .environment-header__mb>div>img:first-child {
         object-fit: cover;
     }
+
     .environment-header__mb>div>img:last-child {
         object-fit: contain;
     }
