@@ -635,7 +635,7 @@
     }
 
     body .all-product__container .product__container .product-item {
-        width: calc(100% / 2 - 20px) !important;
+        width: calc(100% / 2 - 15px) !important;
     }
 
     .product-button img {
@@ -796,11 +796,15 @@
         gap: 10px;
     }
 
+    .filter-item__left{
+        padding: 10px;
+    }
+
     .filter-item__right {
         flex-direction: column;
         align-items: start;
         border-radius: 25px;
-        padding: 5px;
+        padding: 10px;
     }
 
     .filter-item__right div {

@@ -2528,11 +2528,11 @@ body .all-product__container .product__container .product-item {
     border-bottom-left-radius: 24px;
     border-bottom-right-radius: 24px;
     border: 1px solid var(--primary-color);
-    padding: 24px 0px;
+    padding: 0px;
     opacity: 0;
     height: 0;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: all 0.1s ease;
     -webkit-appearance: none;
 }
 
@@ -2560,6 +2560,7 @@ body .all-product__container .product__container .product-item {
 .options.active {
     opacity: 1;
     height: auto;
+    padding: 24px 0px;
 }
 
 .option-container {
