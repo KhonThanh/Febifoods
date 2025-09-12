@@ -1159,6 +1159,16 @@
     .all-product h2 {
         font-size: calc(var(--font-size-base) + 8px);
     }
+
+    .product-status__container{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .product-status__container ul{
+        width: fit-content;
+        gap: 5px;
+    }
 }
 
 @media screen and (max-width: 551px) {
