@@ -803,7 +803,7 @@
     }
 
     .zindex-mb__option {
-        z-index: 3;
+        z-index: 4;
     }
 
     .filter-item__left select,
@@ -1041,8 +1041,7 @@
     }
 
     .more-space {
-        padding-bottom: 10px;
-        margin-bottom: 20px !important;
+        margin-bottom: 30px !important;
     }
 
     .padding-larger {
@@ -1405,12 +1404,12 @@
     }
 
     .header-top::after {
-        width: 176px;
-        height: 22px;
+        width: 156px;
+        height: 20px;
     }
 
     .header-top::before {
-        width: 178px;
-        height: 22px;
+        width: 158px;
+        height: 20px;
     }
 }
