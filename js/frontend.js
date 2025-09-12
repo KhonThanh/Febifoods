@@ -167,13 +167,13 @@ $(document).ready(function () {
 
 
 // js connect
-$(document).ready(function () {
-  $('.connection-content__item').on('click', function (e) {
-    e.preventDefault();
-    $('.connection-content__item').removeClass('active');
-    $(this).addClass('active');
-  });
-});
+// $(document).ready(function () {
+//   $('.connection-content__item').on('click', function (e) {
+//     e.preventDefault();
+//     $('.connection-content__item').removeClass('active');
+//     $(this).addClass('active');
+//   });
+// });
 
 //js story
 document.addEventListener('DOMContentLoaded', function () {
