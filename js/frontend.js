@@ -738,11 +738,45 @@ document.addEventListener('DOMContentLoaded', function () {
 
 $(document).ready(function () {
   if ($('.all-certification').length) {
-    $('.all-certification').on('init', function (event, slick) {
+    const slider = $('.all-certification');
+    const items = slider.children();
+    const count = items.length;
+
+    if (count > 0 && count < 6) {
+      if (count === 1) {
+        // clone thêm 5
+        for (let i = 0; i < 5; i++) {
+          slider.append(items[0].cloneNode(true));
+        }
+      } else if (count === 2) {
+        // clone mỗi item thành 3
+        for (let i = 0; i < count; i++) {
+          for (let j = 0; j < 2; j++) {
+            slider.append(items[i].cloneNode(true));
+          }
+        }
+      } else if (count === 3) {
+        // clone mỗi item thành 2
+        for (let i = 0; i < count; i++) {
+          slider.append(items[i].cloneNode(true));
+        }
+      } else if (count === 4) {
+        // pattern 1,2,3,4,1,2
+        slider.append(items[0].cloneNode(true));
+        slider.append(items[1].cloneNode(true));
+      } else if (count === 5) {
+        // pattern 1,2,3,4,5,1
+        slider.append(items[0].cloneNode(true));
+      }
+    }
+
+    // add margin khi init
+    slider.on('init', function (event, slick) {
       $(slick.$slideTrack).addClass('all-certification-margin');
     });
 
-    $('.all-certification').slick({
+    // init slick
+    slider.slick({
       centerMode: true,
       centerPadding: '6px',
       slidesToShow: 5,
@@ -787,16 +821,14 @@ $(document).ready(function () {
     const certificationPopup = document.querySelector('.certification-popup');
     const popupImage = certificationPopup.querySelector('img');
 
-    // Event delegation for click on slick-center
-    $('.all-certification').on('click', '.slick-center', function () {
-      const imgSrc = $(this).find('img').attr('src'); // lấy src từ ảnh trong slide
+    slider.on('click', '.slick-center', function () {
+      const imgSrc = $(this).find('img').attr('src');
       if (imgSrc) {
         popupImage.setAttribute('src', imgSrc);
       }
       certificationPopup.classList.add('active');
     });
 
-    // Close popup when click outside image
     certificationPopup.addEventListener('click', function (e) {
       if (!popupImage.contains(e.target)) {
         certificationPopup.classList.remove('active');
